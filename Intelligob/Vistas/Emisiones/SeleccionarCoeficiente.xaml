@@ -1,0 +1,14 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.Emisiones.SeleccionarCoeficiente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        Title="Seleccionar Coeficiente" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ListBox Name="lsCoeficientes" ItemsSource="{Binding LCoeficientes}" SelectedItem="{Binding Seleccionado}" MinHeight="100" DisplayMemberPath="Denominacion" MinWidth="200"/>
+        <Button Name="btSeleccionar" Command="{Binding CmdSeleccionar}" Grid.Row="1" Content="Seleccionar" MinHeight="24" VerticalAlignment="Center" MinWidth="80" Margin="10" HorizontalAlignment="Right"/>
+    </Grid>
+</local:BaseDialogoVista>

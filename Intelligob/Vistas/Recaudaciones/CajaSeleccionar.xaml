@@ -1,0 +1,22 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.Recaudaciones.CajaSeleccionar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        Title="Seleccionar Caja" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid MinHeight="140" MinWidth="300" MaxWidth="600" MaxHeight="400" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                  AlternatingRowBackground="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" IsReadOnly="True" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+                  VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionMode="Single" BorderThickness="0,0,0,1" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" 
+                  ColumnHeaderStyle="{DynamicResource GridEncabezadoPlano}"
+                  ItemsSource="{Binding LCajas}" SelectedItem="{Binding Seleccionado}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Descripcion}" Header="Descripcion" MinWidth="280"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Seleccionar" Command="{Binding CmdSeleccionar}" Grid.Row="1" MinHeight="24" MinWidth="90" Margin="10" HorizontalAlignment="Right"/>
+    </Grid>
+</local:BaseDialogoVista>

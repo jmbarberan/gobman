@@ -1,0 +1,83 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.ConsultasLista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Plantillas="clr-namespace:Intelligob.Escritorio.Plantillas" 
+      xmlns:Convertidores="clr-namespace:Intelligob.Escritorio.Convertidores"
+      xmlns:Interfaces="clr-namespace:Intelligob.Escritorio.Vistas.Interfaces"
+      mc:Ignorable="d"
+	Title="Seleccionar consulta">
+    <Page.Resources>
+        <Convertidores:ListaVisibilidadConvertidor x:Key="listaVisibilidadConv"/>
+        <DataTemplate x:Key="InformeNormal">
+            <StackPanel Margin="4" Orientation="Horizontal">
+                <Image Source="{Binding IconoUri}" Stretch="Uniform" x:Name="image" VerticalAlignment="Center" HorizontalAlignment="Center" Height="24" Width="24" Margin="4,0,2,0"/>
+                <TextBlock Text="{Binding Nombre}" FontSize="14" Foreground="RoyalBlue" Margin="2,0,4,0" TextWrapping="Wrap" Width="160"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="InformeSeleccionado">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="4" Orientation="Horizontal">
+                    <Image Source="{Binding IconoUri}" Stretch="Uniform" x:Name="image" VerticalAlignment="Center" HorizontalAlignment="Center" Height="24" Width="24" Margin="4,0,2,0"/>
+                    <TextBlock Text="{Binding Nombre}" FontSize="14" Foreground="RoyalBlue" Margin="2,0,4,0" TextWrapping="Wrap" Width="160"/>
+                </StackPanel>                
+            </Grid>
+        </DataTemplate>
+        <Style TargetType="{x:Type ListViewItem}" x:Key="EstiloContenedor">
+            <Setter Property="ContentTemplate" Value="{StaticResource InformeNormal}" />
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="ContentTemplate" Value="{StaticResource InformeSeleccionado}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Plantillas:BarraComados Grid.ColumnSpan="3" MinHeight="48"/>
+            <Button Grid.Column="0" Name="btConsultar" Command="{Binding CmdConsultar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Ejecutar consulta seleccionada" Margin="10,5,5,5">
+                <Image Height="32" Width="32" Source="../Imagenes/aceptar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <!--Button Grid.Column="1" Name="btImprimir" Command="{Binding CmdImprimir}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Imprimir reporte" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/impresora1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </-->
+            <StackPanel Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="11" HorizontalAlignment="Right">
+                <Button Name="btRegresar" Command="{Binding CmdRegresar}" Style="{DynamicResource BotonBarra}" VerticalAlignment="Center" ToolTip="Volver a la pagina anterior" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/fIzquierda.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button x:Name="btAdelante" Command="{Binding CmdAdelante}" Style="{DynamicResource BotonBarra}" VerticalAlignment="Center" ToolTip="Volver a la pagina anterior" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/fderecha.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <ListView Grid.Row="1" BorderThickness="0" ItemsSource="{Binding LConsultas}" SelectedItem="{Binding Seleccionado}" ItemContainerStyle="{StaticResource EstiloContenedor}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+                        ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+                        MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+                        ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+        <Border Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="0,1,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" MinHeight="22">
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+        </Border>
+        <TextBlock Name="BarraEstado" Text="{Binding BarraEstado}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}"/>
+    </Grid>
+</Page>

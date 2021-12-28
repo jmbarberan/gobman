@@ -1,0 +1,69 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.ImpresionAjustes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Printing="clr-namespace:System.Drawing.Printing;assembly=System.Drawing"
+        Title="Ajustes de Impresion" SizeToContent="WidthAndHeight" ResizeMode="NoResize" MinWidth="260" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="0" Content="Seleccionar impresora:" FontSize="12" Foreground="RoyalBlue" Margin="5,0,0,0" Grid.ColumnSpan="2"/>
+        <ListBox ItemsSource="{x:Static Printing:PrinterSettings.InstalledPrinters}" Grid.Column="1" Grid.Row="1" SelectedItem="{Binding Seleccionada}" Grid.ColumnSpan="2"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3" Margin="0,5,0,0">
+            <Label Content="Numero de copias" Margin="0,5,5,0"/>
+            <TextBox Text="{Binding Copias}" MinWidth="50" MinHeight="22" VerticalAlignment="Center" Style="{DynamicResource TeTextBoxBasico}" Margin="0,5,0,0"/>
+            <CheckBox Content="Intercalar" IsChecked="{Binding Intercalar}" VerticalAlignment="Center" Margin="15,5,0,0"/>
+        </StackPanel>
+        <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="0,5,0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Orientacion del papel" Margin="0,0,5,0" Grid.Row="1"/>
+            <ComboBox SelectedIndex="{Binding IOrientacion}" MinHeight="24" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
+                <ComboBox.Items>
+                    <TextBlock Text="Vertical"/>
+                    <TextBlock Text="Horizontal"/>
+                </ComboBox.Items>
+            </ComboBox>
+            <Label Content="Tamaño del papel" Margin="0,0,5,0" />
+            <ComboBox Grid.Column="1" ItemsSource="{Binding LTamaños}" MinWidth="160" Margin="0,5,0,5" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" 
+			    SelectedItem="{Binding Tamaño, Mode=TwoWay}" MinHeight="24">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding PaperName}" Width="160"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </Grid>        
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Command="{Binding CmdAjustes}" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" MinHeight="24" Content="Ajustes..." Margin="10" MinWidth="80"/>
+            <Button Command="{Binding CmdAceptar}" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" MinHeight="24" Content="Aceptar" Margin="0,10,10,10" MinWidth="80"/>
+        </Grid>
+    </Grid>
+</local:BaseDialogoVista>

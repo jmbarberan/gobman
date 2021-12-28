@@ -1,0 +1,136 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.ContribuyentesLista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:Convertidores="clr-namespace:Intelligob.Escritorio.Convertidores"
+      xmlns:Utiles="clr-namespace:Intelligob.Utiles;assembly=IntelligobUtiles"
+      xmlns:Plantillas="clr-namespace:Intelligob.Escritorio.Plantillas"
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mp="clr-namespace:Benjamin.Gale.Controls;assembly=ModalContentPresenter"
+      xmlns:Local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+      mc:Ignorable="d"       
+	Title="Lista de Contribuyentes">
+    <Page.Resources>        
+        <Convertidores:NegativoLogicoConvertidor x:Key="ConvertidorLogico" />        
+        <Style x:Key="TextoRayado" TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Estado}" Value="2">
+                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>        
+    </Page.Resources>
+    <mp:ModalContentPresenter x:Name="modalPresenter" Grid.Row="1" Grid.ColumnSpan="2" IsModal="{Binding MostrarModal}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>                
+            <Plantillas:BarraComados Grid.ColumnSpan="2" MinHeight="48"/>        
+            <Grid Grid.ColumnSpan="2" Margin="10,0,0,0">            
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnBuscar" Command="{Binding CmdBuscar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Buscar contribuyentes" Margin="10,5,5,5">
+                    <Image Height="32" Width="32" Source="../Imagenes/lupa1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button Grid.Column="1" x:Name="btnNuevo" Command="{Binding CmdNuevo}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Registrar nuevo contribuyente" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/agregar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button Grid.Column="2" x:Name="btnModificar" Command="{Binding CmdModificar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Modificar el contribuyente seleccionado" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/pluma1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button Grid.Column="3" x:Name="btnEliminar" Command="{Binding CmdEliminar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Eliminar el contribuyente seleccionado" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/eliminar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button Grid.Column="4" x:Name="btnRestuarar" Command="{Binding CmdRestaurar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Restaurar el contribuyente seleccionado" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/aceptar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Separator Grid.Column="5" Width="28" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+                <Button Grid.Column="6" x:Name="btnCalcular" Command="{Binding CmdRebajas}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Registrar rebajas al contribuyente" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/calculadora1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button Grid.Column="7" Command="{Binding CmdUnificar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Unificar contribuyentes" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/vinculo.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <StackPanel Grid.Column="8" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,5,0">
+                    <Button x:Name="btnRegresar" Style="{DynamicResource BotonBarra}" Command="{Binding CmdRegresar}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Volver a la vista anterior" Margin="5">
+                        <Image Height="32" Width="32" Source="../Imagenes/fIzquierda.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                    </Button>
+                    <Button x:Name="btAdelante" Command="{Binding CmdAdelante}" Style="{DynamicResource BotonBarra}" VerticalAlignment="Center" ToolTip="Volver a la pagina anterior" Margin="5">
+                        <Image Height="32" Width="32" Source="../Imagenes/fderecha.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                    </Button>
+                </StackPanel>
+            </Grid>        
+            <telerik:RadBusyIndicator Grid.Row="1" Grid.ColumnSpan="2" BusyContent="{Binding BusyContent}" IsBusy="{Binding ConsultaOcupada}" IsIndeterminate="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Plantillas:BarraBusqueda/>
+                    <StackPanel FlowDirection="LeftToRight" Orientation="Vertical" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" MinHeight="22">
+                        <ComboBox Name="cbxTipoBusqueda" 
+                        DisplayMemberPath="Key"
+                        SelectedValuePath="Value"
+                        ItemsSource="{Binding ListaTipoBusqueda}"
+                        IsEnabled="{Binding BuscarPorCedula, Converter={StaticResource ConvertidorLogico}}"
+                        SelectedValue="{Binding TipoBusqueda, Mode=TwoWay}"                      
+                        Margin="10,10,10,5" VerticalAlignment="Center" HorizontalAlignment="Stretch" MinHeight="24" SelectedIndex="0"/>
+                        <AdornerDecorator Grid.Row="2">
+                            <StackPanel>
+                                <TextBox Name="TxBuscar" Text="{Binding FiltroBusqueda, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="10,5,10,5" VerticalAlignment="Center" HorizontalAlignment="Stretch" MinWidth="160" MinHeight="24" Style="{DynamicResource TeTextBoxBasico}" KeyDown="TxBuscar_KeyDown"/>
+                            </StackPanel>
+                        </AdornerDecorator>
+                        <ToggleButton Name="chkCedula" IsChecked="{Binding BuscarPorCedula, UpdateSourceTrigger=PropertyChanged}" MinHeight="24" Content="Buscar por cedula" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,5,10,5" Style="{DynamicResource SlidingToggleButton}" BorderBrush="{x:Null}"/>
+                        <ToggleButton Name="chkEliminados" IsChecked="{Binding MostrarEliminados}" IsEnabled="{Binding BuscarPorCedula, Converter={StaticResource ConvertidorLogico}}" MinHeight="24" Content="Mostrar Eliminados" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,5,10,5" Style="{DynamicResource SlidingToggleButton}" BorderBrush="{x:Null}"/>
+                    </StackPanel>
+                    <DataGrid x:Name="grdContribuyentes" Grid.Row="1" Grid.Column="1" 
+                    ItemsSource="{Binding LContribuyentes, Mode=OneWay}" SelectedItem="{Binding Seleccionado}" 
+                    AutoGenerateColumns="False" Margin="0,0,0,0" VerticalAlignment="Stretch" AlternatingRowBackground="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" IsReadOnly="True" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionMode="Single" BorderThickness="0" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+                    ColumnHeaderStyle="{DynamicResource GridEncabezadoPlano}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Nombres}" Header="Nombres" MinWidth="280" ElementStyle="{StaticResource TextoRayado}"/>
+                            <DataGridTextColumn Binding="{Binding Path=PersoneriaNav.Denominacion}" Header="Personeria" Width="160" ElementStyle="{StaticResource TextoRayado}"/>
+                            <DataGridTextColumn Binding="{Binding Cedula}" Header="Cedula" MinWidth="160" ElementStyle="{StaticResource TextoRayado}"/>
+                            <DataGridTextColumn Binding="{Binding Direccion}" Header="Direccion" MinWidth="280" ElementStyle="{StaticResource TextoRayado}"/>
+                            <DataGridTextColumn Binding="{Binding Representante}" Header="Representante" MinWidth="280" ElementStyle="{StaticResource TextoRayado}"/>
+                            <DataGridTextColumn Binding="{Binding Estado}" Header="Estado" MinWidth="50" Visibility="Hidden"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </telerik:RadBusyIndicator>
+            <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="0,1,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" MinHeight="22">
+                <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            </Border>
+            <TextBlock Name="BarraEstado" Text="{Binding BarraEstado}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}"/>
+        </Grid>
+        <mp:ModalContentPresenter.ModalContent>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ContentPresenter Content="{Binding VistaModal}"/>
+            </StackPanel>
+        </mp:ModalContentPresenter.ModalContent>
+    </mp:ModalContentPresenter>
+</Page>

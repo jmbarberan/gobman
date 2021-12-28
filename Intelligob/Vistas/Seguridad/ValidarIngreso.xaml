@@ -1,0 +1,33 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.ValidarIngreso"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ff="clr-namespace:Intelligob.Escritorio.Vistas"
+      mc:Ignorable="d"
+	Title="Autorizar Ingreso">
+
+    <Grid Margin="16,10,15,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" MinHeight="44" Margin="-16,-10,-15,0"/>
+        <Label Content="INGRESO AL SISTEMA" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+        <Label Content="Usuario" Grid.Row="1" Margin="0,10,0,0"/>
+        <AdornerDecorator Grid.Row="2">
+            <StackPanel>
+                <TextBox Name="txUsuario" Text="{Binding UsrCodigo, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" MinWidth="180" Margin="0,0,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="23" Style="{DynamicResource TeTextBoxBasico}" VerticalContentAlignment="Center" KeyDown="txUsuario_KeyDown" TabIndex="0"/>
+            </StackPanel>
+        </AdornerDecorator>
+        <Label Content="Contraseña" Grid.Row="3" Margin="0,0,0,0"/>
+        <PasswordBox Name="txClave" MinWidth="180" Margin="0,0,0,10" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="23" Style="{DynamicResource TeClaveBasico}" VerticalContentAlignment="Center" KeyDown="txClave_KeyDown" LostFocus="txClave_LostFocus"/>
+        <Button Name="btIngresar" Content="Ingresar" IsEnabled="{Binding PuedeIngresar}" Command="{Binding CmdIngresar}" Grid.Row="5" MinWidth="90" MinHeight="24" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+        <Image Source="../Imagenes/llave_usuario.png" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="6" Margin="1,0,0,0" Stretch="None"/>
+    </Grid>
+</Page>

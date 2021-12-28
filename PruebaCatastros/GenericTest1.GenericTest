@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GenericTest id="87f22a6f-97b7-44ed-a08a-695f4445c088" name="GenericTest1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+	<SummaryXmlFile path="%TestOutputDirectory%\&lt;Escriba aquí el nombre del archivo de resumen&gt;"/>
+	<Command filename="&lt;Escriba aquí el nombre de archivo&gt;" workingDirectory="%TestOutputDirectory%"/>
+</GenericTest>

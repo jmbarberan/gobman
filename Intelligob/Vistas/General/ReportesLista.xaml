@@ -1,0 +1,95 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.ReportesLista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Plantillas="clr-namespace:Intelligob.Escritorio.Plantillas"
+      mc:Ignorable="d" 
+	Title="ReportesLista">
+    
+    <Page.Resources>
+        <Style x:Key="TextoRayado" TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Estado}" Value="2">
+                    <Setter Property="TextDecorations" Value="Strikethrough"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                    <Setter Property="FontStyle" Value="Italic"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>    
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Plantillas:BarraComados Grid.ColumnSpan="2" MinHeight="48"/>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>            
+            <Button Grid.Column="0" x:Name="btnNuevo" Command="{Binding CmdNuevo}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Registrar nuevo reporte" Margin="10,5,5,5">
+                <Image Height="32" Width="32" Source="../Imagenes/agregar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Button Grid.Column="1" x:Name="btnModificar" Command="{Binding CmdModificar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Modificar el reporte seleccionado" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/pluma1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Button Grid.Column="2" x:Name="btnEliminar" Command="{Binding CmdEliminar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Eliminar el reporte seleccionado" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/eliminar1.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Separator Grid.Column="3" Width="28" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <Button Grid.Column="4" Command="{Binding CmdPlanilla}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Seleccionar como plantilla de titulo" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/dinero.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Button Grid.Column="5" Command="{Binding CmdPlanillaParcial}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Left" VerticalAlignment="Center" ToolTip="Seleccionar como plantilla de titulo cobro parcial" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/monedas.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Button Grid.Column="6" Command="{Binding CmdPlanillasQuitar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Left" VerticalAlignment="Center" ToolTip="Desmarcar plantillas de titulos" Margin="5">
+                <Image Height="32" Width="32" Source="../Imagenes/dineroQuitar.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <StackPanel Grid.Column="7" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,5,0">
+                <Button x:Name="btnRegresar" Style="{DynamicResource BotonBarra}" Command="{Binding CmdRegresar}" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Volver a la vista anterior" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/fIzquierda.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+                <Button x:Name="btAdelante" Command="{Binding CmdAdelante}" Style="{DynamicResource BotonBarra}" VerticalAlignment="Center" ToolTip="Volver a la pagina anterior" Margin="5">
+                    <Image Height="32" Width="32" Source="../Imagenes/fderecha.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        
+        <DataGrid Grid.Row="1" ItemsSource="{Binding LReportes}" SelectedItem="{Binding Seleccionado}" MinHeight="200"
+                  AutoGenerateColumns="False" Margin="0,0,0,0" VerticalAlignment="Stretch" AlternatingRowBackground="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" 
+                  IsReadOnly="True" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+                  SelectionMode="Single" BorderThickness="0" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" ColumnHeaderStyle="{DynamicResource GridEncabezadoPlano}"
+                  CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Reporte" Binding="{Binding Denominacion}" MinWidth="300" ElementStyle="{StaticResource TextoRayado}"/>
+                <DataGridTextColumn Header="Modulo" Binding="{Binding Path=ModuloNav.Denominacion}" MinWidth="200" ElementStyle="{StaticResource TextoRayado}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="0,1,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" MinHeight="22">
+            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+        </Border>
+        <TextBlock Text="{Binding BarraEstado}" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}"/>
+    </Grid>
+</Page>

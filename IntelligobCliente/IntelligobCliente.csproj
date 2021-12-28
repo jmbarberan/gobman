@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B37FBF9-3274-4857-A2A3-0787994BB6F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intelligob.Cliente</RootNamespace>
+    <AssemblyName>IntelligobCliente</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskDialog, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFTaskDialog.1.7.1\lib\net40-Client\TaskDialog.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess">
+      <HintPath>..\IntelligobServidor\bin\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2014.2.711.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.DataServices, Version=2014.2.711.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.DataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Web.40, Version=2014.2.711.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.Web.40.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Depositos\AguaDep.cs" />
+    <Compile Include="Depositos\CajasDep.cs" />
+    <Compile Include="Depositos\CatastrosDep.cs" />
+    <Compile Include="Depositos\CoeficientesDep.cs" />
+    <Compile Include="Depositos\ConceptosDep.cs" />
+    <Compile Include="Depositos\ContribuyentesDep.cs" />
+    <Compile Include="Depositos\DepositoBase.cs" />
+    <Compile Include="Depositos\DepositosControl.cs" />
+    <Compile Include="Depositos\EmisionAsyncronica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Depositos\EmisionesDep.cs" />
+    <Compile Include="Depositos\IDepositosControl.cs" />
+    <Compile Include="Depositos\RecaudacionesDep.cs" />
+    <Compile Include="Depositos\RepRecaudacionesDep.cs" />
+    <Compile Include="Depositos\SeguridadDep.cs" />
+    <Compile Include="Depositos\TablasDep.cs" />
+    <Compile Include="IModeloCache.cs" />
+    <Compile Include="ModeloCache.cs" />
+    <Compile Include="Modelos\AguaLecturaExtension.cs" />
+    <Compile Include="Modelos\CajaComprobanteExt.cs" />
+    <Compile Include="Modelos\CarpetaCatastralAnualExt.cs" />
+    <Compile Include="Modelos\CobroExtension.cs" />
+    <Compile Include="Modelos\CobroPlanillaPagoParcial.cs" />
+    <Compile Include="Modelos\CobroPlanillaReversion.cs" />
+    <Compile Include="Modelos\CobroRap.cs" />
+    <Compile Include="Modelos\CobroTransaccionExt.cs" />
+    <Compile Include="Modelos\ConceptosEmisionExtension.cs" />
+    <Compile Include="Modelos\ConceptosExtension.cs" />
+    <Compile Include="Modelos\Consulta.cs" />
+    <Compile Include="Modelos\ConvenioExtension.cs" />
+    <Compile Include="Modelos\ElementoPago.cs" />
+    <Compile Include="Modelos\Informe.cs" />
+    <Compile Include="Modelos\PlanillaAtributoExtension.cs" />
+    <Compile Include="Modelos\PlanillaExtension.cs" />
+    <Compile Include="Modelos\PlanillaRubroExtension.cs" />
+    <Compile Include="Modelos\PredioBaseExtension.cs" />
+    <Compile Include="Modelos\PredioBloqueExtension.cs" />
+    <Compile Include="Modelos\RepEmisionesSaldoExt.cs" />
+    <Compile Include="Modelos\RepPredioExtension.cs" />
+    <Compile Include="Modelos\ResumenEmisionPeriodoItemExt.cs" />
+    <Compile Include="Modelos\SeguimientoExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Referencia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SesionUtiles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Intelligob.Utilerias.Modelos.Cuenta.datasource" />
+    <None Include="Service References\Referencia\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.AguaLecturaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.AguaPotableDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.AguaServicioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.AutorizacionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.BaseImponibleAño.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CajaComprobanteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CajaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CajaElementoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CajasUsuarioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CarpetaCatastralAnualDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CarpetaCatastralCorteItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobrosElementoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobrosNotaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobrosNotasElementoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobrosRubroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CobroTransaccionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CoeficienteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CoeficienteElementoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ComandoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConceptoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConceptosDocumentoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConceptosEmisionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConceptosRubroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ContribuyenteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ContribuyentesRebajaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConvenioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConveniosDividendoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ConvenioTransaccionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CuentaBancariaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.CuentaCorrienteItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.EmisionesSaldosItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.FuncionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.MejoraDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.MejoraElementoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.MercadoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ModuloDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ModuloUsuarioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PatenteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PatentesComponenteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PlanillaAtributoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PlanillaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PlanillaMesDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PlanillaRubroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PlanillaSustitucionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioBaseDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioBloqueDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioConstruccionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioFotoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioFrenteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioPisoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioPropietarioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioTablaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PredioTerrenoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.PrivilegioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RebajaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RebajasRubroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepCtaCteAnualItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepCuentaCorrienteDetalleDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepCuentaCorrienteResumenDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepEmisionesSaldoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ReporteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepPredioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepRecaudacionesCompDetalleDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepRecaudacionesFechaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RepReversionesFechaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ResumenCatastralItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ResumenEmisionesPeriodoItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RubroCalcularConcepto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RubroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.RubrosParametroDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.SeguimientoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.ServicioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.SoporteDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.SoporteMovimientoDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.SupervisionDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.TablaClaveDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.TablaDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Cliente.Referencia.UsuarioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Entidades.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Servidor.Dto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Referencia\Intelligob.Utilerias.Modelos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Referencia\service.wsdl" />
+    <None Include="Service References\Referencia\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Referencia\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntelligobUtilerias\IntelligobUtilerias.csproj">
+      <Project>{5fb04245-b53f-43c6-9bb7-e8ee331b4cd4}</Project>
+      <Name>IntelligobUtilerias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntelligobUtiles\IntelligobUtiles.csproj">
+      <Project>{60341a1e-3e0b-4f24-9898-680decb9cf00}</Project>
+      <Name>IntelligobUtiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Referencia\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Referencia\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Referencia\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Referencia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

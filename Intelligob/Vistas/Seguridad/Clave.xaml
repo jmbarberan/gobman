@@ -1,0 +1,13 @@
+﻿<Window x:Class="Intelligob.Escritorio.Vistas.Seguridad.Clave"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        Title="Clave" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <PasswordBox Name="txClave" MinHeight="24" MinWidth="160" Margin="10" Style="{DynamicResource TeClaveBasico}"/>
+        <Button Name="btAceptar" Content="Aceptar" Grid.Row="1" MinHeight="24" MinWidth="80" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10" Click="btAceptar_Click"/>
+    </Grid>
+</Window>

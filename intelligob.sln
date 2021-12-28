@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligobUtiles", "IntelligobUtiles\IntelligobUtiles.csproj", "{60341A1E-3E0B-4F24-9898-680DECB9CF00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A6F95D7-6AD2-4E5E-BBCD-42E06D30D7FA}"
+	ProjectSection(SolutionItems) = preProject
+		intelligob.vsmdi = intelligob.vsmdi
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligobReportes", "InteligobReportes\IntelligobReportes.csproj", "{F0D29820-FFEF-487D-A48C-45BCE4255384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaCatastros", "PruebaCatastros\PruebaCatastros.csproj", "{1D80D7DC-2E25-4A78-AA84-11D0AAC71703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligobServidor", "IntelligobServidor\IntelligobServidor.csproj", "{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligobCliente", "IntelligobCliente\IntelligobCliente.csproj", "{9B37FBF9-3274-4857-A2A3-0787994BB6F6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89} = {C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intelligob", "Intelligob\Intelligob.csproj", "{36185620-1880-4B63-8175-9F7F5CFA4969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Llave", "Llave\Llave.csproj", "{7C5F5423-C9DB-40E9-97F5-83ABB709C79E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelligobUtilerias", "IntelligobUtilerias\IntelligobUtilerias.csproj", "{5FB04245-B53F-43C6-9BB7-E8EE331B4CD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60341A1E-3E0B-4F24-9898-680DECB9CF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60341A1E-3E0B-4F24-9898-680DECB9CF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60341A1E-3E0B-4F24-9898-680DECB9CF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60341A1E-3E0B-4F24-9898-680DECB9CF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D29820-FFEF-487D-A48C-45BCE4255384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D29820-FFEF-487D-A48C-45BCE4255384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D29820-FFEF-487D-A48C-45BCE4255384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D29820-FFEF-487D-A48C-45BCE4255384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D80D7DC-2E25-4A78-AA84-11D0AAC71703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D80D7DC-2E25-4A78-AA84-11D0AAC71703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D80D7DC-2E25-4A78-AA84-11D0AAC71703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D80D7DC-2E25-4A78-AA84-11D0AAC71703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64015EE-FAD2-4086-A69B-8FBC2AB7DD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B37FBF9-3274-4857-A2A3-0787994BB6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B37FBF9-3274-4857-A2A3-0787994BB6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B37FBF9-3274-4857-A2A3-0787994BB6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B37FBF9-3274-4857-A2A3-0787994BB6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36185620-1880-4B63-8175-9F7F5CFA4969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36185620-1880-4B63-8175-9F7F5CFA4969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36185620-1880-4B63-8175-9F7F5CFA4969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36185620-1880-4B63-8175-9F7F5CFA4969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5F5423-C9DB-40E9-97F5-83ABB709C79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5F5423-C9DB-40E9-97F5-83ABB709C79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5F5423-C9DB-40E9-97F5-83ABB709C79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5F5423-C9DB-40E9-97F5-83ABB709C79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB04245-B53F-43C6-9BB7-E8EE331B4CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB04245-B53F-43C6-9BB7-E8EE331B4CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB04245-B53F-43C6-9BB7-E8EE331B4CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB04245-B53F-43C6-9BB7-E8EE331B4CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F734F6B-65C6-4B1F-84B2-71C59B8ADCE4}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = intelligob.vsmdi
+	EndGlobalSection
+EndGlobal

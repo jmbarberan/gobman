@@ -1,0 +1,15 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.Seguridad.UsuarioSeleccionar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        xmlns:Plantillas="clr-namespace:Intelligob.Escritorio.Plantillas"
+        Title="Seleccionar Usuario" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Plantillas:UsuarioSeleccionLista/>
+        <Button Content="Seleccionar" Command="{Binding CmdSeleccionar}" MinHeight="24" MinWidth="90" Grid.Row="1" HorizontalAlignment="Right" Margin="10"/>
+    </Grid>
+</local:BaseDialogoVista>

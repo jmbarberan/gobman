@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Intelligob.Escritorio.Vistas.General.ContribuyenteEditorModal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+             xmlns:Plantillas="clr-namespace:Intelligob.Escritorio.Plantillas"  
+             mc:Ignorable="d" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="Black" BorderThickness="2">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>        
+        <Label Grid.Row="0" Grid.Column="0" Content="Personeria" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Nombre" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Cedula" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="Representante" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <Label Grid.Row="4" Grid.Column="0" Content="Direccion" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <Label Grid.Row="5" Grid.Column="0" Content="Telefonos" HorizontalAlignment="Right" FontSize="12" Foreground="#FF3B446A"/>
+        <AdornerDecorator Grid.Column="1">
+            <ComboBox x:Name="cbCategoria" ItemsSource="{Binding LPersonerias}" MinWidth="160" Margin="3" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left"
+			    SelectedItem="{Binding Personeria, ValidatesOnDataErrors=True, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" MinHeight="24" Style="{DynamicResource ComboBoxValido}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Denominacion}" Width="160"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </AdornerDecorator>
+        <AdornerDecorator Grid.Column="1" Grid.Row="1">
+            <TextBox x:Name="txNombre" Text="{Binding Nombres, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Margin="3" FontSize="12"/>
+        </AdornerDecorator>
+        <AdornerDecorator Grid.Column="1" Grid.Row="2">
+            <TextBox x:Name="txCedula" Text="{Binding Cedula, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" Style="{DynamicResource TeTextBoxBasico}"  MinHeight="24" Margin="3" FontSize="12"/>
+        </AdornerDecorator>
+        <TextBox x:Name="txRepresentante" Text="{Binding Representante}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Column="1" Grid.Row="3" Margin="3" FontSize="12"/>
+        <TextBox x:Name="txDireccion" Text="{Binding Direccion}" Style="{DynamicResource TeTextBoxBasico}"  MinHeight="24" Grid.Column="1" Grid.Row="4" Margin="3" FontSize="12" MinWidth="280"/>
+        <TextBox x:Name="txTelefonos" Text="{Binding Telefonos}" Style="{DynamicResource TeTextBoxBasico}"  MinHeight="24" Grid.Column="1" Grid.Row="5" Margin="3" FontSize="12"/>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" FlowDirection="RightToLeft" Grid.Row="6" Grid.ColumnSpan="2">            
+            <Button x:Name="btGuardar" Content="Guardar" Command="{Binding CmdGuardar}" HorizontalAlignment="Right" MinHeight="24" Margin="0,0,5,0" MinWidth="80"/>
+            <Button x:Name="btCancelar" Content="Cancelar" Command="{Binding CmdCancelar}" HorizontalAlignment="Right" MinHeight="24" Margin="5,0,0,0" MinWidth="80"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

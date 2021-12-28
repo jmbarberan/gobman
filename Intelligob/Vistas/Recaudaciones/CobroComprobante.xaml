@@ -1,0 +1,106 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.Recaudaciones.CobroComprobante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        Title="Registre los componentes de este cobro" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="AvisoColor" TargetType="{x:Type Label}">     
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding AvisoNivel}" Value="0">
+                    <Setter Property="Background" Value="LightGreen"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding AvisoNivel}" Value="1">
+                    <Setter Property="Background" Value="Yellow"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding AvisoNivel}" Value="2">
+                    <Setter Property="Background" Value="LightSalmon"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="CeldaDerecha" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>            
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="{Binding TitulosSeleccionados}" Margin="5" VerticalContentAlignment="Center" MinHeight="24"/>
+            <TextBlock Text="{Binding MontoPagar, StringFormat=c}" HorizontalAlignment="Right" Grid.Column="1" Margin="5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="COMPONENTES" Foreground="RoyalBlue" Margin="5,5,20,5"/>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="btSerAgregar" Command="{Binding CmdAgregar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,5" ToolTip="Agregar componente">
+                    <Image Height="24" Width="24" Source="..\Imagenes\agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+                </Button>
+                <Button x:Name="btSerModificar" Command="{Binding CmdModificar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,5" ToolTip="Modificar componente seleccionado">
+                    <Image Height="24" Width="24" Source="..\Imagenes\pluma24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+                </Button>
+                <Button x:Name="btSerEliminar" Command="{Binding CmdQuitar}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,5" ToolTip="Quitar componente">
+                    <Image Height="24" Width="24" Source="..\Imagenes\remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <DataGrid Grid.Row="2" MinHeight="140" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                  AlternatingRowBackground="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" IsReadOnly="True" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+                  VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionMode="Single" BorderThickness="0,1,0,1" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" 
+                  ColumnHeaderStyle="{DynamicResource GridEncabezadoPlano}"
+                  ItemsSource="{Binding LAbonos}" SelectedItem="{Binding AbonoSeleccionado}" Name="gdComponentes" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Descripcion del componente" Binding="{Binding Presentacion}" MinWidth="300" Width="0.7*" HeaderStyle="{StaticResource GridEncabezadoPlano}"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding Valor, StringFormat=n2}" MinWidth="100" Width="0.3*" CellStyle="{StaticResource CeldaDerecha}" HeaderStyle="{StaticResource GridEncabezadoPlanoDerecha}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="3" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Total componentes" Margin="5,5,5,0" VerticalContentAlignment="Center" MinHeight="24"/>
+            <TextBlock Grid.Column="1" Text="{Binding TotalAbonos, StringFormat=c}" VerticalAlignment="Center" Margin="5,5,5,0" HorizontalAlignment="Right" FontWeight="SemiBold"/>
+        </Grid>
+        <Grid Grid.Row="4" HorizontalAlignment="Right" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            <ToggleButton IsChecked="{Binding CrearNCreditoMarca}" Visibility="{Binding CrearNCredito}" Content="Crear nota de credito" MinHeight="24" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource SlidingToggleButton}" Margin="10,0,0,5"/>
+            <Label Content="Diferencia" Grid.Column="1" Margin="5,0,5,5" Visibility="{Binding CrearNCredito}" VerticalContentAlignment="Center" HorizontalAlignment="Right" MinHeight="24"/>
+            <TextBlock Text="{Binding Diferencia, StringFormat=c}" Visibility="{Binding CrearNCredito}" Grid.Column="2" VerticalAlignment="Center" Margin="5,0,5,5" HorizontalAlignment="Right" FontWeight="SemiBold" MinWidth="70"/>
+        </Grid>
+        <Label BorderBrush="RoyalBlue" BorderThickness="1" Grid.Row="5" Foreground="{Binding AvisoColor}" Margin="10,5,10,0" HorizontalContentAlignment="Center" 
+               Width="auto" Visibility="{Binding AvisoVisibilidad}" Style="{StaticResource AvisoColor}">
+            <TextBlock Text="{Binding Aviso, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" MaxWidth="{Binding ElementName=gdComponentes, Path=ActualWidth}" TextAlignment="Center"/>
+        </Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Right" Grid.Column="1">
+            <Button Content="Cobro por tickets" Command="{Binding CmdTickets}" HorizontalAlignment="Right" MinHeight="24" MinWidth="120" Margin="10" ToolTip="Cobrar con tickets de recaudacion diaria"/>
+            <Button Content="Cobro en efectivo" Command="{Binding CmdEfectivo}" HorizontalAlignment="Right" MinHeight="24" MinWidth="120" Margin="10" ToolTip="Realizar el cobro en efectivo del monto seleccionado"/>
+            <Button Content="Aceptar" Command="{Binding CmdAceptar}" HorizontalAlignment="Right" MinHeight="24" MinWidth="120" Margin="10" ToolTip="Realizar el cobro con los componentes y montos especificados"/>
+        </StackPanel>
+    </Grid>
+</local:BaseDialogoVista>

@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Intelligob.Escritorio.Vistas.Catastros.MercadoEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderBrush="Black" BorderThickness="2">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Contribuyente" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,5,5"/>
+        <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <AdornerDecorator>
+                <TextBox x:Name="txNombres" Text="{Binding Contribuyente, ValidatesOnDataErrors=True, Mode=OneWay}" VerticalAlignment="Center" Grid.Column="0" MinHeight="24" IsReadOnly="True" Margin="0,0,0,5" Style="{DynamicResource TeTextBoxBasico}"/>
+            </AdornerDecorator>
+            <Button x:Name="btContribuyente" Command="{Binding CmdSeleccionarContribuyente}" Grid.Column="1" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,0,5" ToolTip="Seleccionar contribuyente">
+                <Image Height="24" Width="24" Source="..\Imagenes\lupa24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+        </Grid>
+        <Label Content="Puesto No." Grid.Row="1" Margin="0,5,0,0"/>
+        <TextBox Text="{Binding Puesto}" Grid.Row="1" Grid.Column="1" Margin="0,5,0,0" MinHeight="24" Style="{StaticResource TeTextBoxBasico}"/>
+        <Label Content="Codigo" Grid.Row="1" Grid.Column="2" Margin="0,5,0,0" HorizontalAlignment="Right"/>
+        <TextBox Text="{Binding Codigo}" Grid.Row="1" Grid.Column="3" MinWidth="180" Margin="0,5,0,0" MinHeight="24" Style="{StaticResource TeTextBoxBasico}"/>
+        <Label Content="Actividad" Grid.Row="2" Margin="0,5,0,0"/>
+        <TextBox Text="{Binding Actividad}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Margin="0,5,0,0" MinHeight="24" Style="{StaticResource TeTextBoxBasico}"/>
+        <Label Content="Existe contrato firmado" Margin="0,5,0,0" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <CheckBox IsChecked="{Binding Contrato}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource SliderCheckBox}" Margin="0,10,10,5" HorizontalAlignment="Right"/>
+        <Label Content="Fec. Isncripcion" Grid.Row="3" Grid.Column="2" Margin="0,5,0,0" HorizontalContentAlignment="Right"/>
+        <DatePicker SelectedDate="{Binding Inscripcion}" Style="{StaticResource FechaEstilo}" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" Margin="0,5,0,0" MinHeight="24"/>
+        <Label Content="Inicio Cont." Grid.Row="4" Margin="0,5,0,0"/>
+        <DatePicker SelectedDate="{Binding FechaDesde}" Style="{StaticResource FechaEstilo}" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="0,5,0,0" MinWidth="140" MinHeight="24"/>
+        <Label Content="Finalizacion Cont." Grid.Row="4" Margin="0,5,0,0" Grid.Column="2"/>
+        <DatePicker SelectedDate="{Binding FechaHasta}" Style="{StaticResource FechaEstilo}" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" Margin="0,5,0,0" MinWidth="120" MinHeight="24"/>
+        <Label Content="Observaciones" Grid.Row="5" Margin="0,5,0,0"/>
+        <TextBox Text="{Binding Observaciones}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" MinWidth="180" Margin="0,5,0,0" MinHeight="24" Style="{StaticResource TeTextBoxBasico}"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.ColumnSpan="4" Margin="0,10,0,0" HorizontalAlignment="Right">
+            <Button Command="{Binding CmdCancelar}" Content="Cancelar" MinWidth="90" Margin="0,0,10,0" MinHeight="22"/>
+            <Button Command="{Binding CmdGuardar}" Content="Guardar" MinWidth="90"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

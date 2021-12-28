@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Intelligob.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Intelligob.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRubroCalcularConcepto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RubroCalcularConcepto" nillable="true" type="tns:RubroCalcularConcepto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRubroCalcularConcepto" nillable="true" type="tns:ArrayOfRubroCalcularConcepto" />
+  <xs:complexType name="RubroCalcularConcepto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DENOMINACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUBRO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VALOR" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RubroCalcularConcepto" nillable="true" type="tns:RubroCalcularConcepto" />
+  <xs:complexType name="ArrayOfResumenCatastralItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResumenCatastralItem" nillable="true" type="tns:ResumenCatastralItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResumenCatastralItem" nillable="true" type="tns:ArrayOfResumenCatastralItem" />
+  <xs:complexType name="ResumenCatastralItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conteo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="escritura" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="impuestos" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="sector" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valcons" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="valpro" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="valter" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResumenCatastralItem" nillable="true" type="tns:ResumenCatastralItem" />
+  <xs:complexType name="ArrayOfEmisionesSaldosItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmisionesSaldosItem" nillable="true" type="tns:EmisionesSaldosItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmisionesSaldosItem" nillable="true" type="tns:ArrayOfEmisionesSaldosItem" />
+  <xs:complexType name="EmisionesSaldosItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="concepto_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="conteo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmisionesSaldosItem" nillable="true" type="tns:EmisionesSaldosItem" />
+  <xs:complexType name="ArrayOfCuentaCorrienteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuentaCorrienteItem" nillable="true" type="tns:CuentaCorrienteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuentaCorrienteItem" nillable="true" type="tns:ArrayOfCuentaCorrienteItem" />
+  <xs:complexType name="CuentaCorrienteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="concepto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CuentaCorrienteItem" nillable="true" type="tns:CuentaCorrienteItem" />
+  <xs:complexType name="ArrayOfBaseImponibleAño">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BaseImponibleAño" nillable="true" type="tns:BaseImponibleAño" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaseImponibleAño" nillable="true" type="tns:ArrayOfBaseImponibleAño" />
+  <xs:complexType name="BaseImponibleAño">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PANIO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PDENOMINACION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PVALOR" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseImponibleAño" nillable="true" type="tns:BaseImponibleAño" />
+  <xs:complexType name="ArrayOfCarpetaCatastralCorteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarpetaCatastralCorteItem" nillable="true" type="tns:CarpetaCatastralCorteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarpetaCatastralCorteItem" nillable="true" type="tns:ArrayOfCarpetaCatastralCorteItem" />
+  <xs:complexType name="CarpetaCatastralCorteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="año" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="base_imponible" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="concepto_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rubro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarpetaCatastralCorteItem" nillable="true" type="tns:CarpetaCatastralCorteItem" />
+  <xs:complexType name="ArrayOfResumenEmisionesPeriodoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResumenEmisionesPeriodoItem" nillable="true" type="tns:ResumenEmisionesPeriodoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResumenEmisionesPeriodoItem" nillable="true" type="tns:ArrayOfResumenEmisionesPeriodoItem" />
+  <xs:complexType name="ResumenEmisionesPeriodoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="concepto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="propiedad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="rubro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valor" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResumenEmisionesPeriodoItem" nillable="true" type="tns:ResumenEmisionesPeriodoItem" />
+  <xs:complexType name="ArrayOfRepCtaCteAnualItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepCtaCteAnualItem" nillable="true" type="tns:RepCtaCteAnualItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRepCtaCteAnualItem" nillable="true" type="tns:ArrayOfRepCtaCteAnualItem" />
+  <xs:complexType name="RepCtaCteAnualItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CODIGO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUBRO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUBRO_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VALOR" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepCtaCteAnualItem" nillable="true" type="tns:RepCtaCteAnualItem" />
+</xs:schema>

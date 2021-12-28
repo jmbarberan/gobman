@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>    
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+    </startup>
+    <appSettings>
+        <add key="ImagenInicio" value="D:\Desarrollo\Proyectos\Remotos\bitbucket\intelligob\Intelligob\Intelligob\Vistas\Imagenes\escudo-palestina156.jpg"/>
+        <add key="MenuInicial" value="MenuCatastrosVM"/>
+        <add key="ConfiguracionPunto" value="BasicHttpBinding_IEntidades" />
+        <add key="DireccionBase" value="http://localhost:3578/Entidades.svc" />
+    </appSettings>    
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_IEntidades" maxReceivedMessageSize="265536000" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:3578/Entidades.svc" binding="basicHttpBinding"
+          bindingConfiguration="BasicHttpBinding_IEntidades" contract="Referencia.IEntidades"
+          name="BasicHttpBinding_IEntidades" />
+    </client>
+  </system.serviceModel>
+</configuration>

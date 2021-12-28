@@ -1,0 +1,36 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.Recaudaciones.CobrosParciales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        Title="Cobros parciales" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <Label Content="Estos titulos soportan pagos parciales:" Grid.ColumnSpan="2" Margin="-5,-10,0,0" Foreground="RoyalBlue" FontSize="14"/>
+            <Label Content="De ser necesario consigne el valor cobrado de cada uno para continuar el proceso" Grid.ColumnSpan="2" Margin="-5,-10,0,0" Foreground="RoyalBlue"/>            
+        </StackPanel>
+        
+        
+        <DataGrid Grid.Row="1" Margin="-10,0,-10,0" Grid.ColumnSpan="2" MinHeight="240" SelectionMode="Single" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                  ItemsSource="{Binding LPlanillas}" SelectedItem="{Binding Seleccionado}"
+                  HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+                  BorderThickness="0,1,0,1" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" ColumnHeaderStyle="{DynamicResource GridEncabezadoPlano}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=ConceptoNav.Denominacion}" Header="Concepto" MinWidth="220" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Codigo}" Header="Codigo" MinWidth="140" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Año}" Header="Año" MinWidth="90" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Saldo, StringFormat=n2}" Header="Valor" MinWidth="100" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Parcial, StringFormat=n2}" Header="Cobro" MinWidth="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Continuar" Command="{Binding CmdAceptar}" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" MinHeight="24" Margin="0,10,0,0" MinWidth="90"/>
+    </Grid>
+</local:BaseDialogoVista>

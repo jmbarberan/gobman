@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="628da3d7-2c4a-47ff-a526-0a12e313f83f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9090/Entidades.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9630ff7c-32f4-4e8e-854e-c922108f7e16" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="2b11473d-398a-46ca-85c0-a7ee81ec2d22" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="01992d2f-6a28-426e-9d96-64db41e54caf" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="Intelligob.Entidades.xsd" MetadataType="Schema" ID="f78db903-8756-4913-a020-16425510a01b" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="Intelligob.Servidor.Dto.xsd" MetadataType="Schema" ID="f84fd716-9213-406b-b964-384822468837" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="Intelligob.Utilerias.Modelos.xsd" MetadataType="Schema" ID="7b3b1d6f-4dc1-40af-a471-1f2c8d5e69a2" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="99b3cb6e-afc7-4eb3-a25f-ab162576020f" SourceId="1" SourceUrl="http://localhost:9090/Entidades.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

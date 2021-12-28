@@ -1,0 +1,35 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.MenuConfiguracion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="MenuConfiguracion">
+
+    <Grid Margin="11,10,10,10">        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" MinHeight="44" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="-11,-10,-10,5"/>
+        <Label Content="AJUSTES" HorizontalAlignment="Left" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+        <Button Content="Servidor" Command="{Binding CmdServidor}" Style="{DynamicResource InformButton}" Margin="0,5,0,5" MinWidth="160" Grid.Row="1">
+            <Button.Tag>
+                <ImageSource>../Imagenes/servidor1.png</ImageSource>
+            </Button.Tag>
+        </Button>
+        <Button Content="Otros ajustes" Command="{Binding CmdAjustes}" Style="{DynamicResource InformButton}" Margin="0,5,0,0" Grid.Row="3">
+            <Button.Tag>
+                <ImageSource>../Imagenes/panelcontrol1.png</ImageSource>
+            </Button.Tag>
+        </Button>
+        <Button Content="Reportes" Command="{Binding CmdReportes}" Style="{DynamicResource InformButton}" Margin="0,5,0,5" Grid.Row="2">
+            <Button.Tag>
+                <ImageSource>../Imagenes/hoja1.png</ImageSource>
+            </Button.Tag>
+        </Button>
+    </Grid>
+</Page>

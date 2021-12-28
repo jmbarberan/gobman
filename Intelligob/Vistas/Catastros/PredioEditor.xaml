@@ -1,0 +1,657 @@
+﻿<local:BaseDialogoVista x:Class="Intelligob.Escritorio.Vistas.PredioEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        xmlns:ReferenciaEntidades="clr-namespace:Intelligob.Cliente.Referencia;assembly=IntelligobCliente"
+        xmlns:ModeloVista="clr-namespace:Intelligob.Escritorio.ModeloVista"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"                
+        mc:Ignorable="d"
+        Title="Editor de predios" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
+    <Window.Resources/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Popup HorizontalAlignment="Left" VerticalAlignment="Top" IsOpen="{Binding PopDigitalizarAbierto}" PlacementTarget="{Binding ElementName=btFotoDigitalizar}" Placement="Bottom">
+            <StackPanel>
+                <local:Digitalizar DataContext="{Binding Digitalizador}"/>
+            </StackPanel>
+        </Popup>    
+        <Popup x:Name="popUrbanoCodigo" HorizontalAlignment="Left" VerticalAlignment="Top" IsOpen="{Binding PopCodigoUrbanoAbierto}" PlacementTarget="{Binding ElementName=txCodigo}" Placement="Bottom">
+            <Grid>                
+                <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Stroke="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>                        
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label FontSize="10" Content="Zona" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Row="1">
+                        <TextBox Text="{Binding Zona, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txuZona" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>    
+                    </AdornerDecorator>                    
+                    <Label FontSize="10" Content="Sector" Grid.Column="1" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="1" Grid.Row="1">
+                        <TextBox Text="{Binding Sector, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txuSector" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>
+                    </AdornerDecorator>                    
+                    <Label FontSize="10" Content="Manzana" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="2" Grid.Row="1">
+                        <TextBox Text="{Binding Manzana, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txuManzana" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>    
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Predio" Grid.Column="3" Grid.Row="0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="3" Grid.Row="1">
+                        <TextBox Text="{Binding Predio, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txuPredio" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>    
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Division" Grid.Column="4" Grid.Row="0"/>
+                    <TextBox Text="{Binding Division}" Style="{DynamicResource TeTextBoxBasico}" Name="txuDivision" Grid.Column="4" Grid.Row="1" MinHeight="24" MinWidth="45" Margin="0,0,10,0"/>
+                    <Button Command="{Binding CmdGuardarCodigoUrbano}" Name="btuCodigoGuardar" Grid.Row="1" Grid.Column="5" Content="Guardar"  MinHeight="24" MinWidth="80" HorizontalAlignment="Right" Width="80"/>
+                </Grid>
+                <Button Command="{Binding CmdCerrarCodigoUrbano}" Name="btuCerrar" Grid.Row="0" Grid.Column="5" Content="X" Background="#FFFD6161" FontWeight="SemiBold" Foreground="#FF6A2020" FontSize="8" MinWidth="17" VerticalAlignment="Top" Margin="0,5,5,0" HorizontalAlignment="Right"/>
+            </Grid>            
+        </Popup>
+        <Popup x:Name="popRuralCodigo" Width="auto" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" IsOpen="{Binding PopCodigoRuralAbierto}" PlacementTarget="{Binding ElementName=txCodigo}" Placement="Bottom">
+            <Grid>
+                <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Stroke="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label FontSize="10" Content="Zona" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Row="1">
+                        <TextBox Text="{Binding Zona, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txrZona" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Poligono" Grid.Column="1"/>
+                    <AdornerDecorator Grid.Column="1" Grid.Row="1">
+                        <TextBox Text="{Binding Poligono, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txrPoligono" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Predio" Grid.Column="2"/>
+                    <AdornerDecorator Grid.Column="2" Grid.Row="1">
+                        <TextBox Text="{Binding Predio, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource TeTextBoxBasico}" Name="txrPredio" MinHeight="24" MinWidth="45" Margin="0,0,5,0"/>    
+                    </AdornerDecorator>                    
+                    <Label FontSize="10" Content="Division" Grid.Column="3"/>
+                    <AdornerDecorator Grid.Column="3" Grid.Row="1">
+                        <TextBox Text="{Binding Division}" Style="{DynamicResource TeTextBoxBasico}" Name="txrDivision" MinHeight="24" MinWidth="45" Margin="0,0,10,0"/>    
+                    </AdornerDecorator>
+                    <Button Command="{Binding CmdGuardarCodigoRural}" Name="btrCodigoGuardar" Grid.Row="1" Grid.Column="7" Content="Guardar" HorizontalAlignment="Stretch" MinHeight="24" Width="80" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                </Grid>
+                <Button Command="{Binding CmdCerrarCodigoRural}" Name="btrCerrar" Grid.Row="0" Grid.Column="5" Content="X" Background="#FFFD6161" FontWeight="SemiBold" Foreground="#FF6A2020" FontSize="8" MinWidth="17" VerticalAlignment="Top" Margin="0,5,5,0" HorizontalAlignment="Right"/>
+            </Grid>
+        </Popup>
+        <Grid Grid.Column="0" Grid.Row="0" Margin="0,6,0,6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="cbxTipoPredio" SelectedIndex="{Binding TipoPredio, Mode=TwoWay}" MinWidth="120" MinHeight="24" Margin="10,2,5,2" Grid.Column="0" Grid.Row="0" TabIndex="0" VerticalAlignment="Center">
+                <TextBlock Text="Predio Urbano" Background="{x:Null}"/>
+                <TextBlock Text="Predio Rural" Background="{x:Null}"/>
+            </ComboBox>
+            <Label Content="Codigo Catastral" Margin="5,0,0,0" FontSize="12" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="{Binding MCodigoPrefijo}" Name="tbCodigoPrefijo" Margin="0,0,0,0" FontSize="12" Grid.Column="2" Grid.Row="0" FontWeight="Bold" VerticalAlignment="Center"/>
+            <AdornerDecorator Grid.Column="3">
+                <TextBox x:Name="txCodigo" IsReadOnly="True" Text="{Binding Codigo, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" MinHeight="24" MinWidth="180" Margin="5,0,0,0" Style="{DynamicResource TeTextBoxBasico}" TabIndex="1" VerticalAlignment="Center"/>
+            </AdornerDecorator>            
+            <Button Name="btCodigo" Command="{Binding CmdModificarCodigo}" Style="{DynamicResource BotonBarra}" MinWidth="30" Grid.Column="4" Grid.Row="4" Margin="5,2,5,2" ToolTip="Modificar el codigo del predio">
+                <Image Source="../Imagenes/pluma24.png" Height="24" Width="24" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+            </Button>
+            <Label Content="Nombre del inmueble" Margin="5,0,5,0" FontSize="12" Grid.Column="5" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding NombreInmueble, Mode=TwoWay}" x:Name="txNombreInmueble" MinHeight="24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,0,10,0" Grid.Column="6" Grid.Row="0" Style="{DynamicResource TeTextBoxBasico}" TabIndex="2" MinWidth="200"/>
+        </Grid>
+        <TabControl Grid.Row="1" TabStripPlacement="Bottom" x:Name="tabSecciones" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderThickness="0,1" Grid.ColumnSpan="2" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Margin="0,0,0,5">
+            <TabItem Header="Informacion basica">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="UBICACION" Grid.Row="0" Grid.Column="0" FontSize="12" Margin="3,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" FontWeight="Bold"/>
+                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Direccion" Margin="10,0,5,0" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox x:Name="txDireccion" Text="{Binding Direccion}" HorizontalAlignment="Stretch" MinHeight="24" VerticalAlignment="Center" Margin="5,0,10,5" Grid.Column="1" Grid.Row="0" Style="{DynamicResource TeTextBoxBasico}"/>
+                        <Label Content="Barrio | Parroquia" Margin="10,0,5,0" Grid.Column="0" Grid.Row="1"/>
+                        <TextBox x:Name="txUbicacion" Text="{Binding Ubicacion}" HorizontalAlignment="Stretch" MinHeight="24" VerticalAlignment="Center" Margin="5,5,10,0" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Style="{DynamicResource TeTextBoxBasico}"/>
+                    </Grid>
+                    <Label Content="INFRAESTRUCTURA" Grid.Row="3" Grid.Column="0" FontSize="12" Margin="3,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" FontWeight="Bold"/>
+                    <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" Orientation="Horizontal" FlowDirection="LeftToRight" MinHeight="24" VerticalAlignment="Center">
+                        <ToggleButton x:Name="tgPrElectricidad" IsChecked="{Binding PredioElectricidad}" Content="Servicio de Energia electrica" Margin="10,0,5,0" Style="{DynamicResource SlidingToggleButton}" MinHeight="24" VerticalAlignment="Top"/>
+                        <Label Content="Servicio de Agua potable" Margin="5,0,5,0"/>
+                        <AdornerDecorator>
+                            <ComboBox Name="cbPrAguaPotable" MinWidth="140" Margin="0,0,10,0" IsSynchronizedWithCurrentItem="True" VerticalAlignment="Top" MinHeight="24"
+                                  Style="{DynamicResource ComboBoxValido}"
+                                  SelectedItem="{Binding PredioAgua, Mode=TwoWay, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                                  ItemsSource="{Binding LPreAgua}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Path=Denominacion}" Width="140"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </AdornerDecorator>
+                        <Label Content="Servicio de Alcantarillado" Margin="5,0,5,0"/>
+                        <ComboBox x:Name="cbPrAlcantarillado" MinWidth="140" Margin="5,0,10,0"  IsSynchronizedWithCurrentItem="True" VerticalAlignment="Top" MinHeight="24"
+                                  SelectedItem="{Binding PredioAlcantarillado, Mode=TwoWay}"
+                                  ItemsSource="{Binding LPreAlcantarillado}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel> 
+                                        <TextBlock Text="{Binding Path=Denominacion}" Width="140"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                    <Label Content="SITUACION LEGAL" Grid.Row="5" Grid.Column="0" FontSize="12" Margin="3,0,0,0" Foreground="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" FontWeight="Bold"/>
+                    <StackPanel Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" Orientation="Horizontal" FlowDirection="LeftToRight">
+                        <Label Content="Clase de dominio" Margin="10,0,5,0" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="cbClaseDominio" MinWidth="160" Margin="5,0,10,5"  IsSynchronizedWithCurrentItem="True" VerticalAlignment="Top" MinHeight="24"
+                                  SelectedItem="{Binding ClaseDominio, Mode=TwoWay}"
+                                  ItemsSource="{Binding LPreDominio}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Label Content="Condicion de tenencia" Margin="5,0,5,0" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="cbTipoTenencia" MinWidth="160" Margin="5,0,10,5"  IsSynchronizedWithCurrentItem="True" VerticalAlignment="Top" MinHeight="24"
+                                  SelectedItem="{Binding CondicionTenencia, Mode=TwoWay}"
+                                  ItemsSource="{Binding LPreCondicionTenencia}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ToggleButton x:Name="tgPrEscritura" IsChecked="{Binding Escrituras}" Content="Tiene escrituras" Margin="5,0,0,5" Style="{DynamicResource SlidingToggleButton}" VerticalAlignment="Top" MinHeight="24"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="4" Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+                        <Label Content="PROPIETARIO(S)" Margin="5,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                        <Image Source="../Imagenes/invalido.png" Visibility="{Binding PropietariosValido}" Height="24" Width="24" VerticalAlignment="Center" HorizontalAlignment="Left" Stretch="None" ToolTip="Debe seleccionar al menos un contribuyente"/>
+                        <Label Content="Tipo de asociacion" Margin="5,0,5,0" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbTipoPropiedad" MinWidth="160" SelectedIndex="0" MinHeight="24" Margin="5,0,10,0" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True"
+                                  SelectedItem="{Binding TipoAsociacion, Mode=TwoWay}"
+                                  ItemsSource="{Binding LPreTipoAsociacion}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Button Command="{Binding CmdContribuyenteAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btCoAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,0" ToolTip="Seleccionar un Contribuyente registrado">
+                            <Image Height="24" Width="24" Source="../Imagenes/lupa24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                        <Button Command="{Binding CmdContribuyenteCrear}" Grid.Column="0" Grid.Row="0" x:Name="btCoCrear" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,0" ToolTip="Registrar un Contribuyente nuevo">
+                            <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                        <Button Command="{Binding CmdContribuyenteModificar}" Grid.Column="0" Grid.Row="0" x:Name="btCoModificar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,0" ToolTip="Modificar Contribuyente seleccionado">
+                            <Image Height="24" Width="24" Source="../Imagenes/pluma24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                        <Button Command="{Binding CmdContribuyenteRemover}" Grid.Column="0" Grid.Row="0" x:Name="btCoEliminar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,0" ToolTip="Quitar de esta lista el Contribuyente seleccionado">
+                            <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                    </StackPanel>
+                    <DataGrid Name="gdPropietarios" Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" MinHeight="160" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" CanUserAddRows="False" CanUserDeleteRows="False"
+                              AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+                               ItemsSource="{Binding LPropietarios, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+                              SelectedItem="{Binding PropietarioSeleccionado}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=ContribuyenteNav.Nombres}" Header="Nombres" Width="360"/>
+                            <DataGridTextColumn Binding="{Binding Path=ContribuyenteNav.PersoneriaNav.Denominacion}" Header="Personeria" Width="160"/>
+                            <DataGridTextColumn Binding="{Binding Path=ContribuyenteNav.Cedula}" Header="Cedula" Width="160"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Caracteristcas del terreno">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="CARACTERISTICAS FORMALES" Margin="3,5,0,5" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <Grid Grid.Column="0" Grid.Row="1" Margin="10,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width=" *"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>                            
+                        </Grid.RowDefinitions>
+                        <Label Content="Superficie" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                        <Label Content="Frente" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                        <Label Content="Fondo" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                        <Label Content="Lados" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                        <Label Content="Angulos rectos" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>
+                        <Label Content="Perimetro" Grid.Row="5" Grid.Column="0" VerticalAlignment="Top" Margin="0,0,0,5"/>                       
+                        <TextBox x:Name="txSuperficie" Text="{Binding ElementName=gdParcelas, Path=SelectedItem.Superficie}" MinHeight="24" Grid.Column="1" Grid.Row="0" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txFrente" Text="{Binding TerrenoFrente}" MinHeight="24" Grid.Column="1" Grid.Row="1" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txFondo" Text="{Binding TerrenoFondo}" MinHeight="24" Grid.Column="1" Grid.Row="2" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txLados" Text="{Binding TerrenoNumeroLados}" MinHeight="24" Grid.Column="1" Grid.Row="3" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txAngulos" Text="{Binding TerrenoNumeroAngulos}" MinHeight="24" Grid.Column="1" Grid.Row="4" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txPerimetro" Text="{Binding ElementName=gdParcelas, Path=SelectedItem.Perimetro}" MinHeight="24" Grid.Column="1" Grid.Row="5" Style="{DynamicResource TeTextBoxBasico}" Margin="5,0,5,5" VerticalAlignment="Center"/>                        
+                    </Grid>                    
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,5">
+                        <Label Content="LONGITUD DE FRENTES" Margin="3,0,0,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <Button Command="{Binding CmdFrenteAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btFrAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="3,0,3,0" ToolTip="Agregar Frente al terreno">
+                            <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Button>
+                        <Button Command="{Binding CmdFrenteRemover}" Grid.Column="0" Grid.Row="0" x:Name="btFrRemover" Style="{StaticResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="3,0,0,0" ToolTip="Quitar frente al terreno">
+                            <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                    </StackPanel>
+                    <DataGrid Name="gdFrentes" Grid.Row="1" Grid.Column="1" Margin="5,0,5,0" CanUserAddRows="False"
+                            ItemsSource="{Binding LFrentes}" SelectedItem="{Binding FrenteSeleccionado}" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"
+                            AutoGenerateColumns="False" SelectionMode="Single" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Frente}" Header="No." Width="40"/>
+                            <DataGridTextColumn Binding="{Binding Superficie}" Header="Longitud" Width="140"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Label Content="LINDEROS Y MESURAS" Margin="3,5,10,5" FontWeight="Bold" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+                    <Grid Grid.Row="1" Grid.Column="2" Height="auto">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Norte" Grid.Row="0" Grid.Column="0" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Sur" Grid.Row="1" Grid.Column="0" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="este" Grid.Row="2" Grid.Column="0" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Oeste" Grid.Row="3" Grid.Column="0" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Ext." Grid.Row="0" Grid.Column="2" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Ext." Grid.Row="1" Grid.Column="2" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Ext." Grid.Row="2" Grid.Column="2" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <Label Content="Ext." Grid.Row="3" Grid.Column="2" Margin="10,0,5,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <TextBox Name="txLinderoNorte" Text="{Binding LinderoNorteNombres}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="0" Grid.Column="1" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txLinderoSur" Text="{Binding LinderoSurNombres}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="1" Grid.Column="1" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txLinderoEste" Text="{Binding LinderoEsteNombres}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="2" Grid.Column="1" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txLinderoOeste" Text="{Binding LinderoOesteNombres}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="3" Grid.Column="1" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txExtLinderoNorte" Text="{Binding LinderoNorteExtension}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="0" Grid.Column="3" Margin="5,0,5,5" MinWidth="40" VerticalAlignment="Center"/>
+                        <TextBox Name="txExtLinderoSur" Text="{Binding LinderoSurExtension}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="1" Grid.Column="3" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txExtLinderoEste" Text="{Binding LinderoEsteExtension}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="2" Grid.Column="3" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txExtLinderoOeste" Text="{Binding LinderoOesteExtension}" Style="{DynamicResource TeTextBoxBasico}" MinHeight="24" Grid.Row="3" Grid.Column="3" Margin="5,0,5,5" VerticalAlignment="Center"/>
+                        <Grid Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4" Margin="0,5,5,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Localizacion en la manzana" Grid.Row="0" Grid.Column="0" FontSize="12" Margin="10,0,5,0" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbLocManzana" Grid.Row="0" Grid.Column="1" MinWidth="140"  IsSynchronizedWithCurrentItem="True" VerticalAlignment="Center" MinHeight="24" Margin="0,0,0,5"
+                                  SelectedItem="{Binding TerrenoLocalizacionManzana, Mode=TwoWay}"
+                                      ItemsSource="{Binding LTerLocManzana}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <Label Content="Nivel con relacion a la razante" Grid.Row="1" Grid.Column="0" FontSize="12" Margin="10,0,5,0" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbRazante" Grid.Row="1" Grid.Column="1" MinWidth="140" IsSynchronizedWithCurrentItem="True"  VerticalAlignment="Center" MinHeight="24"
+                                  SelectedItem="{Binding TerrenoNivelRazante, Mode=TwoWay}"
+                                      ItemsSource="{Binding LTerNivelRazante}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="0" Margin="10,10,5,0" VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Calidad del suelo" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbCalidadSuelo" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" MinWidth="140" MinHeight="24"
+                                  SelectedItem="{Binding TerrenoCalidadSuelo, Mode=TwoWay}"
+                                  ItemsSource="{Binding LTerCalidadSuelo}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,10,0,0">
+                        <Label Content="Material de la via de acceso" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cbMaterialVia" MinWidth="140"  IsSynchronizedWithCurrentItem="True" VerticalAlignment="Center" MinHeight="24"
+                                  SelectedItem="{Binding ViaMaterial, Mode=TwoWay}"
+                                  ItemsSource="{Binding LPreViaMaterial}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+                    <Label Grid.Row="3" Grid.Column="0" Content="SERVICIOS EN LA VIA" Margin="3,6,0,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <StackPanel Orientation="Vertical" Grid.Row="4" Margin="10,0,0,5" HorizontalAlignment="Left">
+                        <ToggleButton x:Name="tgViaAlumbrado" IsChecked="{Binding ViaAlumbrado}"  Content="Alumbrado publico" HorizontalContentAlignment="Right" Style="{DynamicResource SlidingToggleButton}" MinHeight="24" Margin="0,0,0,5"/>
+                        <ToggleButton x:Name="tgViaAceras" IsChecked="{Binding ViaAceras}"  Content="Aceras y bordillos" HorizontalContentAlignment="Right" Style="{DynamicResource SlidingToggleButton}" MinHeight="24" Margin="0,5,0,5"/>
+                        <ToggleButton x:Name="tgViaCanalizacion" IsChecked="{Binding ViaAlcantarillado}"  Content="Canalizacion de aguas lluvias" HorizontalContentAlignment="Right" Style="{DynamicResource SlidingToggleButton}" MinHeight="24" Margin="0,5,0,5"/>
+                    </StackPanel>
+                    <Label Grid.Row="3" Grid.Column="1" Content="FACTORES DE VALORACION" Margin="3,6,0,0" FontWeight="Bold" VerticalAlignment="Center" Visibility="{Binding VisibilidadRustico}"/>
+                    <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" Visibility="{Binding VisibilidadRustico}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Clase de tierra" VerticalAlignment="Center" Margin="0,0,0,5"/>
+                        <Label Content="Zona homogenea" Grid.Row="1" VerticalAlignment="Center" Margin="0,5,0,0"/>
+                        <xctk:IntegerUpDown Value="{Binding ElementName=gdParcelas, Path=SelectedItem.ClaseTierra}" Grid.Row="0" Grid.Column="1" Margin="3,0,0,5" Minimum="1" Maximum="8" MinWidth="80" MinHeight="24" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                        <xctk:IntegerUpDown Value="{Binding ElementName=gdParcelas, Path=SelectedItem.ZonaHomogenea}" Grid.Row="1" Grid.Column="1" Margin="3,5,0,0" Minimum="1" Maximum="3" MinWidth="80" MinHeight="24" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2"  Margin="3,6,0,0" Visibility="{Binding VisibilidadRustico}">
+                        <Label  Content="DESCRIPCION DE PARCELAS" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <Button Command="{Binding CmdTerrenoAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btTerAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="3,0,3,0" ToolTip="Agregar Parcela al terreno">
+                            <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Button>
+                        <Button Command="{Binding CmdTerrenoQuitar}" Grid.Column="0" Grid.Row="0" x:Name="btTerRemover" Style="{StaticResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="3,0,0,0" ToolTip="Quitar Parcela del terreno">
+                            <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                        </Button>
+                    </StackPanel>
+                    <DataGrid Name="gdParcelas" Grid.Row="4" Grid.Column="2" Margin="0,0,5,5" Visibility="{Binding VisibilidadRustico}" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"                            
+                            AutoGenerateColumns="False" SelectionMode="Single" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" 
+                            VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False"
+                            ItemsSource="{Binding LTerrenos}" SelectedItem="{Binding ETerreno}" ColumnWidth="*">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Superficie" Binding="{Binding Superficie}" MinWidth="130" Width="0.40*"/>
+                            <DataGridTextColumn Header="Clase de tierra" Binding="{Binding ClaseTierra}" Width="0.30*"/>
+                            <DataGridTextColumn Header="Zona homogenea" Binding="{Binding ZonaHomogenea}" Width="0.30*"/>
+                        </DataGrid.Columns>    
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Descripcion de las edificaciones">
+                <Grid Margin="0,0,0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Margin="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="BLOQUES Y PISOS" MinHeight="24" Margin="10,0,0,2" Grid.Row="0" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <ComboBox x:Name="cbTipoInserto" MinWidth="160" Margin="10,0,5,0" SelectedIndex="{Binding InsPisoBloque}" VerticalAlignment="Center" MinHeight="24">
+                                <TextBlock Text="Insertar Piso" Background="{x:Null}"/>
+                                <TextBlock Text="Insertar Bloque" Background="{x:Null}"/>
+                            </ComboBox>
+                            <Button Command="{Binding CmdBloqueAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btBlqAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,0" ToolTip="Agregar bloque o piso">
+                                <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                            <Button Command="{Binding CmdBloqueRemover}" Grid.Column="0" Grid.Row="0" x:Name="btBlqRemover" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,0,0" ToolTip="Quitar bloque o piso seleccionado">
+                                <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                        </StackPanel>                        
+                        <TreeView Name="tvBloques" MinHeight="140" Grid.Row="2" Margin="10,5,0,0" FontSize="14" 
+                                  ItemsSource="{Binding LBloques}"
+                                  SelectedItemChanged="tvBloques_SelectedItemChanged">
+                            <TreeView.Resources>
+                                <HierarchicalDataTemplate DataType="{x:Type ReferenciaEntidades:PredioBloqueDto}" ItemsSource="{Binding PisosLista}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="../Imagenes/bloque.png" Margin="0,0,5,0"/>
+                                        <TextBlock Text="{Binding Descripcion}"/>
+                                        <TextBlock Text=" (" Foreground="RoyalBlue"/>
+                                        <TextBlock Text="{Binding PisosLista.Count}" Foreground="RoyalBlue"/>
+                                        <TextBlock Text=" Piso[s])" Foreground="RoyalBlue"/>
+                                    </StackPanel>                                    
+                                </HierarchicalDataTemplate>
+                                <DataTemplate DataType="{x:Type ReferenciaEntidades:PredioPisoDto}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="../Imagenes/piso.png" Margin="0,0,5,0"/>
+                                        <TextBlock Text="{Binding Descripcion}"/>
+                                        <TextBlock Text=" (" Foreground="Green"/>
+                                        <TextBlock Text="{Binding Superficie}" Foreground="Green"/>
+                                        <TextBlock Text=" mts2)" Foreground="Green"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </TreeView.Resources>
+                        </TreeView>
+                        <Label Content="ATRIBUTOS DEL PISO" Margin="10,0,0,0" Grid.Row="3" FontWeight="Bold"/>
+                        <Grid Grid.Row="4" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Descripcion" Grid.Column="0" Grid.Row="0" Margin="10,0,0,0"/>
+                            <Label Content="Edad de la construccion" Grid.Column="0" Grid.Row="1" Margin="10,0,0,0"/>
+                            <Label Content="Superficie del piso" Grid.Column="0" Grid.Row="2" Margin="10,0,0,0"/>
+                            <Label Content="Estado de conservacion" Grid.Column="0" Grid.Row="3" Margin="10,0,0,0"/>
+                            <Label Content="Observaciones" Grid.Column="0" Grid.Row="4" Margin="10,0,0,0"/>
+                            <TextBox Name="txPisoDescripcion" Text="{Binding ElementName=tvBloques, Path=SelectedItem.Descripcion, Mode=TwoWay}" MinHeight="24" Grid.Row="0" Grid.Column="1" Margin="5,0,0,5" Style="{DynamicResource TeTextBoxBasico}" VerticalAlignment="Center"/>
+                            <TextBox Name="txEdadConstruccion" Text="{Binding ElementName=tvBloques, Path=SelectedItem.EdadConstruccion, Mode=TwoWay}" IsEnabled="{Binding EsPisoSeleccionado}" MinHeight="24" Grid.Row="1" Grid.Column="1" Margin="5,0,0,5" Style="{DynamicResource TeTextBoxBasico}" VerticalAlignment="Center"/>
+                            <TextBox Name="txPisoSuperficie" Text="{Binding ElementName=tvBloques, Path=SelectedItem.Superficie, Mode=TwoWay}" IsEnabled="{Binding EsPisoSeleccionado}" MinHeight="24" Grid.Row="2" Grid.Column="1" Margin="5,0,0,5" Style="{DynamicResource TeTextBoxBasico}" VerticalAlignment="Center"/>
+                            <ComboBox Name="cbPisoConservacion" IsEnabled="{Binding EsPisoSeleccionado}" Grid.Column="1" Grid.Row="3" Margin="5,0,0,0" VerticalAlignment="Center" MinHeight="24"
+                                  ItemsSource="{Binding LPisoConservacion}"                                  
+                                  SelectedItem="{Binding ElementName=tvBloques, Path=SelectedItem.ConservacionNav, Mode=TwoWay}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Denominacion}" Width="140"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                            <TextBox Name="txPisoObserva" Text="{Binding ElementName=tvBloques, Path=SelectedItem.Observaciones, Mode=TwoWay}" IsEnabled="{Binding EsPisoSeleccionado}" MinHeight="24" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0,0,5" Style="{DynamicResource TeTextBoxBasico}" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="SELECCION DE COMPONENTES" FontSize="12" Margin="10,0,10,0" Grid.Row="0" Height="24" FontWeight="Bold"/>
+                        <TreeView Name="tvConsComponentes" FontSize="16" Height="360" Width="240" Grid.Row="1" Margin="15,5,10,5" 
+                                  ItemsSource="{Binding LComponentes}" SelectedItemChanged="tvConsComponentes_SelectedItemChanged">
+                            <TreeView.Resources>
+                                <HierarchicalDataTemplate DataType="{x:Type ModeloVista:ConstruccionPlantilla}" ItemsSource="{Binding Componentes}">
+                                    <TextBlock Text="{Binding Denominacion}"/>
+                                </HierarchicalDataTemplate>
+                                <HierarchicalDataTemplate DataType="{x:Type ModeloVista:ConstruccionComponente}" ItemsSource="{Binding Elementos}">
+                                    <TextBlock Text="{Binding Denominacion}"/>
+                                </HierarchicalDataTemplate>
+                                <DataTemplate DataType="{x:Type ModeloVista:ConstruccionElemento}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="../Imagenes/bolagris.png" Margin="0,0,5,0"/>
+                                        <TextBlock Text="{Binding Elemento.Denominacion}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </TreeView.Resources>
+                        </TreeView>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical" VerticalAlignment="Center" Height="80">
+                            <Button Command="{Binding CmdComponenteAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btConsAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,10,5,10" ToolTip="Agregar Elemento de construccion">
+                                <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                            <Button Command="{Binding CmdComponenteRemover}" Grid.Column="0" Grid.Row="0" x:Name="btConsRemover" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,5,10" ToolTip="Quitar componente de construccion">
+                                <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>    
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="COMPONENTES DE LA EDIFICACION" MinHeight="24" Margin="10,0,0,0" Grid.Row="0" FontWeight="Bold"/>
+                        <DataGrid Name="gdConComponentes" IsEnabled="{Binding EsPisoSeleccionado}" Margin="10,0,10,6" Grid.Row="1" Width="240" AutoGenerateColumns="False" SelectionMode="Single" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"
+                            ItemsSource="{Binding Mode=OneWay, Path=PisoSeleccionado.ConstruccionesLista}" IsReadOnly="True"  Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"
+                                  SelectedItem="{Binding ConstruccionSeleccionada}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Clase}" Header="Elemento" MinWidth="120"/>
+                                <DataGridTextColumn Binding="{Binding ConsElementoNav.Denominacion}" Header="Constitucion" MinWidth="140"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Imagenes">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal" Grid.Column="0" Width="auto" HorizontalAlignment="Left" Margin="0,5,0,5">
+                            <ComboBox x:Name="cbFotos" Width="160" Grid.Column="1" Grid.Row="6" Margin="5,0,5,0" VerticalAlignment="Center" MinHeight="24"
+                                  DisplayMemberPath="Descripcion" ItemsSource="{Binding LFotos}" SelectedItem="{Binding FotoSeleccionada}"/>                            
+                            <Separator Margin="0" Height="2" BorderThickness="1,0,0,0" Width="24" RenderTransformOrigin="0.5,0.5" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+                                <Separator.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Separator.RenderTransform>
+                            </Separator>
+                            <Button Command="{Binding CmdFotoAgregar}" Grid.Column="0" Grid.Row="0" x:Name="btFotoAgregar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="10,0,5,0" ToolTip="Agregar foto">
+                                <Image Height="24" Width="24" Source="../Imagenes/agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                            <Button Command="{Binding CmdFotoRemover}" Grid.Column="0" Grid.Row="0" x:Name="btFotoRemover" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,10,0" ToolTip="Quitar foto">
+                                <Image Height="24" Width="24" Source="../Imagenes/remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                            <Button Command="{Binding CmdFotoDigitalizar}" Grid.Column="0" Grid.Row="0" x:Name="btFotoDigitalizar" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,10,0" ToolTip="Escanear una imagen">
+                                <Image Height="24" Width="24" Source="../Imagenes/scanner24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{DynamicResource ImagenBoton}"/>
+                            </Button>
+                            <Separator Margin="0" Height="2" BorderThickness="1,0,0,0" Width="24" RenderTransformOrigin="0.5,0.5" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+                                <Separator.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Separator.RenderTransform>
+                            </Separator>
+                        </StackPanel>
+                        <Label Content="Descripcion" Grid.Column="1" FontWeight="Bold" Margin="10,0,5,0" MinHeight="28" VerticalAlignment="Center"/>
+                        <TextBox Name="txFotoDescripcion" Text="{Binding Mode=TwoWay, Path=FotoSeleccionada.Descripcion}" Grid.Column="2" MinHeight="24" VerticalAlignment="Center" Margin="0,0,10,0"  Style="{DynamicResource TeTextBoxBasico}"/>
+                    </Grid>
+                    <Rectangle Grid.Row="1" Height="auto" Width="auto" Fill="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Stroke="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}"/>
+                    <Image Name="imFoto" Source="{Binding Mode=OneWay, Path=FotoSeleccionada.Foto}" Grid.Row="1" MinHeight="340" MaxHeight="540" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Uniform"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StackPanel Grid.Row="2" FlowDirection="RightToLeft" Orientation="Horizontal" Margin="0,5,10,10">
+            <!--Button Command="{Binding CmdCancelar}" x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Right" MinHeight="24" Margin="0,0,5,0" MinWidth="90"/-->
+            <Button Command="{Binding CmdGuardar}" x:Name="btGuardar"  Content="Guardar" HorizontalAlignment="Right" MinHeight="24" Margin="0,0,0,0" MinWidth="90"/>
+        </StackPanel>
+    </Grid>
+</local:BaseDialogoVista>

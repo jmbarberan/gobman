@@ -1,0 +1,34 @@
+﻿<Application x:Class="Intelligob.Escritorio.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_Startup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Plantillas/ToggleButton.xaml"/>
+                <ResourceDictionary Source="Plantillas/TextBoxBasico.xaml"/>
+                <ResourceDictionary Source="Plantillas/BotonBarra.xaml"/>
+                <ResourceDictionary Source="Plantillas/BotonMenu.xaml"/>
+                <ResourceDictionary Source="Plantillas/BotonPrincipal.xaml"/>
+                <ResourceDictionary Source="Plantillas/ListasDiccionario.xaml"/>
+                <!--ResourceDictionary Source="Vistas/Imagenes/Vectores.xaml"/-->
+                <ResourceDictionary Source="Plantillas/EstiloReporteVisor.xaml"/>
+                <ResourceDictionary Source="Plantillas/FechaDiccionario.xaml"/>
+                <ResourceDictionary Source="Plantillas/CuadriculaDiccionario.xaml"/>
+                <ResourceDictionary Source="Themes/Windows8/System.Windows.xaml"/>
+                <ResourceDictionary Source="Themes/Windows8/Telerik.ReportViewer.Wpf.xaml"/>
+                <ResourceDictionary Source="Themes/Windows8/Telerik.Windows.Controls.Input.xaml"/>
+                <ResourceDictionary Source="Themes/Windows8/Telerik.Windows.Controls.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.Data.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.DataVisualization.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.GridView.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.Pivot.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.PivotFieldList.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Controls.PivotFieldList.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Documents.xaml"/>
+                <ResourceDictionary Source="Themes/Office2013/Telerik.Windows.Documents.Proofing.xaml"/>
+                <ResourceDictionary Source="Plantillas/PivotDiccionario.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

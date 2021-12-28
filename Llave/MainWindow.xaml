@@ -1,0 +1,8 @@
+﻿<Window x:Class="Llave.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Llave" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Button Name="btComando" Content="Activar" MinWidth="90" MinHeight="24" Click="btComando_Click"/>
+    </Grid>
+</Window>

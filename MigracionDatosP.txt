@@ -1,0 +1,2928 @@
+
+IBE: Starting restore. Current time: 10:27:52 a. m.
+gbak:opened file E:\Desarrollo\Proyectos\Intelligob\Backup\unigob.fbk 
+gbak:transportable backup -- data in XDR format 
+gbak:		backup file is compressed 
+gbak:created database unigob, page_size 4096 bytes 
+gbak:started transaction 
+gbak:restoring domain D_FOTO 
+gbak:restoring domain D_TEXTO 
+gbak:restoring domain RDB$864 
+gbak:restoring domain RDB$865 
+gbak:restoring domain RDB$866 
+gbak:restoring domain RDB$867 
+gbak:restoring domain RDB$877 
+gbak:restoring domain RDB$878 
+gbak:restoring domain RDB$879 
+gbak:restoring domain RDB$880 
+gbak:restoring domain RDB$881 
+gbak:restoring domain RDB$882 
+gbak:restoring domain RDB$883 
+gbak:restoring domain RDB$884 
+gbak:restoring domain RDB$885 
+gbak:restoring domain RDB$886 
+gbak:restoring domain RDB$891 
+gbak:restoring domain RDB$892 
+gbak:restoring domain RDB$889 
+gbak:restoring domain RDB$890 
+gbak:restoring domain RDB$1030 
+gbak:restoring domain RDB$829 
+gbak:restoring domain RDB$830 
+gbak:restoring domain RDB$1032 
+gbak:restoring domain RDB$831 
+gbak:restoring domain RDB$1033 
+gbak:restoring domain RDB$832 
+gbak:restoring domain RDB$1034 
+gbak:restoring domain RDB$833 
+gbak:restoring domain RDB$1035 
+gbak:restoring domain RDB$834 
+gbak:restoring domain RDB$1036 
+gbak:restoring domain RDB$835 
+gbak:restoring domain RDB$1037 
+gbak:restoring domain RDB$836 
+gbak:restoring domain RDB$1038 
+gbak:restoring domain RDB$922 
+gbak:restoring domain RDB$1039 
+gbak:restoring domain RDB$923 
+gbak:restoring domain RDB$924 
+gbak:restoring domain RDB$925 
+gbak:restoring domain D_BLOB 
+gbak:restoring domain RDB$926 
+gbak:restoring domain RDB$927 
+gbak:restoring domain RDB$928 
+gbak:restoring domain RDB$929 
+gbak:restoring domain RDB$930 
+gbak:restoring domain RDB$986 
+gbak:restoring domain RDB$931 
+gbak:restoring domain RDB$932 
+gbak:restoring domain RDB$933 
+gbak:restoring domain RDB$934 
+gbak:restoring domain RDB$935 
+gbak:restoring domain RDB$936 
+gbak:restoring domain RDB$937 
+gbak:restoring domain RDB$938 
+gbak:restoring domain D_CEDULA 
+gbak:restoring domain D_CODIGO 
+gbak:restoring domain D_COMENTARIOS 
+gbak:restoring domain D_ESTADO 
+gbak:restoring domain D_FECHA 
+gbak:restoring domain D_HORA 
+gbak:restoring domain D_ID 
+gbak:restoring domain D_INDICE 
+gbak:restoring domain D_NOMBRE 
+gbak:restoring domain D_VALOR 
+gbak:    committing metadata 
+gbak:restoring table COBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column FECHA 
+gbak:    restoring column FORMA_PAGO 
+gbak:    restoring column FORMA_PAGO_ATRIBUTOS 
+gbak:    restoring column USUARIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONTRIBUYENTES 
+gbak:committing metadata for table COBROS 
+gbak:restoring table AUTORIZACIONES 
+gbak:    restoring column FECHA_EJECUCION 
+gbak:    restoring column ID 
+gbak:    restoring column USUARIO 
+gbak:    restoring column FUNCION 
+gbak:    restoring column COMANDO 
+gbak:    restoring column FECHA_EMISION 
+gbak:    restoring column SUPERVISOR 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table AUTORIZACIONES 
+gbak:restoring table COEFICIENTES 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column INDICE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table COEFICIENTES 
+gbak:restoring table CONSTRUCCION_COMPONENTES 
+gbak:    restoring column ID 
+gbak:    restoring column MODELO 
+gbak:    restoring column ELEMENTO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table CONSTRUCCION_COMPONENTES 
+gbak:restoring table SERVICIOS 
+gbak:    restoring column LECTURA 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column SECTOR 
+gbak:    restoring column CATEGORIA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column TIPO 
+gbak:    restoring column FECHA 
+gbak:    restoring column DENOMINACION 
+gbak:    restoring column DIRECCION 
+gbak:committing metadata for table SERVICIOS 
+gbak:restoring table CONSTRUCCION_MODELOS 
+gbak:    restoring column PRECIO 
+gbak:    restoring column ID 
+gbak:    restoring column ESTRUCTURA 
+gbak:    restoring column INDICE 
+gbak:    restoring column PISOS 
+gbak:    restoring column PISOS_DESDE 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table CONSTRUCCION_MODELOS 
+gbak:restoring table CONTRIBUYENTES_CODIGOS 
+gbak:    restoring column ID 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column RUBRO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CATASTRO 
+gbak:    restoring column INDICE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DESCRIPCION 
+gbak:committing metadata for table CONTRIBUYENTES_CODIGOS 
+gbak:restoring table FUNCIONES 
+gbak:    restoring column ID 
+gbak:    restoring column GRUPO 
+gbak:    restoring column MODULO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table FUNCIONES 
+gbak:restoring table CONTRIBUYENTES_REBAJAS 
+gbak:    restoring column FRACCION 
+gbak:    restoring column ID 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column AÑO 
+gbak:    restoring column REBAJA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PERSONAL 
+gbak:committing metadata for table CONTRIBUYENTES_REBAJAS 
+gbak:restoring table FUNCIONES_COMANDOS 
+gbak:    restoring column ID 
+gbak:    restoring column FUNCION 
+gbak:    restoring column COMANDO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table FUNCIONES_COMANDOS 
+gbak:restoring table CONVENIOS 
+gbak:    restoring column VALOR 
+gbak:    restoring column PAGOS 
+gbak:    restoring column ID 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column DIVIDENDOS 
+gbak:    restoring column EMISIONES 
+gbak:    restoring column FECHA_REGISTRO 
+gbak:    restoring column FECHA_TERMINACION 
+gbak:    restoring column FECHA_EMISION 
+gbak:    restoring column ESTADO 
+gbak:    restoring column TIPO 
+gbak:    restoring column NUMERO 
+gbak:committing metadata for table CONVENIOS 
+gbak:restoring table CONVENIOS_TRANSACCIONES 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column CONVENIO 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column TRANSACCION 
+gbak:committing metadata for table CONVENIOS_TRANSACCIONES 
+gbak:restoring table PLANILLAS 
+gbak:    restoring column TOTAL 
+gbak:    restoring column PAGOS 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column CONVENIOS 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column MES 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column SERVICIO 
+gbak:    restoring column FECHA_EMISION 
+gbak:    restoring column FECHA_CANCELACION 
+gbak:    restoring column USUARIO 
+gbak:    restoring column COMENTARIOS 
+gbak:    restoring column NUMERO 
+gbak:    restoring column ESPECIE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONTRIBUYENTES 
+gbak:    restoring column SOPORTE_NUMERO 
+gbak:committing metadata for table PLANILLAS 
+gbak:restoring table PLANILLAS_ATRIBUTOS 
+gbak:    restoring column VALOR_D 
+gbak:    restoring column VALOR_B 
+gbak:    restoring column ID 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column ATRIBUTO 
+gbak:    restoring column TIPO 
+gbak:    restoring column VALOR_I 
+gbak:    restoring column VALOR_C 
+gbak:    restoring column VALOR_F 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table PLANILLAS_ATRIBUTOS 
+gbak:restoring table PLANILLAS_RUBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column PAGOS 
+gbak:    restoring column ID 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column RUBRO 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column ESTADO 
+gbak:    restoring column REFERENCIA 
+gbak:committing metadata for table PLANILLAS_RUBROS 
+gbak:restoring table PAPELERA_ATRIBUTOS 
+gbak:    restoring column VALOR_D 
+gbak:    restoring column VALOR_B 
+gbak:    restoring column ID 
+gbak:    restoring column PAPELERA 
+gbak:    restoring column ATRIBUTO 
+gbak:    restoring column TIPO 
+gbak:    restoring column VALOR_I 
+gbak:    restoring column VALOR_C 
+gbak:    restoring column VALOR_F 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PAPELERA_ATRIBUTOS 
+gbak:restoring table PREDIOS_BASE 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column AVALUO_TERRENO 
+gbak:    restoring column AVALUO_CONSTRUCCION 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column FORMATO_CODIGO 
+gbak:    restoring column MODO_PROPIEDAD 
+gbak:    restoring column TIPO_PROPIEDAD 
+gbak:    restoring column ESCRITURA 
+gbak:    restoring column OBSERVACIONES 
+gbak:    restoring column DOMINIO 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column VIA_ACCESIBILIDAD 
+gbak:    restoring column VIA_MATERIAL 
+gbak:    restoring column VIA_ACERAS 
+gbak:    restoring column VIA_ALCANTARILLADO 
+gbak:    restoring column VIA_ALUMBRADO 
+gbak:    restoring column PREDIO_AGUA 
+gbak:    restoring column PREDIO_ELECTRICIDAD 
+gbak:    restoring column PREDIO_ALCANTARILLADO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column REGISTRO 
+gbak:    restoring column UBICACION 
+gbak:    restoring column NOMBRE_INMUEBLE 
+gbak:committing metadata for table PREDIOS_BASE 
+gbak:restoring table RUBROS_PARAMETROS 
+gbak:    restoring column ID 
+gbak:    restoring column RUBRO 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column TIPO 
+gbak:    restoring column CATASTRO 
+gbak:    restoring column CAMPO 
+gbak:committing metadata for table RUBROS_PARAMETROS 
+gbak:restoring table PREDIOS_BLOQUES 
+gbak:    restoring column AVALUO 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column BLOQUE 
+gbak:    restoring column DESCRIPCION 
+gbak:committing metadata for table PREDIOS_BLOQUES 
+gbak:restoring table PREDIOS_CONSTRUCCION 
+gbak:    restoring column ID 
+gbak:    restoring column PISO 
+gbak:    restoring column ELEMENTO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CLASE 
+gbak:committing metadata for table PREDIOS_CONSTRUCCION 
+gbak:restoring table PREDIOS_FOTOS 
+gbak:    restoring column FOTO 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column INDICE 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PREDIOS_FOTOS 
+gbak:restoring table PREDIOS_FRENTES 
+gbak:    restoring column SUPERFICIE 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column FRENTE 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PREDIOS_FRENTES 
+gbak:restoring table PREDIOS_PISOS 
+gbak:    restoring column SUPERFICIE 
+gbak:    restoring column SUPERFICIE_COMUN 
+gbak:    restoring column ID 
+gbak:    restoring column BLOQUE 
+gbak:    restoring column PISO 
+gbak:    restoring column EDAD_CONSTRUCCION 
+gbak:    restoring column CONSERVACION 
+gbak:    restoring column OBSERVACIONES 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column DIRECCION 
+gbak:committing metadata for table PREDIOS_PISOS 
+gbak:restoring table PREDIOS_TABLAS 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column TABLA 
+gbak:    restoring column CLAVE 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PREDIOS_TABLAS 
+gbak:restoring table REBAJAS 
+gbak:    restoring column FRACCION 
+gbak:    restoring column ID 
+gbak:    restoring column COMENTARIOS 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table REBAJAS 
+gbak:restoring table REBAJAS_RUBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column DENOMINADOR 
+gbak:    restoring column ID 
+gbak:    restoring column REBAJA 
+gbak:    restoring column RUBRO 
+gbak:    restoring column TIPO 
+gbak:    restoring column PERSONAL 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table REBAJAS_RUBROS 
+gbak:restoring table RUBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column DENOMINADOR 
+gbak:    restoring column ID 
+gbak:    restoring column TIPO 
+gbak:    restoring column TABLA 
+gbak:    restoring column EMISION 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CALCULADORA 
+gbak:    restoring column AFECTANTE 
+gbak:    restoring column PROPIEDAD 
+gbak:    restoring column DENONINACION 
+gbak:    restoring column REBAJAS_CODIGOS 
+gbak:committing metadata for table RUBROS 
+gbak:restoring table PREDIOS_TERRENOS 
+gbak:    restoring column FRENTE 
+gbak:    restoring column FONDO 
+gbak:    restoring column LINDERO_NORTE_EXTENSION 
+gbak:    restoring column LINDERO_SUR_EXTENSION 
+gbak:    restoring column LINDERO_ESTE_EXTENSION 
+gbak:    restoring column LINDERO_OESTE_EXTENSION 
+gbak:    restoring column SUPERFICIE 
+gbak:    restoring column PERIMETRO 
+gbak:    restoring column AVALUO 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column LINDERO_NORTE_PREDIO 
+gbak:    restoring column LINDERO_SUR_PREDIO 
+gbak:    restoring column LINDERO_ESTE_PREDIO 
+gbak:    restoring column LINDERO_OESTE_PREDIO 
+gbak:    restoring column NUMERO_LADOS 
+gbak:    restoring column NUMERO_ANGULOS_RECTOS 
+gbak:    restoring column CALIDAD_SUELO 
+gbak:    restoring column LOCALIZACION_MANZANA 
+gbak:    restoring column NIVEL_RAZANTE 
+gbak:    restoring column FUENTE_AGUA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CLASE_TIERRA 
+gbak:    restoring column ZONA_HOMOGENEA 
+gbak:    restoring column LINDERO_NORTE_NOMBRES 
+gbak:    restoring column LINDERO_SUR_NOMBRES 
+gbak:    restoring column LINDERO_ESTE_NOMBRES 
+gbak:    restoring column LINDERO_OESTE_NOMBRES 
+gbak:committing metadata for table PREDIOS_TERRENOS 
+gbak:restoring table TABLAS 
+gbak:    restoring column ID 
+gbak:    restoring column INDICE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PARTICULAR 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table TABLAS 
+gbak:restoring table TABLAS_CLAVES 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column TABLA 
+gbak:    restoring column CLAVE 
+gbak:    restoring column SUPERIOR 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table TABLAS_CLAVES 
+gbak:restoring table USUARIOS_SUPERVISION 
+gbak:    restoring column ID 
+gbak:    restoring column USUARIO 
+gbak:    restoring column MODULO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table USUARIOS_SUPERVISION 
+gbak:restoring table USUARIOS 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CADUCA 
+gbak:    restoring column CADUCA_FECHA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CLAVE 
+gbak:committing metadata for table USUARIOS 
+gbak:restoring table COBROS_TRANSACCIONES 
+gbak:    restoring column VALOR 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column ID 
+gbak:    restoring column COBRO 
+gbak:    restoring column TRANSACCION 
+gbak:    restoring column ESTADO 
+gbak:    restoring column SOPORTE_NUMERO 
+gbak:committing metadata for table COBROS_TRANSACCIONES 
+gbak:restoring table USUARIOS_PRIVILEGIOS 
+gbak:    restoring column ID 
+gbak:    restoring column USUARIO 
+gbak:    restoring column FUNCION 
+gbak:    restoring column COMANDOS 
+gbak:    restoring column ESTADO 
+gbak:    restoring column SUPERVISADOS 
+gbak:committing metadata for table USUARIOS_PRIVILEGIOS 
+gbak:restoring table PREDIOS_PROPIETARIOS 
+gbak:    restoring column ID 
+gbak:    restoring column PREDIO 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PREDIOS_PROPIETARIOS 
+gbak:restoring table CONCEPTOS_DOCUMENTOS 
+gbak:    restoring column DEFINICION 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column REPORTE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column MODULO 
+gbak:    restoring column REPORTEID 
+gbak:    restoring column DESCRIPCION 
+gbak:committing metadata for table CONCEPTOS_DOCUMENTOS 
+gbak:restoring table CONCEPTOS 
+gbak:    restoring column REPORTE_DEFINICION 
+gbak:    restoring column ID 
+gbak:    restoring column DENOMINACION 
+gbak:    restoring column PERIODO 
+gbak:    restoring column CONSECUTIVO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column MENU_EMISIONES 
+gbak:    restoring column REPORTE_COMPROBARTE 
+gbak:    restoring column CONVENIO_HABILITADO 
+gbak:    restoring column PAGOS_PARCIALES 
+gbak:    restoring column VALIDAR 
+gbak:    restoring column RECARGOS_CODIGOS 
+gbak:    restoring column REBAJAS_CODIGOS 
+gbak:committing metadata for table CONCEPTOS 
+gbak:restoring table CONCEPTOS_RUBROS 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column RUBRO 
+gbak:    restoring column INDICE 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table CONCEPTOS_RUBROS 
+gbak:restoring table CONTRIBUYENTES 
+gbak:    restoring column ID 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column TELEFONOS 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PERSONERIA 
+gbak:    restoring column CEDULA 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column REPRESENTANTE 
+gbak:committing metadata for table CONTRIBUYENTES 
+gbak:restoring table MODULOSUSUARIO 
+gbak:    restoring column USUARIO 
+gbak:    restoring column MODULO 
+gbak:    restoring column BOTON 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table MODULOSUSUARIO 
+gbak:restoring table PAPELERA 
+gbak:    restoring column ID 
+gbak:    restoring column TIPO 
+gbak:    restoring column TABLA 
+gbak:    restoring column FECHA 
+gbak:    restoring column USUARIO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table PAPELERA 
+gbak:restoring table COBROS_ELEMENTOS 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column COBRO 
+gbak:    restoring column FORMA_PAGO 
+gbak:    restoring column FECHA 
+gbak:    restoring column NUMERO 
+gbak:    restoring column ENTIDAD 
+gbak:    restoring column CODIGO 
+gbak:    restoring column TIPO 
+gbak:    restoring column AUTORIZACION 
+gbak:    restoring column COMENTARIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table COBROS_ELEMENTOS 
+gbak:restoring table MODULOS 
+gbak:    restoring column ID 
+gbak:    restoring column ESTADO 
+gbak:    restoring column BOTON 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table MODULOS 
+gbak:restoring table PATENTES 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column OBSERVACIONES 
+gbak:    restoring column PREDIO 
+gbak:    restoring column ARTESANO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONTABILIDAD_REQUERIDA 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column NOMBRE_COMERCIAL 
+gbak:committing metadata for table PATENTES 
+gbak:restoring table COBROS_RUBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column ID 
+gbak:    restoring column COBRO 
+gbak:    restoring column RUBRO 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column REFERENCIA 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table COBROS_RUBROS 
+gbak:restoring table CAJAS_USUARIOS 
+gbak:    restoring column ID 
+gbak:    restoring column CAJA 
+gbak:    restoring column USUARIO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table CAJAS_USUARIOS 
+gbak:restoring table AGUA_POTABLE 
+gbak:    restoring column MEDIDOR_DIAMETRO 
+gbak:    restoring column PROMEDIO_INDIVIDUAL 
+gbak:    restoring column UBICACION_MANZANA 
+gbak:    restoring column UBICACION_PREDIO 
+gbak:    restoring column PROMEDIO_USAR 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column CATEGORIA 
+gbak:    restoring column CLASIFICACION 
+gbak:    restoring column MEDIDOR_INSTALADO 
+gbak:    restoring column MEDIDOR_CODIGO 
+gbak:    restoring column SERVICIO_ADICIONAL 
+gbak:    restoring column SERVICIO_AGREGADO 
+gbak:    restoring column UBICACION_SECTOR 
+gbak:    restoring column UBICACION_ZONA 
+gbak:    restoring column UBICACION_DIVISION 
+gbak:    restoring column SERVICIO_ESTADO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PREDIO_CODIGO 
+gbak:    restoring column PREDIO 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column MEDIDOR_FECHA 
+gbak:    restoring column PISCINA 
+gbak:    restoring column TANQUE_ELEVADO 
+gbak:    restoring column FORMA_PROPIEDAD 
+gbak:    restoring column TIPO_DOMINIO 
+gbak:    restoring column SERVICIO1_FECHA 
+gbak:    restoring column SERVICIO2_FECHA 
+gbak:    restoring column DIRECCION_BARRIO 
+gbak:    restoring column RESERVORIO 
+gbak:committing metadata for table AGUA_POTABLE 
+gbak:restoring table AGUA_LECTURAS 
+gbak:    restoring column MES_1 
+gbak:    restoring column MES_2 
+gbak:    restoring column MES_3 
+gbak:    restoring column MES_4 
+gbak:    restoring column MES_5 
+gbak:    restoring column MES_6 
+gbak:    restoring column MES_7 
+gbak:    restoring column MES_8 
+gbak:    restoring column MES_9 
+gbak:    restoring column MES_10 
+gbak:    restoring column MES_11 
+gbak:    restoring column MES_12 
+gbak:    restoring column ESTADO 
+gbak:    restoring column ID 
+gbak:    restoring column CUENTA 
+gbak:    restoring column AÑO 
+gbak:committing metadata for table AGUA_LECTURAS 
+gbak:restoring table COEFICIENTES_ELEMENTOS 
+gbak:    restoring column VALOR 
+gbak:    restoring column VALOR1 
+gbak:    restoring column VALOR2 
+gbak:    restoring column VALOR3 
+gbak:    restoring column VALOR4 
+gbak:    restoring column MONTO_DESDE 
+gbak:    restoring column MONTO_HASTA 
+gbak:    restoring column ID 
+gbak:    restoring column COEFICIENTE 
+gbak:    restoring column CLAVE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column ENTERO_DESDE 
+gbak:    restoring column ENTERO_HASTA 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table COEFICIENTES_ELEMENTOS 
+gbak:restoring table ZCOBROS 
+gbak:    restoring column VALOR 
+gbak:    restoring column TERCERAV 
+gbak:    restoring column TERCERAE 
+gbak:    restoring column ID 
+gbak:    restoring column FECHA 
+gbak:    restoring column CODIGO 
+gbak:    restoring column ANIO 
+gbak:committing metadata for table ZCOBROS 
+gbak:restoring table LISTAS 
+gbak:    restoring column HORA 
+gbak:    restoring column ATRIBUTOS 
+gbak:    restoring column OPERADOR 
+gbak:    restoring column ENTIDAD 
+gbak:    restoring column OPERACION 
+gbak:    restoring column AUTORIZACION 
+gbak:    restoring column ID 
+gbak:committing metadata for table LISTAS 
+gbak:restoring table PATENTES_COMPONENTES 
+gbak:    restoring column BASE_IMPONIBLE 
+gbak:    restoring column HAB_BASE 
+gbak:    restoring column HAB_CATEGORIA 
+gbak:    restoring column HAB_TIPO 
+gbak:    restoring column ID 
+gbak:    restoring column PATENTE 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CATEGORIA 
+gbak:    restoring column COEFICIENTES_TIPO 
+gbak:    restoring column HAB_INDICE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column COEFICIENTES_INDICE 
+gbak:committing metadata for table PATENTES_COMPONENTES 
+gbak:restoring table AGUA_SERVICIOS 
+gbak:    restoring column ID 
+gbak:    restoring column CUENTA 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column FECHA_INICIO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table AGUA_SERVICIOS 
+gbak:restoring table SEGUIMIENTO 
+gbak:    restoring column FECHA 
+gbak:    restoring column ORIGINAL 
+gbak:    restoring column INTERFAZ_RED 
+gbak:    restoring column ID 
+gbak:    restoring column USUARIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CLIENTE 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column COMENTARIO 
+gbak:    restoring column ENTIDAD 
+gbak:committing metadata for table SEGUIMIENTO 
+gbak:restoring table PLANILLAS_SUSTITUCION 
+gbak:    restoring column FECHA 
+gbak:    restoring column ID 
+gbak:    restoring column ORIGINAL 
+gbak:    restoring column NUEVA 
+gbak:    restoring column COMENTARIOS 
+gbak:    restoring column USUARIO 
+gbak:committing metadata for table PLANILLAS_SUSTITUCION 
+gbak:restoring table ZPREDIOS_RUSTICOS 
+gbak:    restoring column SUPERFICIE 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column REGISTRO 
+gbak:    restoring column ZONA 
+gbak:    restoring column SECTOR 
+gbak:    restoring column POLIGONO 
+gbak:    restoring column PREDIO 
+gbak:    restoring column ZONA_HOMOGENEA 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column CLASE_TIERRA 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column DENOMINACION_PREDIO 
+gbak:    restoring column LINDERO_NORTE 
+gbak:    restoring column LINDERO_SUR 
+gbak:    restoring column LINDERO_ESTE 
+gbak:    restoring column LINDERO_OESTE 
+gbak:    restoring column CEDULA 
+gbak:committing metadata for table ZPREDIOS_RUSTICOS 
+gbak:restoring table ZTITULOSAPBAJAS 
+gbak:    restoring column MES1 
+gbak:    restoring column MES2 
+gbak:    restoring column MES3 
+gbak:    restoring column MES4 
+gbak:    restoring column MES5 
+gbak:    restoring column MES6 
+gbak:    restoring column MES7 
+gbak:    restoring column MES8 
+gbak:    restoring column MES9 
+gbak:    restoring column MES10 
+gbak:    restoring column MES11 
+gbak:    restoring column MES12 
+gbak:    restoring column VALOR1 
+gbak:    restoring column PAGOS 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column ID 
+gbak:    restoring column ANIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CODIGO 
+gbak:committing metadata for table ZTITULOSAPBAJAS 
+gbak:restoring table ZPATENTE 
+gbak:    restoring column CAPITAL 
+gbak:    restoring column ACTIVOS 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column ACTIVIDAD 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column NUMERO 
+gbak:    restoring column CEDULA 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column DIRECCION 
+gbak:committing metadata for table ZPATENTE 
+gbak:restoring table ZTITULOSPT 
+gbak:    restoring column CAPITAL 
+gbak:    restoring column ACTIVOS 
+gbak:    restoring column PATENTE_MUNICIPAL 
+gbak:    restoring column PERMISO_FUNCIONAMIENTO 
+gbak:    restoring column ACTIVOS_TOTALES 
+gbak:    restoring column PAGADO 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column PATENTESUB 
+gbak:    restoring column FECHA_PAGO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column PATENTEID 
+gbak:    restoring column NOMBRE 
+gbak:committing metadata for table ZTITULOSPT 
+gbak:restoring table ZTITULOSPU 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column IMPUESTO_PREDIAL 
+gbak:    restoring column SERVICIO_ADMINISTRATIVO 
+gbak:    restoring column BOMBEROS 
+gbak:    restoring column ADICIONAL 
+gbak:    restoring column RECOLECCION_DESECHOS 
+gbak:    restoring column MEDICINA_RURAL 
+gbak:    restoring column EDUCACION_ELEMENTAL 
+gbak:    restoring column SOLAR_NOEDIFICADO 
+gbak:    restoring column VIVIENDA_RURAL 
+gbak:    restoring column INTERES 
+gbak:    restoring column DESCUENTO 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column PAGO 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column FECHA_PAGO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PREDIOID 
+gbak:    restoring column NOMBRES 
+gbak:committing metadata for table ZTITULOSPU 
+gbak:restoring table ZAGUA 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column TELEFONOS 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CEDULA 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column CATEGORIA 
+gbak:committing metadata for table ZAGUA 
+gbak:restoring table PLANILLAS_MESES 
+gbak:    restoring column MES1 
+gbak:    restoring column MES2 
+gbak:    restoring column MES3 
+gbak:    restoring column MES4 
+gbak:    restoring column MES5 
+gbak:    restoring column MES6 
+gbak:    restoring column MES7 
+gbak:    restoring column MES8 
+gbak:    restoring column MES9 
+gbak:    restoring column MES10 
+gbak:    restoring column MES11 
+gbak:    restoring column MES12 
+gbak:    restoring column ESTADO 
+gbak:    restoring column ID 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column RUBRO 
+gbak:committing metadata for table PLANILLAS_MESES 
+gbak:restoring table ZTITULOSPR 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column IMPUESTO_PREDIAL 
+gbak:    restoring column SALUD_PECUARIA 
+gbak:    restoring column IMPUESTO_MUNICIPAL 
+gbak:    restoring column BOMBEROS 
+gbak:    restoring column TASA_ADMINISTRATIVA 
+gbak:    restoring column INTERES 
+gbak:    restoring column PAGADO 
+gbak:    restoring column DESCUENTO 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CENTRO_AGRICOLA 
+gbak:    restoring column EXONERACION 
+gbak:    restoring column ID 
+gbak:    restoring column AÑO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column REGISTRO_CATASTRAL 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column PREDIOID 
+gbak:    restoring column PAGO_FECHA 
+gbak:    restoring column NOMBRES 
+gbak:committing metadata for table ZTITULOSPR 
+gbak:restoring table ZTITULOSAP 
+gbak:    restoring column MES1 
+gbak:    restoring column MES2 
+gbak:    restoring column MES3 
+gbak:    restoring column MES4 
+gbak:    restoring column MES5 
+gbak:    restoring column MES6 
+gbak:    restoring column MES7 
+gbak:    restoring column MES8 
+gbak:    restoring column MES9 
+gbak:    restoring column MES10 
+gbak:    restoring column MES11 
+gbak:    restoring column MES12 
+gbak:    restoring column VALOR1 
+gbak:    restoring column PAGOS 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column ID 
+gbak:    restoring column ANIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CODIGO 
+gbak:committing metadata for table ZTITULOSAP 
+gbak:restoring table CONCEPTOS_EMISION 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column PERIODICO 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column INDICE 
+gbak:    restoring column ID 
+gbak:    restoring column ORIGEN_TIPO 
+gbak:    restoring column ORIGEN_CLAVE 
+gbak:    restoring column REFERENCIA 
+gbak:    restoring column ESTADO 
+gbak:    restoring column EMITE 
+gbak:    restoring column CALCULA 
+gbak:    restoring column TIPO_DATO 
+gbak:    restoring column VALIDAR 
+gbak:committing metadata for table CONCEPTOS_EMISION 
+gbak:restoring table REPORTES 
+gbak:    restoring column DEFINICION 
+gbak:    restoring column ID 
+gbak:    restoring column MODULO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table REPORTES 
+gbak:restoring table CARPETA_CATASTRAL_ANUAL 
+gbak:    restoring column BASE_IMPONIBLE 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table CARPETA_CATASTRAL_ANUAL 
+gbak:restoring table REP_RECAUDACIONES_FECHA 
+gbak:    restoring column TOTAL 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column PAGOS 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column AÑO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column FECHA 
+gbak:    restoring column CONCEPTODEN 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column SOPORTE_NUMERO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table REP_RECAUDACIONES_FECHA 
+gbak:restoring table REP_RECAUDACIONES_COMPONENTES 
+gbak:    restoring column VALOR 
+gbak:    restoring column CONCEPTODEN 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column RUBRODEN 
+gbak:committing metadata for table REP_RECAUDACIONES_COMPONENTES 
+gbak:restoring table REP_REVERSIONES_FECHA 
+gbak:    restoring column PAGO 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column ID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column FECHA 
+gbak:    restoring column ANIO 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table REP_REVERSIONES_FECHA 
+gbak:restoring table IBE$VERSION_HISTORY 
+gbak:    restoring column IBE$VH_MODIFY_DATE 
+gbak:    restoring column IBE$VH_HEADER 
+gbak:    restoring column IBE$VH_BODY 
+gbak:    restoring column IBE$VH_DESCRIPTION 
+gbak:    restoring column IBE$VH_ID 
+gbak:    restoring column IBE$VH_OBJECT_TYPE 
+gbak:    restoring column IBE$VH_USER_NAME 
+gbak:    restoring column IBE$VH_OBJECT_NAME 
+gbak:committing metadata for table IBE$VERSION_HISTORY 
+gbak:restoring table REP_RECAUDACIONES_YEAR 
+gbak:    restoring column VALOR 
+gbak:    restoring column ANIO 
+gbak:    restoring column CONCEPTODEN 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column RUBRODEN 
+gbak:committing metadata for table REP_RECAUDACIONES_YEAR 
+gbak:restoring table MEJORAS_ELEMENTOS 
+gbak:    restoring column LONGITUD 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column ALICUOTA 
+gbak:    restoring column TOTAL 
+gbak:    restoring column DIVIDENDO 
+gbak:    restoring column ID 
+gbak:    restoring column MEJORA 
+gbak:    restoring column PREDIO 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column EMISIONES 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table MEJORAS_ELEMENTOS 
+gbak:restoring table ZMEJORAS 
+gbak:    restoring column AVALUOTEO 
+gbak:    restoring column ALICUOTA 
+gbak:    restoring column CEMTOTAL 
+gbak:    restoring column CEMANUAL 
+gbak:    restoring column CEMCUOTA 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column PREDIOID 
+gbak:    restoring column INSERTADO 
+gbak:committing metadata for table ZMEJORAS 
+gbak:restoring table CARPETA_CATASTRAL_TOTAL 
+gbak:    restoring column BASE_IMPONIBLE 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table CARPETA_CATASTRAL_TOTAL 
+gbak:restoring table ZCOBROS_2014 
+gbak:    restoring column VALOR 
+gbak:    restoring column TERCERAV 
+gbak:    restoring column TERCERAE 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column DESCUENTOS 
+gbak:    restoring column ID 
+gbak:    restoring column FECHA 
+gbak:    restoring column CODIGO 
+gbak:    restoring column ANIO 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column MES 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column PLANILLA_ESTADO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTODEN 
+gbak:committing metadata for table ZCOBROS_2014 
+gbak:restoring table ZCOBROSCOM_2014 
+gbak:    restoring column VALOR 
+gbak:    restoring column TERCERAV 
+gbak:    restoring column TERCERAE 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column DESCUENTOS 
+gbak:    restoring column ID 
+gbak:    restoring column FECHA 
+gbak:    restoring column CODIGO 
+gbak:    restoring column ANIO 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column MES 
+gbak:    restoring column PLANILLA 
+gbak:    restoring column PLANILLA_ESTADO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTODEN 
+gbak:committing metadata for table ZCOBROSCOM_2014 
+gbak:restoring table SOPORTE_MOVIMIENTOS 
+gbak:    restoring column ID 
+gbak:    restoring column SOPORTE 
+gbak:    restoring column NUMERO 
+gbak:    restoring column MOVIMIENTO 
+gbak:    restoring column REFERENCIA 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column FECHA 
+gbak:    restoring column ESTADO 
+gbak:committing metadata for table SOPORTE_MOVIMIENTOS 
+gbak:restoring table SOPORTES 
+gbak:    restoring column ID 
+gbak:    restoring column TIPO 
+gbak:    restoring column REFERENCIA 
+gbak:    restoring column NUMERO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table SOPORTES 
+gbak:restoring table REP_CUENTA_CORRIENTE_RESUMEN 
+gbak:    restoring column DEUDA 
+gbak:    restoring column CONTRIBUYENTES 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONTEO 
+gbak:committing metadata for table REP_CUENTA_CORRIENTE_RESUMEN 
+gbak:restoring table CAJAS 
+gbak:    restoring column SALDO 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column CIERRE 
+gbak:    restoring column ESTADO 
+gbak:    restoring column DESCRIPCION 
+gbak:committing metadata for table CAJAS 
+gbak:restoring table CAJAS_MOVIMIENTOS 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column CAJA 
+gbak:    restoring column TIPO 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column CATEGORIA 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column FECHA 
+gbak:    restoring column USUARIO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column BENEFICIARIO 
+gbak:committing metadata for table CAJAS_MOVIMIENTOS 
+gbak:restoring table CONTRIBUYENTES_TRANSACCIONES 
+gbak:    restoring column VALOR 
+gbak:    restoring column IMPUTACIONES 
+gbak:    restoring column ID 
+gbak:    restoring column CONTRIBUYENTE 
+gbak:    restoring column FECHA 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column CATEGORIA 
+gbak:    restoring column DESCRIPCION 
+gbak:    restoring column NUMERO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column CONCEPTO 
+gbak:committing metadata for table CONTRIBUYENTES_TRANSACCIONES 
+gbak:restoring table REP_CUENTA_CORRIENTE_DETALLE 
+gbak:    restoring column TOTAL 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CODIGO 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column AÑO 
+gbak:committing metadata for table REP_CUENTA_CORRIENTE_DETALLE 
+gbak:restoring table REP_PREDIOS 
+gbak:    restoring column AVALUO_TERRENO 
+gbak:    restoring column AVALUO_CONSTRUCCION 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column SUPERFICIE 
+gbak:    restoring column AREA_CONSTRUCCION 
+gbak:    restoring column ID 
+gbak:    restoring column FORMATO_CODIGO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column TIPO_PROPIEDAD 
+gbak:    restoring column DOMINIO 
+gbak:    restoring column ESCRITURA 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column ZONA_HOMOGENEA 
+gbak:    restoring column CLASE_TIERRA 
+gbak:    restoring column CONSTRUIDO 
+gbak:    restoring column ZONA 
+gbak:    restoring column SECTOR 
+gbak:    restoring column MANZANA 
+gbak:    restoring column PREDIO 
+gbak:    restoring column POLIGONO 
+gbak:    restoring column DIVISION 
+gbak:    restoring column ESTADO 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CEDULA 
+gbak:committing metadata for table REP_PREDIOS 
+gbak:restoring table ZTITULOSPU1 
+gbak:    restoring column VALOR_PROPIEDAD 
+gbak:    restoring column IMPUESTO_PREDIAL 
+gbak:    restoring column SERVICIO_ADMINISTRATIVO 
+gbak:    restoring column BOMBEROS 
+gbak:    restoring column ADICIONAL 
+gbak:    restoring column RECOLECCION_DESECHOS 
+gbak:    restoring column MEDICINA_RURAL 
+gbak:    restoring column EDUCACION_ELEMENTAL 
+gbak:    restoring column SOLAR_NOEDIFICADO 
+gbak:    restoring column VIVIENDA_RURAL 
+gbak:    restoring column INTERES 
+gbak:    restoring column DESCUENTO 
+gbak:    restoring column LEY_ANCIANO 
+gbak:    restoring column PAGO 
+gbak:    restoring column ID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column AÑO 
+gbak:    restoring column FECHA_PAGO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column NUEVOID 
+gbak:    restoring column CONTRIBUYENTEID 
+gbak:    restoring column ESTADO 
+gbak:    restoring column PREDIOID 
+gbak:    restoring column NOMBRES 
+gbak:committing metadata for table ZTITULOSPU1 
+gbak:restoring table REP_EMISIONES_SALDOS 
+gbak:    restoring column ID 
+gbak:    restoring column VALOR 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column DENOMINACION 
+gbak:    restoring column AÑO 
+gbak:    restoring column CONTEO 
+gbak:    restoring column ESTADODEN 
+gbak:committing metadata for table REP_EMISIONES_SALDOS 
+gbak:restoring table PREDIOS_DISTINTOS_CODIGOS 
+gbak:    restoring column CODIGO 
+gbak:    restoring column DIRECCION 
+gbak:    restoring column NOMBRE_INMUEBLE 
+gbak:committing metadata for table PREDIOS_DISTINTOS_CODIGOS 
+gbak:restoring table REP_RECAUDACIONES_COMP_DETALLE 
+gbak:    restoring column VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column NOMBRES 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column CONCEPTOID 
+gbak:    restoring column CODIGO 
+gbak:    restoring column ANIO 
+gbak:    restoring column RUBROID 
+gbak:    restoring column ORIGEN 
+gbak:    restoring column ESTADO 
+gbak:    restoring column FECHA 
+gbak:    restoring column RUBRO 
+gbak:committing metadata for table REP_RECAUDACIONES_COMP_DETALLE 
+gbak:restoring table PATENTES_DISTINTO_CODIGO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column DIRECCION 
+gbak:committing metadata for table PATENTES_DISTINTO_CODIGO 
+gbak:restoring table MEJORAS 
+gbak:    restoring column MONTO_INVERTIDO 
+gbak:    restoring column RECUPERACION_MONTO 
+gbak:    restoring column RECUPERACION_PORCENTAJE 
+gbak:    restoring column SUMA_AVALUOS 
+gbak:    restoring column DIVIDENDO_VALOR 
+gbak:    restoring column ID 
+gbak:    restoring column DECRIPCION 
+gbak:    restoring column RECUPERACION_AÑOS 
+gbak:    restoring column RECUPERACION_EMISIONES 
+gbak:    restoring column PREDIOS_CONTEO 
+gbak:    restoring column DIVIDENDO_TIPO 
+gbak:    restoring column ESTADO 
+gbak:    restoring column RUBRO 
+gbak:    restoring column DENOMINACION 
+gbak:committing metadata for table MEJORAS 
+gbak:restoring table REP_RECAUDACIONES_CONCEPTO 
+gbak:    restoring column TOTAL 
+gbak:    restoring column REBAJAS 
+gbak:    restoring column RECARGOS 
+gbak:    restoring column PAGOS 
+gbak:    restoring column ID 
+gbak:    restoring column CONCEPTO 
+gbak:    restoring column AÑO 
+gbak:    restoring column CODIGO 
+gbak:    restoring column NUMERO 
+gbak:    restoring column FECHA 
+gbak:    restoring column CONCEPTODEN 
+gbak:    restoring column NOMBRES 
+gbak:committing metadata for table REP_RECAUDACIONES_CONCEPTO 
+gbak:restoring generator AUTORIZACIONES_ID_GEN value: 0 
+gbak:restoring generator COBROS_ID_GEN value: 98409 
+gbak:restoring generator COBROS_TRANSACCIONES_ID_GEN value: 105177 
+gbak:restoring generator COEFICIENTES_ID_GEN value: 19 
+gbak:restoring generator CONCEPTOS_ID_GEN value: 13 
+gbak:restoring generator CONCEPTOS_RUBROS_ID_GEN value: 43 
+gbak:restoring generator CONSTRUCCION_COMPONENTES_ID_GEN value: 182 
+gbak:restoring generator CONSTRUCCION_MODELOS_ID_GEN value: 16 
+gbak:restoring generator CONTRIBUYENTES_CODIGOS_ID_GEN value: 0 
+gbak:restoring generator CONTRIBUYENTES_ID_GEN value: 12740 
+gbak:restoring generator CONTRIBUYENTES_REBAJAS_ID_GEN value: 980 
+gbak:restoring generator CONVENIOS_ID_GEN value: 0 
+gbak:restoring generator CONVENIOS_TRANSACCIONES_ID_GEN value: 0 
+gbak:restoring generator PREDIOS_PISOS_ID_GEN value: 3869 
+gbak:restoring generator FUNCIONES_COMANDOS_ID_GEN value: 75 
+gbak:restoring generator FUNCIONES_ID_GEN value: 41 
+gbak:restoring generator PREDIOS_PROPIETARIOS_ID_GEN value: 14809 
+gbak:restoring generator PREDIOS_TERRENOS_ID_GEN value: 13714 
+gbak:restoring generator PAPELERA_ATRIBUTOS_ID_GEN value: 0 
+gbak:restoring generator PAPELERA_ID_GEN value: 0 
+gbak:restoring generator PLANILLAS_ATRIBUTOS_ID_GEN value: 233944 
+gbak:restoring generator PLANILLAS_ID_GEN value: 140869 
+gbak:restoring generator PLANILLAS_RUBROS_ID_GEN value: 635833 
+gbak:restoring generator PREDIOS_BASE_ID_GEN value: 13727 
+gbak:restoring generator PREDIOS_BLOQUES_ID_GEN value: 3014 
+gbak:restoring generator PREDIOS_CONSTRUCCION_ID_GEN value: 35218 
+gbak:restoring generator PREDIOS_FOTOS_ID_GEN value: 17 
+gbak:restoring generator PREDIOS_FRENTES_ID_GEN value: 4119 
+gbak:restoring generator PREDIOS_TABLAS_ID_GEN value: 0 
+gbak:restoring generator REBAJAS_ID_GEN value: 3 
+gbak:restoring generator REBAJAS_RUBROS_ID_GEN value: 4 
+gbak:restoring generator RUBROS_ID_GEN value: 44 
+gbak:restoring generator TABLAS_CLAVES_ID_GEN value: 239 
+gbak:restoring generator TABLAS_ID_GEN value: 27 
+gbak:restoring generator USUARIOS_ID_GEN value: 12 
+gbak:restoring generator USUARIOS_PRIVILEGIOS_ID_GEN value: 97 
+gbak:restoring generator USUARIOS_SUPERVISION_ID_GEN value: 0 
+gbak:restoring generator MODULOS value: 5 
+gbak:restoring generator COEFICIENTES_ELEMENTOS_ID_GEN value: 534 
+gbak:restoring generator SERIVICIOS_ID_GEN value: 0 
+gbak:restoring generator PATENTES_COMPONENTES_ID_GEN value: 2685 
+gbak:restoring generator PATENTES_GEN_ID value: 853 
+gbak:restoring generator AGUA_LECTURAS_GEN_ID value: 4091 
+gbak:restoring generator AGUA_POTABLE_GEN_ID value: 0 
+gbak:restoring generator GEN_LISTAS_ID value: 40 
+gbak:restoring generator GEN_SEGUIMIENTO_ID value: 176247 
+gbak:restoring generator PLANILLAS_SUSTITUCION_GEN_ID value: 0 
+gbak:restoring generator RUBROS_PARAMETROS_ID_GEN value: 2 
+gbak:restoring generator AGUA_SERVICIOS_GEN_ID value: 129 
+gbak:restoring generator COBROS_ELEMENTOS_GEN value: 98377 
+gbak:restoring generator ZGEN_ZPREDIOS_RUSTICOS_ID value: 6484 
+gbak:restoring generator ZGEN_PATENTES_ID value: 634 
+gbak:restoring generator ZGEN_TITULOSPU_ID value: 36558 
+gbak:restoring generator ZGEN_TITULOSPR_ID value: 25748 
+gbak:restoring generator ZGEN_ZAGUA_ID value: 3940 
+gbak:restoring generator ZGEN_ZTITULOSPT_ID value: 4635 
+gbak:restoring generator ZGEN_ZTITULOSAP_ID value: 23837 
+gbak:restoring generator PLANILLAS_MESES_ID_GEN value: 25889 
+gbak:restoring generator COBROS_RUBROS_GEN_ID value: 38121 
+gbak:restoring generator ZCOBROS_GEN_ID value: 18547 
+gbak:restoring generator REP_NUMERO_FILA_GEN_ID value: 299824 
+gbak:restoring generator CONCEPTOS_DOCUMENTOS_GEN_ID value: 2 
+gbak:restoring generator CONCEPTOS_EMISION_ID_GEN value: 22 
+gbak:restoring generator REPORTES_GEN_ID value: 17 
+gbak:restoring generator CAJAS_ID_GEN value: 1 
+gbak:restoring generator CAJAS_MOVIMIENTOS_ID_GEN value: 0 
+gbak:restoring generator CONTRIB_TRANSACCIONES_ID_GEN value: 0 
+gbak:restoring generator CAJAS_USUARIOS_GEN_ID value: 3 
+gbak:restoring generator ZCOBROSCOM_2014 value: 28318 
+gbak:restoring generator SOPORTE_MOVIMIENTOS_GEN_ID value: 30 
+gbak:restoring generator SOPORTES_GEN_ID value: 2 
+gbak:restoring generator MEJORAS_ELEMENTOS_GEN_ID value: 13500 
+gbak:restoring generator MEJORAS_GEN_ID value: 5 
+gbak:restoring generator IBE$VERSION_HISTORY_ID_GEN value: 40 
+gbak:restoring stored procedure CAL_AGUA_CONSUMO 
+gbak:restoring parameter PSUBCATEGORIA for stored procedure 
+gbak:restoring parameter PCATEGORIA for stored procedure 
+gbak:restoring parameter CATEGORIA for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring parameter SUBCATEGORIA for stored procedure 
+gbak:restoring stored procedure CAL_JUNTAB_ALCABALAS 
+gbak:restoring parameter PYEARS for stored procedure 
+gbak:restoring parameter PAVALUO for stored procedure 
+gbak:restoring parameter PEMISION for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure ZMIGRAR_PREDIOSR 
+gbak:restoring stored procedure ZMIGRAR_TITULOSR 
+gbak:restoring stored procedure PRERURAL_CALCULAR_VALPRO_TODOS 
+gbak:restoring stored procedure CARGAR_MEJORAS 
+gbak:restoring stored procedure ZMIGRAR_AGUA 
+gbak:restoring stored procedure CONTRIBUYENTES_XCODIGOS 
+gbak:restoring parameter CONTRIBS for stored procedure 
+gbak:restoring parameter NOMBRES for stored procedure 
+gbak:restoring stored procedure CAL_AGUA 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure MANZANAU_XCODIGO 
+gbak:restoring parameter PCODIGO for stored procedure 
+gbak:restoring parameter CODIGO for stored procedure 
+gbak:restoring stored procedure CAL_PATENTE 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure REP_CUENTA_CORRIENTE_CORTE 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter id for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter nombres for stored procedure 
+gbak:restoring parameter codigo for stored procedure 
+gbak:restoring parameter direccion for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter total for stored procedure 
+gbak:restoring stored procedure CAL_PREDIO_RURAL 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure CAL_PREDIO_URBANO 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure ZMIGRAR_TITULOSU 
+gbak:restoring stored procedure ZMIGRAR_PATENTES 
+gbak:restoring stored procedure REMOVER_ACENTOS_FB2X 
+gbak:restoring parameter TEXTO for stored procedure 
+gbak:restoring parameter RETORNO for stored procedure 
+gbak:restoring stored procedure EMITIR_IPRURAL_TODOS 
+gbak:restoring parameter NYEAR for stored procedure 
+gbak:restoring stored procedure CALCULAR_CONCEPTO 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PTIPOS for stored procedure 
+gbak:restoring parameter PARAMETROS for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure REP_EMISIONES_SALDO_FECHA 
+gbak:restoring parameter PFECHA_CORTE for stored procedure 
+gbak:restoring parameter id for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter conteo for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter estado for stored procedure 
+gbak:restoring stored procedure ZARREGLAR_RECARGOS 
+gbak:restoring stored procedure EMISION_AGUA 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter PMES for stored procedure 
+gbak:restoring parameter RETID for stored procedure 
+gbak:restoring stored procedure UNIFICAR_CONTRIBUYENTES 
+gbak:restoring parameter IDPERMANECE for stored procedure 
+gbak:restoring parameter IDELIMINADO for stored procedure 
+gbak:restoring stored procedure BASE_IMPONIBLE_XCODIGO 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PCODIGO for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter PDENOMINACION for stored procedure 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter PVALOR for stored procedure 
+gbak:restoring stored procedure DIVIDIR_CODIGO 
+gbak:restoring parameter PCODIGO for stored procedure 
+gbak:restoring parameter DIVISION for stored procedure 
+gbak:restoring parameter ZONA for stored procedure 
+gbak:restoring parameter SECTOR for stored procedure 
+gbak:restoring parameter MANZANA for stored procedure 
+gbak:restoring parameter PREDIO for stored procedure 
+gbak:restoring parameter POLIGONO for stored procedure 
+gbak:restoring stored procedure PREDIO_CONSTRUIDO 
+gbak:restoring parameter PREDIO for stored procedure 
+gbak:restoring parameter RESULTADO for stored procedure 
+gbak:restoring stored procedure REP_CARPETA_CATASTRAL_CORTE 
+gbak:restoring parameter AÑO for stored procedure 
+gbak:restoring parameter CONCEPTO for stored procedure 
+gbak:restoring parameter FECHA_CORTE for stored procedure 
+gbak:restoring parameter id for stored procedure 
+gbak:restoring parameter nombres for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter codigo for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter base_imponible for stored procedure 
+gbak:restoring stored procedure EMITIR_IPRURAL 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter NYEAR for stored procedure 
+gbak:restoring parameter RETID for stored procedure 
+gbak:restoring stored procedure ZMIGRAR_TITULOSP 
+gbak:restoring stored procedure EMITIR_CER_AVALAUOS_RURALES 
+gbak:restoring parameter PCONTRIB for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring stored procedure REP_CTACTE_RUBROS_DETALLE 
+gbak:restoring parameter PAFECTANTE for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter rubro_id for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring parameter nombres for stored procedure 
+gbak:restoring stored procedure REP_CTA_CORRIENTE_RUBROS_CORTE 
+gbak:restoring parameter PPOSTERIORES for stored procedure 
+gbak:restoring parameter PAFECTANTE for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter rubro_id for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring stored procedure REP_RESUMEN_CATASTRAL 
+gbak:restoring parameter PYEAR for stored procedure 
+gbak:restoring parameter tipo for stored procedure 
+gbak:restoring parameter sector for stored procedure 
+gbak:restoring parameter conteo for stored procedure 
+gbak:restoring parameter valter for stored procedure 
+gbak:restoring parameter valcons for stored procedure 
+gbak:restoring parameter valpro for stored procedure 
+gbak:restoring parameter escritura for stored procedure 
+gbak:restoring parameter impuestos for stored procedure 
+gbak:restoring stored procedure REP_RESUMEN_EMISIONES_PERIODO 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter PFECHAINICIO for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter PPERIODO for stored procedure 
+gbak:restoring parameter PAFECTANTES for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter propiedad for stored procedure 
+gbak:restoring stored procedure EMISION_AGUA_TODOS 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter PMES for stored procedure 
+gbak:restoring stored procedure ZREBAJA_AGUA 
+gbak:restoring stored procedure EMITIR_ALCALABAS 
+gbak:restoring parameter PCONTRIB for stored procedure 
+gbak:restoring parameter PAVALUO for stored procedure 
+gbak:restoring parameter PYEARS for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring stored procedure EMITIR_CER_AVALAUOS 
+gbak:restoring parameter PCONTRIB for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring stored procedure EMITIR_CONCEPTO_TODOS 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PERIODO for stored procedure 
+gbak:restoring stored procedure EMITIR_PATENTE 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter RETID for stored procedure 
+gbak:restoring stored procedure EMITIR_PATENTES_TODOS 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring stored procedure PREURBANO_CALCULAR_VALPRO_TODOS 
+gbak:restoring stored procedure EMITIR_TITULO 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PARAMETROS for stored procedure 
+gbak:restoring parameter PUSUARIO for stored procedure 
+gbak:restoring parameter PCOMENTARIOS for stored procedure 
+gbak:restoring parameter ID for stored procedure 
+gbak:restoring stored procedure Z_CALCULAR_RUBROS 
+gbak:restoring parameter TOPE for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure EMITIR_CEM 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring stored procedure ZAGUA_SERVICIOID 
+gbak:restoring stored procedure EMITIR_CER_NOADEUDAR 
+gbak:restoring parameter PCONTRIB for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring stored procedure ZMEJORAS_IMPORTAR 
+gbak:restoring stored procedure EMITIR_IPURBANO 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter NYEAR for stored procedure 
+gbak:restoring parameter RETID for stored procedure 
+gbak:restoring stored procedure ZMIGRAR_TITULOSAP 
+gbak:restoring stored procedure EMITIR_IPURBANO_TODOS 
+gbak:restoring parameter NYEAR for stored procedure 
+gbak:restoring stored procedure PRERURAL_CALCULAR_VALPRO 
+gbak:restoring parameter PREID for stored procedure 
+gbak:restoring parameter PACTUALIZAR for stored procedure 
+gbak:restoring parameter VAVALUO for stored procedure 
+gbak:restoring stored procedure EMITIR_ACTIVOS_TODOS 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring stored procedure PREURBANO_CALCULAR_VALPRO 
+gbak:restoring parameter PREID for stored procedure 
+gbak:restoring parameter PACTUALIZAR for stored procedure 
+gbak:restoring parameter VALPRO for stored procedure 
+gbak:restoring stored procedure VALIDAR_CONCEPTO 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PARAMETROS for stored procedure 
+gbak:restoring parameter RESULTADO for stored procedure 
+gbak:restoring stored procedure REP_RECAUDA_COMPONENTES_FECHA 
+gbak:restoring parameter PFECHAINICIO for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter id for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter origen for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring stored procedure ACTUALIDAD_ANIO 
+gbak:restoring parameter ANIO for stored procedure 
+gbak:restoring parameter ACTUALIDADN for stored procedure 
+gbak:restoring parameter ACTUALIDAD for stored procedure 
+gbak:restoring stored procedure REP_CTA_CORRIENTE_ANUAL_CORTE 
+gbak:restoring parameter AÑO for stored procedure 
+gbak:restoring parameter CONCEPTO for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter ID for stored procedure 
+gbak:restoring parameter RUBRO_ID for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter NOMBRES for stored procedure 
+gbak:restoring parameter CODIGO for stored procedure 
+gbak:restoring stored procedure REPRESENTANTE_XPREDIO 
+gbak:restoring parameter PREDIO for stored procedure 
+gbak:restoring parameter CONTRIBUYENTE for stored procedure 
+gbak:restoring parameter NOMBRES for stored procedure 
+gbak:restoring parameter CEDULA for stored procedure 
+gbak:restoring stored procedure EMITIR _CER_NOADEUDAR 
+gbak:restoring parameter PCONTRIB for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring stored procedure CAL_ALCABALAS_DESCUENTO 
+gbak:restoring parameter PSUMA for stored procedure 
+gbak:restoring parameter PTABLA for stored procedure 
+gbak:restoring parameter PYEARS for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure PREDIO_SUPERFICIE_CONSTRUCCION 
+gbak:restoring parameter PREDIO for stored procedure 
+gbak:restoring parameter SUPERFICIE for stored procedure 
+gbak:restoring stored procedure MEJORAS_ACTUALIZAR 
+gbak:restoring stored procedure ZPATENTES_DIVIDIR 
+gbak:restoring stored procedure EMITIR_ACTIVOS 
+gbak:restoring parameter PID for stored procedure 
+gbak:restoring parameter PANIO for stored procedure 
+gbak:restoring parameter PVER for stored procedure 
+gbak:restoring parameter PNUM for stored procedure 
+gbak:restoring parameter RETID for stored procedure 
+gbak:restoring stored procedure REP_BALANCE_CARTERA_AGUA 
+gbak:restoring parameter FECHA_INICIO for stored procedure 
+gbak:restoring parameter FECHA_CORTE for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter saldo_anterior for stored procedure 
+gbak:restoring parameter emisiones for stored procedure 
+gbak:restoring parameter cobros for stored procedure 
+gbak:restoring parameter bajas for stored procedure 
+gbak:restoring stored procedure REP_CUENTA_CORRIENTE_AGUA_COD 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter NOMBRES for stored procedure 
+gbak:restoring parameter CODIGO for stored procedure 
+gbak:restoring parameter CONTEO for stored procedure 
+gbak:restoring parameter TOTAL for stored procedure 
+gbak:restoring stored procedure REP_CUENTA_CORRIENTE_AGUA 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter PAGOS for stored procedure 
+gbak:restoring parameter ID for stored procedure 
+gbak:restoring parameter CONCEPTO for stored procedure 
+gbak:restoring parameter NOMBRES for stored procedure 
+gbak:restoring parameter CODIGO for stored procedure 
+gbak:restoring parameter DIRECCION for stored procedure 
+gbak:restoring parameter AÑO for stored procedure 
+gbak:restoring parameter TOTAL for stored procedure 
+gbak:restoring stored procedure CAL_ALCABALAS_RURAL 
+gbak:restoring parameter PYEARS for stored procedure 
+gbak:restoring parameter PAVALUO for stored procedure 
+gbak:restoring parameter PEMISION for stored procedure 
+gbak:restoring parameter PCONCEPTO for stored procedure 
+gbak:restoring parameter RUBRO for stored procedure 
+gbak:restoring parameter DENOMINACION for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring stored procedure PISOS_XPREDIO 
+gbak:restoring parameter PREDIO for stored procedure 
+gbak:restoring parameter PISOS for stored procedure 
+gbak:restoring parameter BLOQUES for stored procedure 
+gbak:restoring parameter EDAD_CONSTRUCCION for stored procedure 
+gbak:restoring parameter FRENTES for stored procedure 
+gbak:restoring stored procedure REP_RECAUDA_COMPONENTES_ACTUAL 
+gbak:restoring parameter PFECHAINICIO for stored procedure 
+gbak:restoring parameter PFECHACORTE for stored procedure 
+gbak:restoring parameter PAFECTANTES for stored procedure 
+gbak:restoring parameter CONCEPTODEN for stored procedure 
+gbak:restoring parameter RUBRODEN for stored procedure 
+gbak:restoring parameter ANIO for stored procedure 
+gbak:restoring parameter ORIGEN for stored procedure 
+gbak:restoring parameter VALOR for stored procedure 
+gbak:restoring parameter ACTUALIDAD for stored procedure 
+gbak:restoring parameter ACTUALIDADN for stored procedure 
+gbak:restoring stored procedure REP_EMISAL_RUBROS_FECHA 
+gbak:restoring parameter PFECHA_CORTE for stored procedure 
+gbak:restoring parameter id for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter conteo for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter estado for stored procedure 
+gbak:restoring parameter rubro_id for stored procedure 
+gbak:restoring parameter rubro for stored procedure 
+gbak:restoring parameter origen for stored procedure 
+gbak:restoring stored procedure PLANILLAS_PAGOS_POSTERIORES 
+gbak:restoring parameter FECHACORTE for stored procedure 
+gbak:restoring parameter PLANILLA for stored procedure 
+gbak:restoring parameter PAGOS for stored procedure 
+gbak:restoring stored procedure COMPROBAR_COBROS 
+gbak:restoring parameter cid for stored procedure 
+gbak:restoring parameter ccod for stored procedure 
+gbak:restoring parameter canio for stored procedure 
+gbak:restoring parameter pid for stored procedure 
+gbak:restoring parameter pestado for stored procedure 
+gbak:restoring stored procedure REP_BALANCE_CARTERA_PERIODO 
+gbak:restoring parameter FECHA_INICIO for stored procedure 
+gbak:restoring parameter FECHA_CORTE for stored procedure 
+gbak:restoring parameter concepto for stored procedure 
+gbak:restoring parameter concepto_id for stored procedure 
+gbak:restoring parameter rurbo for stored procedure 
+gbak:restoring parameter rubro_id for stored procedure 
+gbak:restoring parameter año for stored procedure 
+gbak:restoring parameter valor for stored procedure 
+gbak:restoring parameter denominacion for stored procedure 
+gbak:restoring parameter origen for stored procedure 
+gbak:    committing metadata 
+gbak:    restoring index PK_MEJORAS 
+gbak:restoring data for table MEJORAS 
+gbak:committing data for table MEJORAS 
+gbak:   5 records restored 
+gbak:restoring data for table ZTITULOSPU1 
+gbak:committing data for table ZTITULOSPU1 
+gbak:   8879 records restored 
+gbak:    restoring index PK_CAJAS 
+gbak:restoring data for table CAJAS 
+gbak:committing data for table CAJAS 
+gbak:   1 records restored 
+gbak:restoring data for table SOPORTES 
+gbak:committing data for table SOPORTES 
+gbak:   2 records restored 
+gbak:restoring data for table SOPORTE_MOVIMIENTOS 
+gbak:committing data for table SOPORTE_MOVIMIENTOS 
+gbak:   30 records restored 
+gbak:    restoring index PK_ZCOBROSCOM_2014 
+gbak:restoring data for table ZCOBROSCOM_2014 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:committing data for table ZCOBROSCOM_2014 
+gbak:   28318 records restored 
+gbak:restoring data for table ZCOBROS_2014 
+gbak:committing data for table ZCOBROS_2014 
+gbak:   2816 records restored 
+gbak:restoring data for table ZMEJORAS 
+gbak:committing data for table ZMEJORAS 
+gbak:   453 records restored 
+gbak:    restoring index PK_MEJORAS_ELEMENTOS 
+gbak:    restoring index FK_MEJORAS_X_ELEMENTOS 
+gbak:restoring data for table MEJORAS_ELEMENTOS 
+gbak:   10000 records restored 
+gbak:committing data for table MEJORAS_ELEMENTOS 
+gbak:   13500 records restored 
+gbak:    restoring index RDB$PRIMARY104 
+gbak:restoring data for table IBE$VERSION_HISTORY 
+gbak:committing data for table IBE$VERSION_HISTORY 
+gbak:   40 records restored 
+gbak:    restoring index PK_REPORTES 
+gbak:restoring data for table REPORTES 
+gbak:committing data for table REPORTES 
+gbak:   16 records restored 
+gbak:    restoring index PK_CONCEPTOS_EMISION 
+gbak:    restoring index FK_CONCEPTOS_EMISION_1 
+gbak:restoring data for table CONCEPTOS_EMISION 
+gbak:committing data for table CONCEPTOS_EMISION 
+gbak:   20 records restored 
+gbak:    restoring index PK_ZTITULOSAP 
+gbak:restoring data for table ZTITULOSAP 
+gbak:   10000 records restored 
+gbak:committing data for table ZTITULOSAP 
+gbak:   18533 records restored 
+gbak:    restoring index PK_ZTITULOSPR 
+gbak:restoring data for table ZTITULOSPR 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:committing data for table ZTITULOSPR 
+gbak:   25654 records restored 
+gbak:    restoring index PK_PLANILLAS_MESES 
+gbak:    restoring index FK_MESES_PLANILLA 
+gbak:    restoring index FK_MESES_RUBRO 
+gbak:restoring data for table PLANILLAS_MESES 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:committing data for table PLANILLAS_MESES 
+gbak:   23735 records restored 
+gbak:    restoring index PK_ZAGUA 
+gbak:restoring data for table ZAGUA 
+gbak:committing data for table ZAGUA 
+gbak:   1970 records restored 
+gbak:    restoring index PK_ZTITULOSPU 
+gbak:restoring data for table ZTITULOSPU 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:committing data for table ZTITULOSPU 
+gbak:   31171 records restored 
+gbak:    restoring index PK_ZTITULOSPT 
+gbak:restoring data for table ZTITULOSPT 
+gbak:committing data for table ZTITULOSPT 
+gbak:   4550 records restored 
+gbak:    restoring index PK_ZPATENTE 
+gbak:restoring data for table ZPATENTE 
+gbak:committing data for table ZPATENTE 
+gbak:   634 records restored 
+gbak:restoring data for table ZTITULOSAPBAJAS 
+gbak:committing data for table ZTITULOSAPBAJAS 
+gbak:   187 records restored 
+gbak:    restoring index PK_ZPREDIOS_RUSTICOS 
+gbak:restoring data for table ZPREDIOS_RUSTICOS 
+gbak:committing data for table ZPREDIOS_RUSTICOS 
+gbak:   3242 records restored 
+gbak:    restoring index PK_PLANILLAS_SUSTITUCION 
+gbak:    restoring index FK_PLA_SUSTITUCION_ORIGINAL 
+gbak:    restoring index FK_PLA_SUSTITUCION_NUEVA 
+gbak:    restoring index FK_PLA_SUSTITUCION_USUARIO 
+gbak:    restoring index PK_SEGUIMIENTO 
+gbak:    restoring index FK_SEGUIMIENTO_USUARIO 
+gbak:restoring data for table SEGUIMIENTO 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:   100000 records restored 
+gbak:   110000 records restored 
+gbak:   120000 records restored 
+gbak:   130000 records restored 
+gbak:   140000 records restored 
+gbak:   150000 records restored 
+gbak:   160000 records restored 
+gbak:   170000 records restored 
+gbak:committing data for table SEGUIMIENTO 
+gbak:   176209 records restored 
+gbak:    restoring index PK_AGUA_SERVICIOS 
+gbak:    restoring index FK_AGUA_SERVICIOS_CUENTA 
+gbak:    restoring index FK_AGUA_SERVICIOS_CONCEPTO 
+gbak:    restoring index FK_AGUA_SERVICIOS_ESTADO 
+gbak:restoring data for table AGUA_SERVICIOS 
+gbak:committing data for table AGUA_SERVICIOS 
+gbak:   122 records restored 
+gbak:    restoring index PK_PATENTES_COMPONENTES 
+gbak:    restoring index FK_PATENTES_COMPONENTES_PAT 
+gbak:    restoring index FK_PATENTES_COMPONENTES_CON 
+gbak:restoring data for table PATENTES_COMPONENTES 
+gbak:committing data for table PATENTES_COMPONENTES 
+gbak:   2459 records restored 
+gbak:    restoring index PK_LISTAS 
+gbak:restoring data for table LISTAS 
+gbak:committing data for table LISTAS 
+gbak:   40 records restored 
+gbak:restoring data for table ZCOBROS 
+gbak:   10000 records restored 
+gbak:committing data for table ZCOBROS 
+gbak:   18547 records restored 
+gbak:    restoring index PK_COEFICIENTES_ELEMENTOS_1 
+gbak:    restoring index FK_COE_ELEMENTOS_COEFICIENTE 
+gbak:restoring data for table COEFICIENTES_ELEMENTOS 
+gbak:committing data for table COEFICIENTES_ELEMENTOS 
+gbak:   529 records restored 
+gbak:    restoring index PK_AGUA_LECTURAS 
+gbak:    restoring index FK_AGUA_LECTURAS_CUENTAS 
+gbak:    restoring index AGUA_POTABLE_IDX_CONTRIBUYENTE 
+gbak:    restoring index AGUA_POTABLE_IDX_CODIGO 
+gbak:    restoring index AGUA_POTABLE_IDX_UBICACION 
+gbak:    restoring index PK_AGUA_POTABLE 
+gbak:    restoring index FK_AGUA_POTABLE_CONTRIBUYENTE 
+gbak:    restoring index FK_AGUA_POTABLE_ESTADO_SERVICIO 
+gbak:    restoring index FK_AGUA_POTABLE_CATEGORIA 
+gbak:restoring data for table AGUA_POTABLE 
+gbak:committing data for table AGUA_POTABLE 
+gbak:   2110 records restored 
+gbak:    restoring index PK_CAJAS_USUARIOS 
+gbak:    restoring index FK_CAJAS_USUARIOS_C 
+gbak:    restoring index FK_CAJAS_USUARIOS_U 
+gbak:restoring data for table CAJAS_USUARIOS 
+gbak:committing data for table CAJAS_USUARIOS 
+gbak:   1 records restored 
+gbak:    restoring index FK_COBROSRUB_COBRO 
+gbak:    restoring index FK_COBROSRUB_RUBRO 
+gbak:    restoring index PK_COBROS_RUBROS 
+gbak:restoring data for table COBROS_RUBROS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:committing data for table COBROS_RUBROS 
+gbak:   38112 records restored 
+gbak:    restoring index PK_PATENTES 
+gbak:    restoring index FK_PATENTES_CONTRIBUYENTES 
+gbak:    restoring index IX_PATENTES_CODIGO 
+gbak:restoring data for table PATENTES 
+gbak:committing data for table PATENTES 
+gbak:   852 records restored 
+gbak:    restoring index PK_MODULOS_1 
+gbak:restoring data for table MODULOS 
+gbak:committing data for table MODULOS 
+gbak:   6 records restored 
+gbak:    restoring index PK_COBROS_ELEMENTOS 
+gbak:    restoring index FK_COBROS_ELEMENTOS_COB 
+gbak:restoring data for table COBROS_ELEMENTOS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:committing data for table COBROS_ELEMENTOS 
+gbak:   98362 records restored 
+gbak:    restoring index PK_PAPELERA_1 
+gbak:    restoring index PKI_CONTRIBUYENTES 
+gbak:    restoring index FK_CONTRIBUYENTES_PERSONERIA 
+gbak:restoring data for table CONTRIBUYENTES 
+gbak:   10000 records restored 
+gbak:committing data for table CONTRIBUYENTES 
+gbak:   12727 records restored 
+gbak:    restoring index PKI_CONCEPTOS_RUBROS 
+gbak:    restoring index FK_CONCEPTOS_RUBROS_CONCEPTO 
+gbak:    restoring index FK_CONCEPTOS_RUBROS_RUBRO 
+gbak:restoring data for table CONCEPTOS_RUBROS 
+gbak:committing data for table CONCEPTOS_RUBROS 
+gbak:   29 records restored 
+gbak:    restoring index PKI_CONCEPTOS 
+gbak:restoring data for table CONCEPTOS 
+gbak:committing data for table CONCEPTOS 
+gbak:   13 records restored 
+gbak:    restoring index PK_CONCEPTOS_DOCUMENTOS 
+gbak:    restoring index FK_CONDOCUMENTOS_CONCEPTO 
+gbak:restoring data for table CONCEPTOS_DOCUMENTOS 
+gbak:committing data for table CONCEPTOS_DOCUMENTOS 
+gbak:   3 records restored 
+gbak:    restoring index PKI_PREDIOS_PROPIETARIOS 
+gbak:    restoring index FK_PREPROPIETARIOS_PREDIO 
+gbak:    restoring index FK_PREPROPIETARIOS_CONTRIB 
+gbak:restoring data for table PREDIOS_PROPIETARIOS 
+gbak:committing data for table PREDIOS_PROPIETARIOS 
+gbak:   7230 records restored 
+gbak:    restoring index PK_USUARIOS_PRIVILEGIOS_1 
+gbak:    restoring index FK_USRPRIVILEGIOS_USUARIO 
+gbak:    restoring index FK_USRPRIVILEGIOS_FUNCION 
+gbak:restoring data for table USUARIOS_PRIVILEGIOS 
+gbak:committing data for table USUARIOS_PRIVILEGIOS 
+gbak:   89 records restored 
+gbak:    restoring index PKI_COBROS_TRANSACCIONES 
+gbak:    restoring index FK_COBROS_TRANSACCIONES_COBRO 
+gbak:restoring data for table COBROS_TRANSACCIONES 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:   100000 records restored 
+gbak:committing data for table COBROS_TRANSACCIONES 
+gbak:   105159 records restored 
+gbak:    restoring index PK_USUARIOS_1 
+gbak:restoring data for table USUARIOS 
+gbak:committing data for table USUARIOS 
+gbak:   10 records restored 
+gbak:    restoring index PKI_USUARIOS_SUPERVISION 
+gbak:    restoring index FK_USRSUPERVISION_USUARIO 
+gbak:    restoring index FK_USRSUPERVISION_MODULO 
+gbak:    restoring index PK_TABLAS_CLAVES_1 
+gbak:    restoring index FK_TABLAS_CLAVES_TABLA 
+gbak:restoring data for table TABLAS_CLAVES 
+gbak:committing data for table TABLAS_CLAVES 
+gbak:   217 records restored 
+gbak:    restoring index PKI_TABLAS 
+gbak:restoring data for table TABLAS 
+gbak:committing data for table TABLAS 
+gbak:   27 records restored 
+gbak:    restoring index PKI_PREDIOS_TERRENOS 
+gbak:    restoring index FK_PREDIOS_TERRENOS_PREDIO 
+gbak:    restoring index FK_PREDIOS_TERRENOS_SUELO 
+gbak:    restoring index FK_PREDIOS_TERRENOS_MANZANA 
+gbak:    restoring index FK_PREDIOS_TERRENOS_RAZANTE 
+gbak:restoring data for table PREDIOS_TERRENOS 
+gbak:committing data for table PREDIOS_TERRENOS 
+gbak:   7212 records restored 
+gbak:    restoring index PK_RUBROS_1 
+gbak:restoring data for table RUBROS 
+gbak:committing data for table RUBROS 
+gbak:   44 records restored 
+gbak:    restoring index PK_REBAJAS_RUBROS_1 
+gbak:    restoring index FK_REBAJAS_RUBROS_REBAJA 
+gbak:    restoring index FK_REBAJAS_RUBROS_RUBRO 
+gbak:restoring data for table REBAJAS_RUBROS 
+gbak:committing data for table REBAJAS_RUBROS 
+gbak:   4 records restored 
+gbak:    restoring index PK_REBAJAS_1 
+gbak:restoring data for table REBAJAS 
+gbak:committing data for table REBAJAS 
+gbak:   3 records restored 
+gbak:    restoring index PK_PREDIOS_TABLAS_1 
+gbak:    restoring index FK_PREDIOS_TABLAS_PREDIO 
+gbak:    restoring index PK_PREDIOS_PISOS_1 
+gbak:    restoring index FK_PREDIOS_PISOS_BLOQUE 
+gbak:    restoring index FK_PREDIOS_PISOS_CONSERVACION 
+gbak:restoring data for table PREDIOS_PISOS 
+gbak:committing data for table PREDIOS_PISOS 
+gbak:   3568 records restored 
+gbak:    restoring index PK_PREDIOS_FRENTES_1 
+gbak:    restoring index FK_PREFRENTES_PREDIO 
+gbak:restoring data for table PREDIOS_FRENTES 
+gbak:committing data for table PREDIOS_FRENTES 
+gbak:   4102 records restored 
+gbak:    restoring index PK_PREDIOS_FOTOS_1 
+gbak:    restoring index FK_PREFOTOS_PREDIO 
+gbak:restoring data for table PREDIOS_FOTOS 
+gbak:committing data for table PREDIOS_FOTOS 
+gbak:   6 records restored 
+gbak:    restoring index PK_PREDIOS_CONSTRUCCION_1 
+gbak:    restoring index FK_PREDIOS_CONSTRUCCION_PISO 
+gbak:    restoring index FK_PRECONSTRUCCION_COMPONENTE 
+gbak:restoring data for table PREDIOS_CONSTRUCCION 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:committing data for table PREDIOS_CONSTRUCCION 
+gbak:   33122 records restored 
+gbak:    restoring index PK_PREDIOS_BLOQUES_1 
+gbak:    restoring index FK_PREBLOQUES_PREDIO 
+gbak:restoring data for table PREDIOS_BLOQUES 
+gbak:committing data for table PREDIOS_BLOQUES 
+gbak:   2870 records restored 
+gbak:    restoring index PK_RUBROS_PARAMETROS 
+gbak:    restoring index FK_RUB_PARAMETROS_RUBRO 
+gbak:restoring data for table RUBROS_PARAMETROS 
+gbak:committing data for table RUBROS_PARAMETROS 
+gbak:   2 records restored 
+gbak:    restoring index PK_PREDIOS_BASE_1 
+gbak:    restoring index IDX_PREDIOS_BASE_1 
+gbak:    restoring index FK_PREDIO_DOMINIO 
+gbak:    restoring index FK_PREDIO_VIA_MATERIAL 
+gbak:restoring data for table PREDIOS_BASE 
+gbak:committing data for table PREDIOS_BASE 
+gbak:   7231 records restored 
+gbak:    restoring index PKI_PAPELERA_ATRIBUTOS 
+gbak:    restoring index FK_PATRIBUTOS_PAPELERA 
+gbak:    restoring index PKI_PLANILLAS_RUBROS 
+gbak:    restoring index FK_PLARUBROS_PLANILLA 
+gbak:    restoring index FK_PLARUBROS_RUBRO 
+gbak:restoring data for table PLANILLAS_RUBROS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:   100000 records restored 
+gbak:   110000 records restored 
+gbak:   120000 records restored 
+gbak:   130000 records restored 
+gbak:   140000 records restored 
+gbak:   150000 records restored 
+gbak:   160000 records restored 
+gbak:   170000 records restored 
+gbak:   180000 records restored 
+gbak:   190000 records restored 
+gbak:   200000 records restored 
+gbak:   210000 records restored 
+gbak:   220000 records restored 
+gbak:   230000 records restored 
+gbak:   240000 records restored 
+gbak:   250000 records restored 
+gbak:   260000 records restored 
+gbak:   270000 records restored 
+gbak:   280000 records restored 
+gbak:   290000 records restored 
+gbak:   300000 records restored 
+gbak:   310000 records restored 
+gbak:   320000 records restored 
+gbak:   330000 records restored 
+gbak:   340000 records restored 
+gbak:   350000 records restored 
+gbak:   360000 records restored 
+gbak:   370000 records restored 
+gbak:   380000 records restored 
+gbak:   390000 records restored 
+gbak:   400000 records restored 
+gbak:   410000 records restored 
+gbak:   420000 records restored 
+gbak:   430000 records restored 
+gbak:   440000 records restored 
+gbak:   450000 records restored 
+gbak:   460000 records restored 
+gbak:   470000 records restored 
+gbak:   480000 records restored 
+gbak:   490000 records restored 
+gbak:   500000 records restored 
+gbak:   510000 records restored 
+gbak:   520000 records restored 
+gbak:   530000 records restored 
+gbak:committing data for table PLANILLAS_RUBROS 
+gbak:   534024 records restored 
+gbak:    restoring index PK_PLANILLAS_ATRIBUTOS_1 
+gbak:    restoring index FK_PLANATRIBUTOS_PLANILLA 
+gbak:restoring data for table PLANILLAS_ATRIBUTOS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:   100000 records restored 
+gbak:   110000 records restored 
+gbak:   120000 records restored 
+gbak:   130000 records restored 
+gbak:   140000 records restored 
+gbak:   150000 records restored 
+gbak:   160000 records restored 
+gbak:   170000 records restored 
+gbak:   180000 records restored 
+gbak:   190000 records restored 
+gbak:   200000 records restored 
+gbak:   210000 records restored 
+gbak:   220000 records restored 
+gbak:committing data for table PLANILLAS_ATRIBUTOS 
+gbak:   221438 records restored 
+gbak:    restoring index PK_PLANILLAS_1 
+gbak:    restoring index IDX_PLANILLAS_CONCEPTO 
+gbak:    restoring index IDX_PLANILLAS_CONTRIBUYENTE 
+gbak:    restoring index FK_PLANILLAS_CONCEPTO 
+gbak:    restoring index FK_PLANILLAS_CONTRIBUYENTE 
+gbak:    restoring index IDX_PLANILLAS_ANIO_CONCEPTO 
+gbak:    restoring index IDX_PLANILLAS_CONTRIB_ESTADO 
+gbak:    restoring index IDX_PLANILLAS_EMISION 
+gbak:    restoring index IDX_PLANILLAS_COBRO 
+gbak:restoring data for table PLANILLAS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:   100000 records restored 
+gbak:   110000 records restored 
+gbak:   120000 records restored 
+gbak:committing data for table PLANILLAS 
+gbak:   129569 records restored 
+gbak:    restoring index PK_CONVENIOS_TRANSACCIONES_1 
+gbak:    restoring index FK_CONTRANSACCIONES_CONVENIO 
+gbak:    restoring index FK_CONTRANSACCIONES_PLANILLA 
+gbak:    restoring index PK_CONVENIOS_1 
+gbak:    restoring index FK_CONVENIOS_CONTRIBUYENTE 
+gbak:    restoring index PK_FUNCIONES_COMANDOS_1 
+gbak:    restoring index FK_FUNCIONES_COMANDOS_FUNCION 
+gbak:restoring data for table FUNCIONES_COMANDOS 
+gbak:committing data for table FUNCIONES_COMANDOS 
+gbak:   75 records restored 
+gbak:    restoring index PKI_CONTRIBUYENTES_REBAJAS 
+gbak:    restoring index FK_CONREBAJAS_CONTRIBUYENTE 
+gbak:    restoring index FK_CONREBAJAS_REBAJA 
+gbak:restoring data for table CONTRIBUYENTES_REBAJAS 
+gbak:committing data for table CONTRIBUYENTES_REBAJAS 
+gbak:   741 records restored 
+gbak:    restoring index PK_FUNCIONES_1 
+gbak:    restoring index FK_FUNCIONES_MODULO 
+gbak:restoring data for table FUNCIONES 
+gbak:committing data for table FUNCIONES 
+gbak:   41 records restored 
+gbak:    restoring index PKI_CONTRIBUYENTES_CODIGOS 
+gbak:    restoring index FK_CONCODIGOS_CONTRIBUYENTE 
+gbak:    restoring index PKI_CONSTRUCCION_COMPONENTES1 
+gbak:restoring data for table CONSTRUCCION_MODELOS 
+gbak:committing data for table CONSTRUCCION_MODELOS 
+gbak:   16 records restored 
+gbak:    restoring index PK_SERVICIOS_1 
+gbak:    restoring index FK_SERVICIOS_CONTRIBUYENTE 
+gbak:    restoring index PKI_CONSTRUCCION_COMPONENTES 
+gbak:    restoring index FK_CONSCOMP_MODELO 
+gbak:restoring data for table CONSTRUCCION_COMPONENTES 
+gbak:committing data for table CONSTRUCCION_COMPONENTES 
+gbak:   182 records restored 
+gbak:    restoring index PKI_COEFICIENTES 
+gbak:restoring data for table COEFICIENTES 
+gbak:committing data for table COEFICIENTES 
+gbak:   19 records restored 
+gbak:    restoring index PK_AUTORIZACIONES_1 
+gbak:    restoring index FK_AUTORIZACIONES_USUARIO 
+gbak:    restoring index FK_AUTORIZACIONES_FUNCION 
+gbak:    restoring index PKI_COBROS 
+gbak:    restoring index IDX_COBROS_CONTRIBUYENTE 
+gbak:    restoring index FK_COBROS_CONTRIBUYENTE 
+gbak:restoring data for table COBROS 
+gbak:   10000 records restored 
+gbak:   20000 records restored 
+gbak:   30000 records restored 
+gbak:   40000 records restored 
+gbak:   50000 records restored 
+gbak:   60000 records restored 
+gbak:   70000 records restored 
+gbak:   80000 records restored 
+gbak:   90000 records restored 
+gbak:committing data for table COBROS 
+gbak:   98393 records restored 
+gbak:    restoring trigger AUTORIZACIONES_BI_NUEVO 
+gbak:    restoring trigger COBROS_BI_NUEVO 
+gbak:    restoring trigger COBROS_TRANSACCIONES_BI_NUEVO 
+gbak:    restoring trigger COEFICIENTES_BI_NUEVO 
+gbak:    restoring trigger CONCEPTOS_BI_NUEVO 
+gbak:    restoring trigger CONCEPTOS_RUBROS_BI_NUEVO 
+gbak:    restoring trigger CONSCOMPONENTES_BI_NUEVO 
+gbak:    restoring trigger CONSTRUCCION_MODELOS_BI_NUEVO 
+gbak:    restoring trigger CONTRIBUYENTES_BI_NUEVO 
+gbak:    restoring trigger CONTCODIGOS_BI_NUEVO 
+gbak:    restoring trigger CONTREBAJAS_BI_NUEVO 
+gbak:    restoring trigger CONVENIOS_BI_NUEVO 
+gbak:    restoring trigger CONTRANSACCIONES_BI_NUEVO 
+gbak:    restoring trigger FUNCIONES_BI_NUEVO 
+gbak:    restoring trigger FUNCOMANDOS_BI_NUEVO 
+gbak:    restoring trigger MODULOS_BI_NUEVO 
+gbak:    restoring trigger PAPELERA_BI_NUEVO 
+gbak:    restoring trigger PATRIBUTOS_BI_NUEVO 
+gbak:    restoring trigger PLANILLAS_BI_NUEVO 
+gbak:    restoring trigger PLATRIBUTOS_BI_NUEVO 
+gbak:    restoring trigger PLRUBROS_BI_NUEVO 
+gbak:    restoring trigger PRDBASE_BI_NUEVO 
+gbak:    restoring trigger PRDBLOQUES_BI_NUEVO 
+gbak:    restoring trigger PRDCONSTRUCCION_BI_NUEVO 
+gbak:    restoring trigger PRDFOTOS_BI_NUEVO 
+gbak:    restoring trigger PRDFRENTES_BI_NUEVO 
+gbak:    restoring trigger PRDPROPIETARIOS_BI_NUEVO 
+gbak:    restoring trigger PRDTABLAS_BI_NUEVO 
+gbak:    restoring trigger PRDTERRENOS_BI_NUEVO 
+gbak:    restoring trigger REBAJAS_BI_NUEVO 
+gbak:    restoring trigger REBRUBROS_BI_NUEVO 
+gbak:    restoring trigger RUBROS_BI_NUEVO 
+gbak:    restoring trigger SERVICIOS_BI_NUEVO 
+gbak:    restoring trigger TABLAS_BI_NUEVO 
+gbak:    restoring trigger TABCLAVES_BI_NUEVO 
+gbak:    restoring trigger USUARIOS_BI_NUEVO 
+gbak:    restoring trigger USRPRIVILEGIOS_BI_NUEVO 
+gbak:    restoring trigger USRSUPERVISION_BI_NUEVO 
+gbak:    restoring trigger PREDIOS_PISOS_BI0 
+gbak:    restoring trigger COEFICIENTES_ELEMENTOS_BI_NUEVO 
+gbak:    restoring trigger PATENTES_BI 
+gbak:    restoring trigger AGUA_LECTURAS_BI 
+gbak:    restoring trigger AGUA_POTABLE_BI 
+gbak:    restoring trigger PATENTES_COMPONENTES_BI 
+gbak:    restoring trigger LISTAS_BI0 
+gbak:    restoring trigger SEGUIMIENTO_BI 
+gbak:    restoring trigger PLANILLAS_SUSTITUCION_BI 
+gbak:    restoring trigger RUBROS_PARAMETROS_BI_NUEVO 
+gbak:    restoring trigger AGUA_SERVICIOS_BI 
+gbak:    restoring trigger COBROS_ELEMENTOS_BI 
+gbak:    restoring trigger ZPREDIOS_RUSTICOS_BI 
+gbak:    restoring trigger ZPATENTE_BI 
+gbak:    restoring trigger ZTITULOSPU_BI 
+gbak:    restoring trigger ZTITULOSPR_BI 
+gbak:    restoring trigger ZAGUA_BI 
+gbak:    restoring trigger ZTITULOSPT_BI 
+gbak:    restoring trigger ZTITULOSAP_BI 
+gbak:    restoring trigger PLANILLAS_MESES_BI 
+gbak:    restoring trigger COBROS_RUBROS_BI 
+gbak:    restoring trigger ZCOBROS_BI 
+gbak:    restoring trigger CONCEPTOS_DOCUMENTOS_BI0 
+gbak:    restoring trigger CONCEPTOS_EMISION_BI 
+gbak:    restoring trigger REPORTES_BI 
+gbak:    restoring trigger CAJAS_BI 
+gbak:    restoring trigger CAJAS_MOVIMIENTOS_BI 
+gbak:    restoring trigger CONTRIBUYENTES_TRANSACCIONES_BI 
+gbak:    restoring trigger CAJAS_USUARIOS_BI 
+gbak:    restoring trigger ZCOBROSCOM_2014_BI0 
+gbak:    restoring trigger SOPORTE_MOVIMIENTOS_BI 
+gbak:    restoring trigger SOPORTES_BI 
+gbak:    restoring trigger MEJORAS_ELEMENTOS_BI 
+gbak:    restoring trigger MEJORAS_BI 
+gbak:    restoring trigger IBE$VERSION_HISTORY_BI 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user PUBLIC 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user PUBLIC 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user PUBLIC 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user IBE$VERSION_HISTORY_BI 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:    restoring privilege for user SYSDBA 
+gbak:creating indexes 
+gbak:    activating and creating deferred index PK_MEJORAS 
+gbak:    activating and creating deferred index PK_CAJAS 
+gbak:    activating and creating deferred index PK_ZCOBROSCOM_2014 
+gbak:    activating and creating deferred index PK_MEJORAS_ELEMENTOS 
+gbak:    activating and creating deferred index RDB$PRIMARY104 
+gbak:    activating and creating deferred index PK_REPORTES 
+gbak:    activating and creating deferred index PK_CONCEPTOS_EMISION 
+gbak:    activating and creating deferred index PK_ZTITULOSAP 
+gbak:    activating and creating deferred index PK_ZTITULOSPR 
+gbak:    activating and creating deferred index PK_PLANILLAS_MESES 
+gbak:    activating and creating deferred index PK_ZAGUA 
+gbak:    activating and creating deferred index PK_ZTITULOSPU 
+gbak:    activating and creating deferred index PK_ZTITULOSPT 
+gbak:    activating and creating deferred index PK_ZPATENTE 
+gbak:    activating and creating deferred index PK_ZPREDIOS_RUSTICOS 
+gbak:    activating and creating deferred index PK_PLANILLAS_SUSTITUCION 
+gbak:    activating and creating deferred index PK_SEGUIMIENTO 
+gbak:    activating and creating deferred index PK_AGUA_SERVICIOS 
+gbak:    activating and creating deferred index PK_PATENTES_COMPONENTES 
+gbak:    activating and creating deferred index PK_LISTAS 
+gbak:    activating and creating deferred index PK_COEFICIENTES_ELEMENTOS_1 
+gbak:    activating and creating deferred index PK_AGUA_LECTURAS 
+gbak:    activating and creating deferred index AGUA_POTABLE_IDX_CONTRIBUYENTE 
+gbak:    activating and creating deferred index AGUA_POTABLE_IDX_CODIGO 
+gbak:    activating and creating deferred index AGUA_POTABLE_IDX_UBICACION 
+gbak:    activating and creating deferred index PK_AGUA_POTABLE 
+gbak:    activating and creating deferred index PK_CAJAS_USUARIOS 
+gbak:    activating and creating deferred index PK_COBROS_RUBROS 
+gbak:    activating and creating deferred index PK_PATENTES 
+gbak:    activating and creating deferred index IX_PATENTES_CODIGO 
+gbak:    activating and creating deferred index PK_MODULOS_1 
+gbak:    activating and creating deferred index PK_COBROS_ELEMENTOS 
+gbak:    activating and creating deferred index PK_PAPELERA_1 
+gbak:    activating and creating deferred index PKI_CONTRIBUYENTES 
+gbak:    activating and creating deferred index PKI_CONCEPTOS_RUBROS 
+gbak:    activating and creating deferred index PKI_CONCEPTOS 
+gbak:    activating and creating deferred index PK_CONCEPTOS_DOCUMENTOS 
+gbak:    activating and creating deferred index PKI_PREDIOS_PROPIETARIOS 
+gbak:    activating and creating deferred index PK_USUARIOS_PRIVILEGIOS_1 
+gbak:    activating and creating deferred index PKI_COBROS_TRANSACCIONES 
+gbak:    activating and creating deferred index PK_USUARIOS_1 
+gbak:    activating and creating deferred index PKI_USUARIOS_SUPERVISION 
+gbak:    activating and creating deferred index PK_TABLAS_CLAVES_1 
+gbak:    activating and creating deferred index PKI_TABLAS 
+gbak:    activating and creating deferred index PKI_PREDIOS_TERRENOS 
+gbak:    activating and creating deferred index PK_RUBROS_1 
+gbak:    activating and creating deferred index PK_REBAJAS_RUBROS_1 
+gbak:    activating and creating deferred index PK_REBAJAS_1 
+gbak:    activating and creating deferred index PK_PREDIOS_TABLAS_1 
+gbak:    activating and creating deferred index PK_PREDIOS_PISOS_1 
+gbak:    activating and creating deferred index PK_PREDIOS_FRENTES_1 
+gbak:    activating and creating deferred index PK_PREDIOS_FOTOS_1 
+gbak:    activating and creating deferred index PK_PREDIOS_CONSTRUCCION_1 
+gbak:    activating and creating deferred index PK_PREDIOS_BLOQUES_1 
+gbak:    activating and creating deferred index PK_RUBROS_PARAMETROS 
+gbak:    activating and creating deferred index PK_PREDIOS_BASE_1 
+gbak:    activating and creating deferred index IDX_PREDIOS_BASE_1 
+gbak:    activating and creating deferred index PKI_PAPELERA_ATRIBUTOS 
+gbak:    activating and creating deferred index PKI_PLANILLAS_RUBROS 
+gbak:    activating and creating deferred index PK_PLANILLAS_ATRIBUTOS_1 
+gbak:    activating and creating deferred index PK_PLANILLAS_1 
+gbak:    activating and creating deferred index IDX_PLANILLAS_CONCEPTO 
+gbak:    activating and creating deferred index IDX_PLANILLAS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index IDX_PLANILLAS_ANIO_CONCEPTO 
+gbak:    activating and creating deferred index IDX_PLANILLAS_CONTRIB_ESTADO 
+gbak:    activating and creating deferred index IDX_PLANILLAS_EMISION 
+gbak:    activating and creating deferred index IDX_PLANILLAS_COBRO 
+gbak:    activating and creating deferred index PK_CONVENIOS_TRANSACCIONES_1 
+gbak:    activating and creating deferred index PK_CONVENIOS_1 
+gbak:    activating and creating deferred index PK_FUNCIONES_COMANDOS_1 
+gbak:    activating and creating deferred index PKI_CONTRIBUYENTES_REBAJAS 
+gbak:    activating and creating deferred index PK_FUNCIONES_1 
+gbak:    activating and creating deferred index PKI_CONTRIBUYENTES_CODIGOS 
+gbak:    activating and creating deferred index PKI_CONSTRUCCION_COMPONENTES1 
+gbak:    activating and creating deferred index PK_SERVICIOS_1 
+gbak:    activating and creating deferred index PKI_CONSTRUCCION_COMPONENTES 
+gbak:    activating and creating deferred index PKI_COEFICIENTES 
+gbak:    activating and creating deferred index PK_AUTORIZACIONES_1 
+gbak:    activating and creating deferred index PKI_COBROS 
+gbak:    activating and creating deferred index IDX_COBROS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_AUTORIZACIONES_USUARIO 
+gbak:    activating and creating deferred index FK_AUTORIZACIONES_FUNCION 
+gbak:    activating and creating deferred index FK_COBROS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_CONCODIGOS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_COBROS_TRANSACCIONES_COBRO 
+gbak:    activating and creating deferred index FK_CONCEPTOS_RUBROS_CONCEPTO 
+gbak:    activating and creating deferred index FK_CONCEPTOS_RUBROS_RUBRO 
+gbak:    activating and creating deferred index FK_CONSCOMP_MODELO 
+gbak:    activating and creating deferred index FK_CONREBAJAS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_CONREBAJAS_REBAJA 
+gbak:    activating and creating deferred index FK_CONVENIOS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_CONTRANSACCIONES_CONVENIO 
+gbak:    activating and creating deferred index FK_FUNCIONES_COMANDOS_FUNCION 
+gbak:    activating and creating deferred index FK_FUNCIONES_MODULO 
+gbak:    activating and creating deferred index FK_PATRIBUTOS_PAPELERA 
+gbak:    activating and creating deferred index FK_PLANILLAS_CONCEPTO 
+gbak:    activating and creating deferred index FK_PLANILLAS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_PLANATRIBUTOS_PLANILLA 
+gbak:cannot commit index FK_PLANATRIBUTOS_PLANILLA 
+gbak: ERROR:violation of FOREIGN KEY constraint "FK_PLANATRIBUTOS_PLANILLA" on table "PLANILLAS_ATRIBUTOS" 
+gbak: ERROR:    Foreign key reference target does not exist 
+gbak: ERROR:    Problematic key value is ("PLANILLA" = 10984) 
+gbak:    activating and creating deferred index FK_PLARUBROS_PLANILLA 
+gbak:cannot commit index FK_PLARUBROS_PLANILLA 
+gbak: ERROR:violation of FOREIGN KEY constraint "FK_PLARUBROS_PLANILLA" on table "PLANILLAS_RUBROS" 
+gbak: ERROR:    Foreign key reference target does not exist 
+gbak: ERROR:    Problematic key value is ("PLANILLA" = 16442) 
+gbak:    activating and creating deferred index FK_PLARUBROS_RUBRO 
+gbak:    activating and creating deferred index FK_PREBLOQUES_PREDIO 
+gbak:    activating and creating deferred index FK_PREDIOS_CONSTRUCCION_PISO 
+gbak:    activating and creating deferred index FK_PREFOTOS_PREDIO 
+gbak:    activating and creating deferred index FK_PREFRENTES_PREDIO 
+gbak:    activating and creating deferred index FK_PREPROPIETARIOS_PREDIO 
+gbak:    activating and creating deferred index FK_PREPROPIETARIOS_CONTRIB 
+gbak:    activating and creating deferred index FK_PREDIOS_TABLAS_PREDIO 
+gbak:    activating and creating deferred index FK_PREDIOS_TERRENOS_PREDIO 
+gbak:    activating and creating deferred index FK_COBROSRUB_COBRO 
+gbak:    activating and creating deferred index FK_REBAJAS_RUBROS_REBAJA 
+gbak:    activating and creating deferred index FK_REBAJAS_RUBROS_RUBRO 
+gbak:    activating and creating deferred index FK_SERVICIOS_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_TABLAS_CLAVES_TABLA 
+gbak:    activating and creating deferred index FK_USRPRIVILEGIOS_USUARIO 
+gbak:    activating and creating deferred index FK_USRPRIVILEGIOS_FUNCION 
+gbak:    activating and creating deferred index FK_USRSUPERVISION_USUARIO 
+gbak:    activating and creating deferred index FK_USRSUPERVISION_MODULO 
+gbak:    activating and creating deferred index FK_PREDIO_DOMINIO 
+gbak:    activating and creating deferred index FK_PREDIOS_PISOS_BLOQUE 
+gbak:    activating and creating deferred index FK_PREDIO_VIA_MATERIAL 
+gbak:    activating and creating deferred index FK_PRECONSTRUCCION_COMPONENTE 
+gbak:    activating and creating deferred index FK_PREDIOS_TERRENOS_SUELO 
+gbak:    activating and creating deferred index FK_PREDIOS_TERRENOS_MANZANA 
+gbak:    activating and creating deferred index FK_PREDIOS_TERRENOS_RAZANTE 
+gbak:    activating and creating deferred index FK_PREDIOS_PISOS_CONSERVACION 
+gbak:    activating and creating deferred index FK_PATENTES_COMPONENTES_PAT 
+gbak:    activating and creating deferred index FK_AGUA_POTABLE_CONTRIBUYENTE 
+gbak:    activating and creating deferred index FK_AGUA_LECTURAS_CUENTAS 
+gbak:    activating and creating deferred index FK_PATENTES_CONTRIBUYENTES 
+gbak:    activating and creating deferred index FK_CONTRANSACCIONES_PLANILLA 
+gbak:    activating and creating deferred index FK_PATENTES_COMPONENTES_CON 
+gbak:    activating and creating deferred index FK_COE_ELEMENTOS_COEFICIENTE 
+gbak:    activating and creating deferred index FK_AGUA_POTABLE_ESTADO_SERVICIO 
+gbak:    activating and creating deferred index FK_AGUA_POTABLE_CATEGORIA 
+gbak:    activating and creating deferred index FK_SEGUIMIENTO_USUARIO 
+gbak:    activating and creating deferred index FK_PLA_SUSTITUCION_ORIGINAL 
+gbak:    activating and creating deferred index FK_PLA_SUSTITUCION_NUEVA 
+gbak:    activating and creating deferred index FK_PLA_SUSTITUCION_USUARIO 
+gbak:    activating and creating deferred index FK_RUB_PARAMETROS_RUBRO 
+gbak:    activating and creating deferred index FK_CONDOCUMENTOS_CONCEPTO 
+gbak:    activating and creating deferred index FK_AGUA_SERVICIOS_CUENTA 
+gbak:    activating and creating deferred index FK_AGUA_SERVICIOS_CONCEPTO 
+gbak:    activating and creating deferred index FK_AGUA_SERVICIOS_ESTADO 
+gbak:    activating and creating deferred index FK_CONTRIBUYENTES_PERSONERIA 
+gbak:    activating and creating deferred index FK_COBROS_ELEMENTOS_COB 
+gbak:    activating and creating deferred index FK_MESES_PLANILLA 
+gbak:    activating and creating deferred index FK_MESES_RUBRO 
+gbak:    activating and creating deferred index FK_COBROSRUB_RUBRO 
+gbak:    activating and creating deferred index FK_CONCEPTOS_EMISION_1 
+gbak:    activating and creating deferred index FK_CAJAS_USUARIOS_C 
+gbak:    activating and creating deferred index FK_CAJAS_USUARIOS_U 
+gbak:    activating and creating deferred index FK_MEJORAS_X_ELEMENTOS 
+gbak:    committing metadata 
+gbak:finishing, closing, and going home 
+gbak:Database is not online due to failure to activate one or more indices. 
+gbak:Run gfix -online to bring database online without active indices. 
+
+IBE: Restore completed with errors. Current time: 10:29:07 a. m.. Elapsed time: 00:01:14
+IBE: Following possible errors detected in the restore log:
+IBE: ===================================================== 
+gbak: ERROR:violation of FOREIGN KEY constraint "FK_PLANATRIBUTOS_PLANILLA" on table "PLANILLAS_ATRIBUTOS" 
+gbak: ERROR:    Foreign key reference target does not exist 
+gbak: ERROR:    Problematic key value is ("PLANILLA" = 10984) 
+gbak: ERROR:violation of FOREIGN KEY constraint "FK_PLARUBROS_PLANILLA" on table "PLANILLAS_RUBROS" 
+gbak: ERROR:    Foreign key reference target does not exist 
+gbak: ERROR:    Problematic key value is ("PLANILLA" = 16442) 

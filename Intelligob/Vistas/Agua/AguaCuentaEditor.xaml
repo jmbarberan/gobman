@@ -1,0 +1,222 @@
+<local:BaseDialogoVista x:Name="vCuentaEditor"
+        x:Class="Intelligob.Escritorio.Vistas.AguaCuentaEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d"
+        xmlns:local="clr-namespace:Intelligob.Escritorio.Vistas.General"
+        Title="Editor de Cuentas de Agua" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Popup x:Name="popUrbanoCodigo" HorizontalAlignment="Left" VerticalAlignment="Top" IsOpen="{Binding PopCodigoAbierto}" PlacementTarget="{Binding ElementName=txCodigoPredio}" Placement="Bottom">
+            <Grid>
+                <Rectangle VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" Stroke="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label FontSize="10" Content="Zona" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Row="1">
+                        <TextBox x:Name="txuZona" Text="{Binding Zona, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" MinHeight="22" MinWidth="45" Margin="0,0,5,0" Style="{DynamicResource TeTextBoxBasico}"/>
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Sector" Grid.Column="1" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="1" Grid.Row="1">
+                        <TextBox x:Name="txuSector" Text="{Binding Sector, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Height="22" MinWidth="45" Margin="0,0,5,0" Style="{DynamicResource TeTextBoxBasico}"/>    
+                    </AdornerDecorator>                    
+                    <Label FontSize="10" Content="Manzana" Grid.Column="2" Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="2" Grid.Row="1">
+                        <TextBox x:Name="txuManzana" Text="{Binding Manzana, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" MinHeight="22" MinWidth="45" Margin="0,0,5,0" Style="{DynamicResource TeTextBoxBasico}"/>
+                    </AdornerDecorator>                    
+                    <Label FontSize="10" Content="Predio" Grid.Column="3" Grid.Row="0" VerticalAlignment="Top"/>
+                    <AdornerDecorator Grid.Column="3" Grid.Row="1">
+                        <TextBox x:Name="txuPredio" Text="{Binding Predio, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" MinHeight="22" MinWidth="45" Margin="0,0,5,0" Style="{DynamicResource TeTextBoxBasico}"/>
+                    </AdornerDecorator>
+                    <Label FontSize="10" Content="Division" Grid.Column="4" Grid.Row="0"/>
+                    <TextBox x:Name="txuDivision" Text="{Binding Division, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Grid.Column="4" Grid.Row="1" MinHeight="22" MinWidth="45" Margin="0,0,10,0" Style="{DynamicResource TeTextBoxBasico}"/>
+                    <Button x:Name="btCodigoPreGuardar" Command="{Binding CmdGuardarCodigo}" Grid.Row="1" Grid.Column="5" Content="Guardar"  MinHeight="22" MinWidth="80" HorizontalAlignment="Right" Width="80"/>
+                </Grid>
+                <Button x:Name="btuCerrar" Command="{Binding CmdCerrarPopCodigo}" Grid.Row="0" Grid.Column="5" Content="X" Background="#FFFD6161" FontWeight="SemiBold" Foreground="#FF6A2020" FontSize="8" MinWidth="17" VerticalAlignment="Top" Margin="0,5,5,0" HorizontalAlignment="Right"/>
+            </Grid>
+        </Popup>
+        <Label Content="Contribuyente" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,0,5"/>
+        <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="5" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <AdornerDecorator>
+                <TextBox x:Name="txNombres" Text="{Binding ContribuyentePresentacion, ValidatesOnDataErrors=True, Mode=OneWay}" VerticalAlignment="Center" Grid.Column="0" MinHeight="24" IsReadOnly="True" Margin="0,0,0,5" Style="{DynamicResource TeTextBoxBasico}"/>
+            </AdornerDecorator>
+            <Button x:Name="btContribuyente" Command="{Binding CmdSeleccionarContribuyente}" Grid.Column="1" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="5,0,0,5" ToolTip="Seleccionar contribuyente">
+                <Image Height="24" Width="24" Source="..\Imagenes\lupa24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+            <Button x:Name="btContribuyenteNuevo" Command="{Binding CmdNuevoContribuyente}" Grid.Column="2" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,0,5" ToolTip="Crear nuevo contribuyente">
+                <Image Height="24" Width="24" Source="..\Imagenes\agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+            <Button x:Name="btContribuyenteModificar" Command="{Binding CmdModificarContribuyente}" Grid.Column="3" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,0,5" ToolTip="Modificar contribuyente">
+                <Image Height="24" Width="24" Source="..\Imagenes\pluma24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+        </Grid>
+        <Label Content="Codigo de la cuenta" Grid.Column="0" Grid.Row="1" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <AdornerDecorator Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="txCodigo" Text="{Binding Codigo, ValidatesOnDataErrors=True, UpdateSourceTrigger=LostFocus}" MinWidth="160" MinHeight="24" VerticalAlignment="Center" Margin="0,0,10,0" Style="{DynamicResource TeTextBoxBasico}"/>
+        </AdornerDecorator>
+        
+        <Label Content="Categoria de cuenta" Grid.Column="2" Grid.Row="1" Margin="0,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Right"/>        
+        <AdornerDecorator Grid.Column="3" Grid.Row="1">
+            <ComboBox x:Name="cbCategoria" ItemsSource="{Binding LCategorias}" MinWidth="160" Margin="0,5,0,5" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" 
+			SelectedItem="{Binding Categoria, ValidatesOnDataErrors=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MinHeight="24" Style="{DynamicResource ComboBoxValido}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Denominacion}" Width="164"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </AdornerDecorator>
+
+        <Label Content="Subcategoria de cuenta" Grid.Column="2" Grid.Row="2" Margin="0,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <AdornerDecorator Grid.Column="3" Grid.Row="2">
+            <ComboBox x:Name="cbSubcategoria" ItemsSource="{Binding LSubcategorias}" MinWidth="160" Margin="0,5,0,5" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" 
+			SelectedItem="{Binding Subcategoria, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" MinHeight="24" Style="{DynamicResource ComboBoxValido}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Denominacion}" Width="164"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </AdornerDecorator>
+
+        <Label Content="Codigo del predio" Grid.Column="0" Margin="0" Grid.Row="3" VerticalAlignment="Center"/>
+        <Grid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="lbCodigoPrefijo" Text="{Binding LCodigoPrefijo}" Grid.Column="1" VerticalAlignment="Center" Margin="5,0,5,0" Foreground="RoyalBlue"/>
+            <TextBox x:Name="txCodigoPredio" Text="{Binding PredioCodigo}" Grid.Column="2" MinWidth="160" MinHeight="24" Margin="0,0,10,0" VerticalAlignment="Center" IsReadOnly="True" Style="{DynamicResource TeTextBoxBasico}"/>
+            <Button x:Name="btCodigo" Command="{Binding CmdModificarCodigo}" Grid.Column="3" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,0" ToolTip="Escribir codigo">
+                <Image Height="24" Width="24" Source="..\Imagenes\pluma24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+        </Grid>
+        <Label Content="Direccion del predio" Grid.Column="1" Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Label Content="Ciudadela/Barrio/Recinto" Grid.Column="0" Grid.Row="4" Margin="0,0,10,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txBarrio" Text="{Binding Barrio}" Grid.Column="0" Grid.Row="5" MinHeight="24" Margin="5,0,10,5" VerticalAlignment="Center" Style="{DynamicResource TeTextBoxBasico}"/>
+        <TextBox x:Name="txDireccion" Text="{Binding Direccion}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" MinHeight="24" Margin="0,0,0,5" VerticalAlignment="Center" Style="{DynamicResource TeTextBoxBasico}"/>
+        <Label Content="Clase de ocupantes" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" Margin="0,5,0,10"/>
+        <ComboBox x:Name="cbTipoPropiedad" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" MinHeight="24" Margin="0,5,10,10" ItemsSource="{Binding LClasesOcupante}"
+                   SelectedItem="{Binding ClaseOcupante, Mode=TwoWay}" IsSynchronizedWithCurrentItem="True">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Denominacion}" Width="160"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Label Content="Tipo de dominio" VerticalAlignment="Center" Grid.Column="2" Grid.Row="6" Margin="0,5,0,10"/>
+        <ComboBox x:Name="cbTipoDominio" Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" MinHeight="24" Margin="0,5,0,10" ItemsSource="{Binding LTiposDominio}"
+                  IsSynchronizedWithCurrentItem="True" SelectedItem="{Binding TipoDominio, Mode=TwoWay}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Denominacion}" Width="160"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ToggleButton x:Name="tgMedidorActivo" Content="Conexion con medidor instalado" IsChecked="{Binding MedidorInstalado}" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="5,0,10,5" HorizontalContentAlignment="Left" MinHeight="24" Style="{DynamicResource SlidingToggleButton}" VerticalAlignment="Center"/>
+        <Label Content="Codigo del medidor" Grid.Column="2" Grid.Row="7" Margin="0,0,0,5" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="txCodigoMedidor" Text="{Binding MedidorCodigo}" Grid.Column="3" Grid.Row="7" Margin="0,0,0,5" IsEnabled="{Binding MedidorInstalado}" VerticalAlignment="Center" MinHeight="24" Style="{DynamicResource TeTextBoxBasico}"/>
+        <Label Content="Fecha de instalacion" Grid.Column="2" Grid.Row="8" VerticalAlignment="Center" Margin="0,5,0,5"/>
+        <DatePicker x:Name="fInstMedidor" SelectedDate="{Binding FechaInstalacion, Mode=TwoWay}" Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" MinHeight="22" Margin="0,5,0,5"/>
+        <Label Content="Diametro de la conexion" VerticalAlignment="Center" Grid.Column="0" Grid.Row="8" Margin="0,5,0,5"/>
+        <TextBox x:Name="txConDiametro" Text="{Binding ConexionDiametro}" Grid.Column="1" Grid.Row="8" Margin="0,5,10,5" VerticalAlignment="Center" MinHeight="22" Style="{DynamicResource TeTextBoxBasico}"/>
+        <Label Content="Tipo de reservorio" Grid.Column="0" Grid.Row="9" Margin="0,5,0,5" VerticalAlignment="Center"/>
+        <TextBox Name="txReservorio" Text="{Binding Reservorio, Mode=TwoWay}" Grid.Column="1" Grid.Row="9" Margin="0,5,10,5" VerticalAlignment="Center" MinHeight="24" Style="{DynamicResource TeTextBoxBasico}"/>
+        <ToggleButton x:Name="tgPiscina" IsChecked="{Binding TienePiscina, Mode=TwoWay}" Content="Tiene piscina" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Stretch" MinHeight="24" Margin="0,5,5,5" Style="{DynamicResource SlidingToggleButton}" HorizontalContentAlignment="Left" VerticalAlignment="Center"/>
+        <ToggleButton x:Name="tgTanque" Content="Tanque elevado" IsChecked="{Binding TanqueElevado, Mode=TwoWay}" Grid.Column="3" Grid.Row="9" HorizontalAlignment="Stretch" MinHeight="24" Margin="0,5,0,5" Style="{DynamicResource SlidingToggleButton}" HorizontalContentAlignment="Left" VerticalAlignment="Center"/>
+        <ToggleButton x:Name="tgPromedio" Content="Emitir utilizando consumo promedio" IsChecked="{Binding PromedioUsar}" Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="5,5,10,10" Style="{DynamicResource SlidingToggleButton}" HorizontalContentAlignment="Left" MinHeight="24" VerticalAlignment="Center"/>
+        <Label Content="Consumo promedio" Grid.Column="2" Grid.Row="10" Margin="0,5,5,10" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox x:Name="txPromedio" Text="{Binding PromedioIndividual}" Grid.Column="3" Grid.Row="10" MinHeight="24" VerticalAlignment="Center" Margin="0,5,0,10" Style="{DynamicResource TeTextBoxBasico}"/>
+        <Label Content="SERVICIOS COMPLEMENTARIOS" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11"  Foreground="RoyalBlue" VerticalAlignment="Center" Margin="0,0,0,5"/>
+        <StackPanel Grid.Column="1" Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btSerAgregar" Command="{Binding CmdAgregarSrv}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,5" ToolTip="Agregar servicio">
+                <Image Height="24" Width="24" Source="..\Imagenes\agregar24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+            <Button x:Name="btSerEliminar" Command="{Binding CmdQuitarSrv}" Style="{DynamicResource BotonBarra}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="32" Height="28" Margin="0,0,5,5" ToolTip="Quitar servicio">
+                <Image Height="24" Width="24" Source="..\Imagenes\remover24.png" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ImagenBoton}"/>
+            </Button>
+        </StackPanel>
+        <DataGrid Name="gdServicios" ItemsSource="{Binding LServicios}" Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="4" SelectedItem="{Binding ServicioSeleccionado}"
+                  Margin="0,0,0,10" MinHeight="100" HorizontalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" CanUserAddRows="False"
+                  VerticalGridLinesBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionMode="Single" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=ConceptoNav.Denominacion}" Header="Concepto del servicio" MinWidth="250" IsReadOnly="True"/>
+                <DataGridTemplateColumn Header="Fecha de Instalacion" MinWidth="140">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FechaInicio}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding FechaInicio}" HorizontalAlignment="Stretch" VerticalContentAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Estado del servicio">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=EstadoNav.Denominacion}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate >
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path=DataContext.LEstados, RelativeSource={RelativeSource AncestorType=Window}}" DisplayMemberPath="Denominacion" SelectedItem="{Binding Path=DataContext.ServicioSeleccionadoEstado, RelativeSource={RelativeSource AncestorType=Window}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btGuardar" Command="{Binding CmdGuardar}" Content="Guardar" Grid.Row="13" Grid.Column="3" HorizontalAlignment="Right" MinHeight="24" MinWidth="90" VerticalAlignment="Center"/>
+    </Grid>
+</local:BaseDialogoVista>

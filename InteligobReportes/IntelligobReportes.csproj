@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0D29820-FFEF-487D-A48C-45BCE4255384}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intelligob.Reportes</RootNamespace>
+    <AssemblyName>IntelligobReportes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting.Data.Schema, Version=11.2.17.1025, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.Reporting.Cache.StackExchangeRedis, Version=14.2.20.1021, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R3 2020\bin\Telerik.Reporting.Cache.StackExchangeRedis.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=14.2.20.1021, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R3 2020\bin\Telerik.Reporting.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=14.2.20.1021, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agua\AguaCuentaFicha.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Agua\AguaCuentaFicha.Designer.cs">
+      <DependentUpon>AguaCuentaFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catastros\CertificadoAvaluos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Catastros\CertificadoAvaluos.Designer.cs">
+      <DependentUpon>CertificadoAvaluos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catastros\CertificadoAvaluosRural.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Catastros\CertificadoAvaluosRural.Designer.cs">
+      <DependentUpon>CertificadoAvaluosRural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catastros\ResumenCatastral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Catastros\ResumenCatastral.Designer.cs">
+      <DependentUpon>ResumenCatastral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catastros\ResumenCatastralExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\CarpetaCatastralAnual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\CarpetaCatastralAnual.Designer.cs">
+      <DependentUpon>CarpetaCatastralAnual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emisiones\CarpetaCatastralCodigo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\CarpetaCatastralCodigo.Designer.cs">
+      <DependentUpon>CarpetaCatastralCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emisiones\CarpetaCatastralExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\DiarioBajasFecha.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\DiarioBajasFecha.Designer.cs">
+      <DependentUpon>DiarioBajasFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emisiones\DiarioBajasFechaExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\EmisionesSaldos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\EmisionesSaldos.Designer.cs" />
+    <Compile Include="Emisiones\EmisionesSaldosExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\ResumenEmisionPeriodo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Emisiones\ResumenEmisionPeriodo.Designer.cs">
+      <DependentUpon>ResumenEmisionPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManejadorConexion.cs" />
+    <Compile Include="ManejadorInformes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recaudaciones\CertificadoNoAdeudar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CertificadoNoAdeudar.Designer.cs">
+      <DependentUpon>CertificadoNoAdeudar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\ComprobanteCobro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\ComprobanteCobro.Designer.cs">
+      <DependentUpon>ComprobanteCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\ConsultaDeuda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\ConsultaDeuda.Designer.cs">
+      <DependentUpon>ConsultaDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\ConsultaDeudaCodigo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\ConsultaDeudaCodigo.Designer.cs">
+      <DependentUpon>ConsultaDeudaCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteAnual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteAnual.Designer.cs">
+      <DependentUpon>CuentaCorrienteAnual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteAnualExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteDetalleAgua.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteDetalleAgua.Designer.cs">
+      <DependentUpon>CuentaCorrienteDetalleAgua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteDetallePU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteDetallePU.Designer.cs">
+      <DependentUpon>CuentaCorrienteDetallePU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteDetallePUExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteMercadoPuesto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteMercadoPuesto.Designer.cs">
+      <DependentUpon>CuentaCorrienteMercadoPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteMercadoPuestoExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteResumen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteResumen.Designer.cs">
+      <DependentUpon>CuentaCorrienteResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\CuentaCorrienteResumenExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesAño.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesAño.Designer.cs">
+      <DependentUpon>DiarioRecaudacionesAño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesConcepto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesConcepto.Designer.cs">
+      <DependentUpon>DiarioRecaudacionesConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesDetComponentesExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesFecha.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesFecha.Designer.cs">
+      <DependentUpon>DiarioRecaudacionesFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesFechaExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesResComponentes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesResComponentes.Designer.cs">
+      <DependentUpon>DiarioRecaudacionesResComponentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioReversiones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioReversiones.Designer.cs">
+      <DependentUpon>DiarioReversiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioReversionesExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\NotificacionDeuda.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\NotificacionDeuda.Designer.cs">
+      <DependentUpon>NotificacionDeuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\Planilla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\Planilla.Designer.cs">
+      <DependentUpon>Planilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\PlanillaParcial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\PlanillaParcial.Designer.cs">
+      <DependentUpon>PlanillaParcial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesDetComponentes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\DiarioRecaudacionesDetComponentes.Designer.cs">
+      <DependentUpon>DiarioRecaudacionesDetComponentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\Report1Ext.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\TicketsMercado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Recaudaciones\TicketsMercado.Designer.cs">
+      <DependentUpon>TicketsMercado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudaciones\TicketsMercadoExt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportConnectionStringManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Agua\AguaCuentaFicha.resx">
+      <DependentUpon>AguaCuentaFicha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catastros\CertificadoAvaluos.resx">
+      <DependentUpon>CertificadoAvaluos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catastros\CertificadoAvaluosRural.resx">
+      <DependentUpon>CertificadoAvaluosRural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catastros\ResumenCatastral.resx">
+      <DependentUpon>ResumenCatastral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emisiones\CarpetaCatastralAnual.resx">
+      <DependentUpon>CarpetaCatastralAnual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emisiones\CarpetaCatastralCodigo.resx">
+      <DependentUpon>CarpetaCatastralCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emisiones\DiarioBajasFecha.resx">
+      <DependentUpon>DiarioBajasFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emisiones\EmisionesSaldos.resx" />
+    <EmbeddedResource Include="Emisiones\ResumenEmisionPeriodo.resx">
+      <DependentUpon>ResumenEmisionPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Recaudaciones\CertificadoNoAdeudar.resx">
+      <DependentUpon>CertificadoNoAdeudar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\ConsultaDeuda.resx">
+      <DependentUpon>ConsultaDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\ConsultaDeudaCodigo.resx">
+      <DependentUpon>ConsultaDeudaCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\CuentaCorrienteAnual.resx">
+      <DependentUpon>CuentaCorrienteAnual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\CuentaCorrienteDetallePU.resx">
+      <DependentUpon>CuentaCorrienteDetallePU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\CuentaCorrienteMercadoPuesto.resx">
+      <DependentUpon>CuentaCorrienteMercadoPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\CuentaCorrienteResumen.resx">
+      <DependentUpon>CuentaCorrienteResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioRecaudacionesAño.resx">
+      <DependentUpon>DiarioRecaudacionesAño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioRecaudacionesConcepto.resx">
+      <DependentUpon>DiarioRecaudacionesConcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioRecaudacionesFecha.resx">
+      <DependentUpon>DiarioRecaudacionesFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioRecaudacionesResComponentes.resx">
+      <DependentUpon>DiarioRecaudacionesResComponentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioReversiones.resx">
+      <DependentUpon>DiarioReversiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\NotificacionDeuda.resx">
+      <DependentUpon>NotificacionDeuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\Planilla.resx">
+      <DependentUpon>Planilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\PlanillaParcial.resx">
+      <DependentUpon>PlanillaParcial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\DiarioRecaudacionesDetComponentes.resx">
+      <DependentUpon>DiarioRecaudacionesDetComponentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudaciones\TicketsMercado.resx">
+      <DependentUpon>TicketsMercado.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntelligobCliente\IntelligobCliente.csproj">
+      <Project>{9b37fbf9-3274-4857-a2a3-0787994bb6f6}</Project>
+      <Name>IntelligobCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntelligobUtilerias\IntelligobUtilerias.csproj">
+      <Project>{5fb04245-b53f-43c6-9bb7-e8ee331b4cd4}</Project>
+      <Name>IntelligobUtilerias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntelligobUtiles\IntelligobUtiles.csproj">
+      <Project>{60341a1e-3e0b-4f24-9898-680decb9cf00}</Project>
+      <Name>IntelligobUtiles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

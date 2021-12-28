@@ -1,0 +1,16 @@
+﻿<Page x:Class="Intelligob.Escritorio.Vistas.General.Inicio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Background="White"
+	Title="Inicio">    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Name="imgInicio" Source="..\Imagenes\intelligob.png" Stretch="None" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+        <Button Foreground="RoyalBlue" Grid.Row="1" Content="Cambiar imagen" VerticalAlignment="Bottom" HorizontalAlignment="Right" MinWidth="110" MinHeight="22" Style="{DynamicResource BotonBarra}" Click="Button_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AFFE7F3-23E2-44DC-891F-83B949B877D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intelligob.Entidades</RootNamespace>
+    <AssemblyName>IntelligobEntidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess">
+      <HintPath>..\..\..\Componentes\Net\OpenAccess\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions">
+      <HintPath>..\..\..\Componentes\Net\OpenAccess\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.ServiceHost">
+      <HintPath>..\..\..\Componentes\Net\OpenAccess\Telerik.OpenAccess.ServiceHost.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AguaLectura.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="AguaPotable.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="AguaServicio.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BaseImponibleAño.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Caja.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CajaComprobante.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CajaElemento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CajasUsuario.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CarpetaCatastralAnual.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CarpetaCatastralCorteItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Cobro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CobrosElemento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CobrosNota.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CobrosNotasElemento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CobrosRubro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CobroTransaccion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConceptosEmision.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Convenio.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConveniosDividendo.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenioTransaccion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaBancaria.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaCorrienteItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaCorrienteRubrosCorteItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="EmisionesSaldoRubrosItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="EmisionesSaldosItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Extensiones\AguaConsultas.cs" />
+    <Compile Include="Extensiones\AguaServicioExtension.cs" />
+    <Compile Include="Autorizacion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Coeficiente.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="CoeficienteElemento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Comando.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Concepto.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConceptosDocumento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ConceptosRubro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Contribuyente.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Extensiones\AguaPotableExtension.cs" />
+    <Compile Include="Extensiones\CarpetraCatastralAnualExt.cs" />
+    <Compile Include="Extensiones\ContribuyentesAuxiliar.cs" />
+    <Compile Include="ContribuyentesRebaja.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Extensiones\IModeloExtension.cs" />
+    <Compile Include="Extensiones\ModeloExtension.cs" />
+    <Compile Include="Extensiones\ProcedimientosResultados.cs" />
+    <Compile Include="Funcion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Mejora.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="MejoraElemento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Mercado.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloUsuario.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Patente.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PatentesComponente.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Planilla.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaAtributo.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaMes.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaRubro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PlanillaSustitucion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioBase.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Extensiones\PredioBaseContribuyente.cs" />
+    <Compile Include="PredioBloque.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioConstruccion.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioFoto.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioFrente.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioPiso.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioPropietario.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioTabla.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="PredioTerreno.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Privilegio.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rebaja.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RebajasRubro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RecaudacionComponentesItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepCtaCteAnualItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepCuentaCorrienteDetalle.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepCuentaCorrienteResumen.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepEmisionesSaldo.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepPredio.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepRecaudacionesCompDetalle.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepRecaudacionesFecha.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RepReversionesFecha.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenCatastralItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="ResumenEmisionesPeriodoItem.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Rubro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RubroCalcularConcepto.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="RubrosParametro.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Seguimiento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="SoporteMovimiento.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Supervision.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Tabla.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="TablaClave.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.generated.cs">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo.rlinq.diagram">
+      <DependentUpon>Modelo.rlinq</DependentUpon>
+    </None>
+    <OpenAccessDeploy Include="Modelo.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>Modelo.cs</LastGenOutput>
+    </OpenAccessDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntelligobUtilerias\IntelligobUtilerias.csproj">
+      <Project>{5fb04245-b53f-43c6-9bb7-e8ee331b4cd4}</Project>
+      <Name>IntelligobUtilerias</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\OpenAccess.targets')" Project="$(MSBuildExtensionsPath)\OpenAccess.targets" />
+</Project>
